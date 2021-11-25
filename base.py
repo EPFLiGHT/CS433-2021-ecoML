@@ -4,11 +4,10 @@ This is the base class of cumulator.
 import json
 import time as t
 import geocoder
-import requests
+import pandas as pd
+from geopy.geocoders import Nominatim
 
-carbon_url = 'https://api.electricitymap.org/v3/carbon-intensity/latest?'
-private_token = 'TOKEN'
-auth = {'auth-token': private_token}
+country_dataset_path = 'country_dataset_adjusted.csv'
 
 
 class Cumulator:
@@ -43,14 +42,16 @@ class Cumulator:
         self.time_list.append(self.t1 - self.t0)
 
     def position_carbon_intensity(self):
+        geolocator = Nominatim(user_agent="cumulator")
         g = geocoder.ip('me')
-        latlng = g.latlng
-        # Useless coordinates, needs testing
-        final_url = carbon_url + 'zone=zoneKey'
-        r = requests.get(final_url, headers=auth)
-        print(r.text)
-        carbon_data_requested = json.loads(r.text)
-        self.carbon_intensity = carbon_data_requested["carbonIntensity"]
+        df_data = pd.read_csv(country_dataset_path)
+
+        location = geolocator.reverse(g.latlng)
+        address = location.raw['address']
+        code = address.get('country_code').upper()
+        df_row = df_data[df_data['country'] == code]
+        self.carbon_intensity = float(df_row['co2_per_unit_energy']*1000 if not df_row.empty else self.carbon_intensity)
+        print(self.carbon_intensity)
 
     # records the amount of data transferred, file_size in kilo bytes
     def data_transferred(self, file_size):
