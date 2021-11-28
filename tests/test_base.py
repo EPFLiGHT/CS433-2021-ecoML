@@ -1,5 +1,6 @@
 import unittest
-from ..base import Cumulator
+from base import Cumulator
+
 
 class TestBase(unittest.TestCase):
     def test_run(self):
@@ -24,8 +25,8 @@ class TestBase(unittest.TestCase):
         output = cumulator.run(foo, 3, y=2)
         self.assertEqual(6, output)
 
-def test_2(self):
-        self.assertEqual(1, 1)  # add assertion here
+    def test_2(self):
+            self.assertEqual(1, 1)  # add assertion here
 
 
 if __name__ == '__main__':
