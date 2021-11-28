@@ -1,9 +1,5 @@
 import unittest
 from base import Cumulator
-import time as t
-import geocoder
-import pandas as pd
-from geopy.geocoders import Nominatim
 
 
 class TestBase(unittest.TestCase):
