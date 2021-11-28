@@ -25,9 +25,6 @@ class TestBase(unittest.TestCase):
         output = cumulator.run(foo, 3, y=2)
         self.assertEqual(6, output)
 
-    def test_2(self):
-            self.assertEqual(1, 1)  # add assertion here
-
 
 if __name__ == '__main__':
     unittest.main()
