@@ -3,7 +3,7 @@ unittest_task:
     image: python:slim
   install_dependencies_script: |
     pip3 install unittest_xml_reporting
-  run_tests_script: python3 -m xmlrunner tests
+  run_tests_script: python3 -m xmlrunner tests/tests.py
   # replace 'tests' with the module,
   # unittest.TestCase, or unittest.TestSuite
   # that the tests are in
