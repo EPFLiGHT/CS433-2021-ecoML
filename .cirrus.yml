@@ -1,0 +1,14 @@
+unittest_task:
+  container:
+    image: python:slim
+  install_dependencies_script: |
+    pip3 install unittest_xml_reporting
+  run_tests_script: python3 -m xmlrunner tests
+  # replace 'tests' with the module,
+  # unittest.TestCase, or unittest.TestSuite
+  # that the tests are in
+  always:
+    upload_results_artifacts:
+      path: ./*.xml
+      format: junit
+      type: text/xml
