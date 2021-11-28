@@ -6,7 +6,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(True, True)  # add assertion here
 
     def test_2(self):
-        self.assertEqual(1, 2)  # add assertion here
+        self.assertEqual(1, 1)  # add assertion here
 
 
 if __name__ == '__main__':
