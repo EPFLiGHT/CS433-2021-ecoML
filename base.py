@@ -4,12 +4,14 @@ This is the base class of cumulator.
 import json
 import time as t
 import geocoder
+import random
 import pandas as pd
 from geopy.geocoders import Nominatim
 import GPUtil
 
 country_dataset_path = 'country_dataset_adjusted.csv'
 gpu_dataset_path = 'hardware\gpu.csv'
+metrics_dataset_path = 'metrics\CO2_metrics.csv'
 
 class Cumulator:
 
@@ -88,10 +90,26 @@ class Cumulator:
         return self.computation_costs() + self.communication_costs()
 
     # prints the carbon footprint in the terminal
-    def display_carbon_footprint(self):
+    def display_carbon_footprint(self):   
         print('########\nOverall carbon footprint: %s gCO2eq\n########' %
               "{:.2e}".format(self.total_carbon_footprint()))
         print('Carbon footprint due to computations: %s gCO2eq' %
               "{:.2e}".format(self.computation_costs()))
         print('Carbon footprint due to communications: %s gCO2eq' %
               "{:.2e}".format(self.communication_costs()))
+        #loading metrics dataset
+        with open(metrics_dataset_path) as file:
+            metrics=json.load(file)
+            final_metrics=[]
+            #computing equivalent of gCO2eq
+            for metric in metrics:
+                metric['equivalent']=metric['eq_factor']*(self.total_carbon_footprint())
+                #keep only significative equivalent metrics
+                if metrics['equivalent'] > 0:
+                    final_metrics.appen(metric)
+            l=len(final_metrics)
+            if l>0:
+                #select random equivalent metrics and print
+                metric=final_metrics[random.randint(0,l-1)]
+                print('\nThis carbon footprint is equivalent to {:2e} {}'.format(metric['equivalent'], metric['measure']))
+        
