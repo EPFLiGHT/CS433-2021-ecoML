@@ -6,13 +6,30 @@ import time as t
 import geocoder
 import pandas as pd
 from geopy.geocoders import Nominatim
+import GPUtil
 
 country_dataset_path = 'country_dataset_adjusted.csv'
-
+gpu_dataset_path = 'hardware\gpu.csv'
 
 class Cumulator:
 
     def __init__(self):
+        default_TDP=250
+        try:
+            gpus = GPUtil.getGPUs()
+            gpu_name=gpus[0].name
+            df=pd.read_csv(gpu_dataset_path)
+            #it uses contains for more flexibility
+            row=df[df['name'].str.contains(gpu_name)]
+            if row.empty:
+                #if gpu not found then assign standard TDP
+                TDP=default_TDP
+            else:
+                #otherwise assign gpu's TDP
+                TDP=row.TDP.values[0]
+        except:
+            #in case no GPU can be found
+            TDP=default_TDP
         self.t0 = 0
         self.t1 = 0
         # times are in seconds
@@ -25,7 +42,7 @@ class Cumulator:
         self.n_gpu = 1
         # assumptions to approximate the carbon footprint
         # computation costs: consumption of a typical GPU in Watts converted to kWh/s
-        self.hardware_load = 250 / 3.6e6
+        self.hardware_load = TDP / 3.6e6
         # communication costs: average energy impact of traffic in a typical data centers, kWh/kB
         self.one_byte_model = 6.894E-8
         # conversion to carbon footprint: average carbon intensity value in gCO2eq/kWh in the EU in 2014
