@@ -1,5 +1,3 @@
-#the website stop responding after 40ish requests
-#the script obtains only the most popular GPUs
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -66,7 +64,8 @@ def process_dump_gpu(path_dump, path_csv):
                 data_list.append({'name':cells[0].getText().strip(), 'gpu_chip':cells[1].getText().strip(), 'released':cells[2].getText().strip(), 'bus':cells[3].getText().strip(), 'memory':cells[4].getText().strip(), 'gpu_clock':cells[5].getText().strip(), 'memory_clock':cells[6].getText().strip(), 'shaders/TMUs/ROPs':cells[7].getText().strip(), 'TDP':tdp})
         df=pd.DataFrame.from_dict(data_list)
         df.to_csv(path_csv, index=False)
-
+        
+#It first obtains a dump of all GPUs whose TDP is known, and then calls process_dump_gpu for processing it and obtaing gpu.csv
 def scrape_gpu_all():
     url="https://www.techpowerup.com/gpu-specs/?sort=name"
     r=requests.get(url, headers=headers)
