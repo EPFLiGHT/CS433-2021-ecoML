@@ -31,7 +31,7 @@ class Cumulator:
                 #otherwise assign gpu's TDP
                 TDP=row.TDP.values[0]
         #ValueError arise when GPUtil can't communicate with the GPU driver 
-        except ValueError:
+        except (ValueError, IndexError):
             #in case no GPU can be found
             print(f'GPU not found. Standard TDP={default_TDP} assigend.')
             TDP=default_TDP
