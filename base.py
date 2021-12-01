@@ -11,7 +11,7 @@ import GPUtil
 
 country_dataset_path = 'country_dataset_adjusted.csv'
 gpu_dataset_path = 'hardware\gpu.csv'
-metrics_dataset_path = 'metrics\CO2_metrics.csv'
+metrics_dataset_path = 'metrics\CO2_metrics.json'
 
 class Cumulator:
 
@@ -26,11 +26,14 @@ class Cumulator:
             if row.empty:
                 #if gpu not found then assign standard TDP
                 TDP=default_TDP
+                print(f'GPU not found. Standard TDP={default_TDP} assigend.')
             else:
                 #otherwise assign gpu's TDP
                 TDP=row.TDP.values[0]
-        except:
+        #ValueError arise when GPUtil can't communicate with the GPU driver 
+        except ValueError:
             #in case no GPU can be found
+            print(f'GPU not found. Standard TDP={default_TDP} assigend.')
             TDP=default_TDP
         self.t0 = 0
         self.t1 = 0
@@ -131,16 +134,9 @@ class Cumulator:
         #loading metrics dataset
         with open(metrics_dataset_path) as file:
             metrics=json.load(file)
-            final_metrics=[]
             #computing equivalent of gCO2eq
             for metric in metrics:
-                metric['equivalent']=metric['eq_factor']*(self.total_carbon_footprint())
-                #keep only significative equivalent metrics
-                if metrics['equivalent'] > 0:
-                    final_metrics.appen(metric)
-            l=len(final_metrics)
-            if l>0:
-                #select random equivalent metrics and print
-                metric=final_metrics[random.randint(0,l-1)]
-                print('\nThis carbon footprint is equivalent to {:2e} {}'.format(metric['equivalent'], metric['measure']))
-        
+                metric['equivalent']=float(metric['eq_factor'])*(self.total_carbon_footprint())
+            #select random equivalent metrics and print
+            metric=metrics[random.randint(0,len(metrics)-1)]
+            print('This carbon footprint is equivalent to {:0.2e} {}.'.format(metric['equivalent'], metric['measure'].lower()))
