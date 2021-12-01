@@ -4,12 +4,14 @@ This is the base class of cumulator.
 import json
 import time as t
 import geocoder
+import random
 import pandas as pd
 from geopy.geocoders import Nominatim
 import GPUtil
 
 country_dataset_path = 'country_dataset_adjusted.csv'
 gpu_dataset_path = 'hardware\gpu.csv'
+metrics_dataset_path = 'metrics\CO2_metrics.json'
 
 class Cumulator:
 
@@ -24,11 +26,14 @@ class Cumulator:
             if row.empty:
                 #if gpu not found then assign standard TDP
                 TDP=default_TDP
+                print(f'GPU not found. Standard TDP={default_TDP} assigend.')
             else:
                 #otherwise assign gpu's TDP
                 TDP=row.TDP.values[0]
-        except:
+        #ValueError arise when GPUtil can't communicate with the GPU driver 
+        except ValueError:
             #in case no GPU can be found
+            print(f'GPU not found. Standard TDP={default_TDP} assigend.')
             TDP=default_TDP
         self.t0 = 0
         self.t1 = 0
@@ -57,6 +62,37 @@ class Cumulator:
         self.t1 = t.time()
         self.cumulated_time += self.t1 - self.t0
         self.time_list.append(self.t1 - self.t0)
+
+    def run(self, function, *args, **kwargs):
+        """
+        Measure the carbon footprint of `function`.
+
+        Example
+        --------
+        >>> # imports
+        >>> from sklearn.linear_model import LinearRegression
+        >>> from sklearn import datasets
+        >>> # initialization
+        >>> cumulator = Cumulator()
+        >>> model = LinearRegression()
+        >>> diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
+        >>> # without output and with keywords arguments
+        >>> cumulator.run(model.fit, X=diabetes_X, y=diabetes_y)
+        >>> # with output and without keywords arguments
+        >>> y = cumulator.run(model.predict, diabetes_X)
+        >>> # show results
+        >>> cumulator.display_carbon_footprint()
+
+
+        :param function: function to measure.
+        :param args: positional arguments of `function`.
+        :param kwargs: keywords arguments of `function`.
+        :return: output of `function`.
+        """
+        self.on()
+        output = function(*args, **kwargs)
+        self.off()
+        return output
 
     def position_carbon_intensity(self):
         geolocator = Nominatim(user_agent="cumulator")
@@ -88,10 +124,19 @@ class Cumulator:
         return self.computation_costs() + self.communication_costs()
 
     # prints the carbon footprint in the terminal
-    def display_carbon_footprint(self):
+    def display_carbon_footprint(self):   
         print('########\nOverall carbon footprint: %s gCO2eq\n########' %
               "{:.2e}".format(self.total_carbon_footprint()))
         print('Carbon footprint due to computations: %s gCO2eq' %
               "{:.2e}".format(self.computation_costs()))
         print('Carbon footprint due to communications: %s gCO2eq' %
               "{:.2e}".format(self.communication_costs()))
+        #loading metrics dataset
+        with open(metrics_dataset_path) as file:
+            metrics=json.load(file)
+            #computing equivalent of gCO2eq
+            for metric in metrics:
+                metric['equivalent']=float(metric['eq_factor'])*(self.total_carbon_footprint())
+            #select random equivalent metrics and print
+            metric=metrics[random.randint(0,len(metrics)-1)]
+            print('This carbon footprint is equivalent to {:0.2e} {}.'.format(metric['equivalent'], metric['measure'].lower()))
