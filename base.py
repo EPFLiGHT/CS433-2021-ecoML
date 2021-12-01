@@ -60,6 +60,37 @@ class Cumulator:
         self.cumulated_time += self.t1 - self.t0
         self.time_list.append(self.t1 - self.t0)
 
+    def run(self, function, *args, **kwargs):
+        """
+        Measure the carbon footprint of `function`.
+
+        Example
+        --------
+        >>> # imports
+        >>> from sklearn.linear_model import LinearRegression
+        >>> from sklearn import datasets
+        >>> # initialization
+        >>> cumulator = Cumulator()
+        >>> model = LinearRegression()
+        >>> diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
+        >>> # without output and with keywords arguments
+        >>> cumulator.run(model.fit, X=diabetes_X, y=diabetes_y)
+        >>> # with output and without keywords arguments
+        >>> y = cumulator.run(model.predict, diabetes_X)
+        >>> # show results
+        >>> cumulator.display_carbon_footprint()
+
+
+        :param function: function to measure.
+        :param args: positional arguments of `function`.
+        :param kwargs: keywords arguments of `function`.
+        :return: output of `function`.
+        """
+        self.on()
+        output = function(*args, **kwargs)
+        self.off()
+        return output
+
     def position_carbon_intensity(self):
         geolocator = Nominatim(user_agent="cumulator")
         g = geocoder.ip('me')
