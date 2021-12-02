@@ -21,3 +21,10 @@ def drop_columns_keeping_max_year(df_data):
     df_updated = df_data[idx]
     df_useful = df_updated[['country', 'co2_per_unit_energy']]
     df_useful.to_csv('country_dataset_adjusted.csv')
+
+
+# convert the dataset downloaded from https://ourworldindata.org/electricity-mix to a compact dataset that can be used from Cumulator
+# generate the new dataset in the current folder
+def dataset_converter(dataset_fr):
+    df_data = dig3_to_dig2_conversion(dataset_fr)
+    drop_columns_keeping_max_year(df_data)
