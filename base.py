@@ -13,11 +13,11 @@ import cpuinfo
 country_dataset_path = 'country_dataset_adjusted.csv'
 gpu_dataset_path = 'hardware/gpu.csv'
 metrics_dataset_path = 'metrics/CO2_metrics.json'
-metrics_dataset_path = 'metrics\CO2_metrics.json'
+metrics_dataset_path = 'metrics/CO2_metrics.json'
 
 
 class Cumulator:
-
+    def __init__(self, hardware="cpu"):
         #default value of TDP
         self.TDP=250
         # conversion to carbon footprint: average carbon intensity value in gCO2eq/kWh in the EU in 2014
@@ -38,11 +38,13 @@ class Cumulator:
         self.hardware_load = self.TDP / 3.6e6
         # communication costs: average energy impact of traffic in a typical data centers, kWh/kB
         self.one_byte_model = 6.894E-8
+        # conversion to carbon footprint: average carbon intensity value in gCO2eq/kWh in the EU in 2014
+        self.carbon_intensity = 447
 
     # starts accumulating time
     def on(self):
         self.t0 = t.time()
-    
+
     def set_hardware(self, hardware):
         if hardware=="gpu":
             #search_gpu will try to detect the gpu on the device and set the corresponding TDP value as TDP value of Cumulator

@@ -7,7 +7,7 @@ unittest_task:
     pip3 install pandas
     pip3 install geopy
     pip3 install GPUtil
-    pip3 install cpuinfo
+    pip3 install py-cpuinfo
   run_tests_script: python3 -m xmlrunner tests/*.py
   # replace 'tests' with the module,
   # unittest.TestCase, or unittest.TestSuite
