@@ -1,3 +1,4 @@
+# All the data is taken from the website "https://www.techpowerup.com/"
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup

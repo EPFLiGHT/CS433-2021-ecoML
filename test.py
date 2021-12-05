@@ -8,7 +8,8 @@ import sklearn
 
 # Position
 
-a = Cumulator()
+a = Cumulator(hardware="gpu")
+a.set_hardware("cpu")
 a.position_carbon_intensity()
 a = dig3_to_dig2_conversion("country_data.csv")
 drop_columns_keeping_max_year(a)

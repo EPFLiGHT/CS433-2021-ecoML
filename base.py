@@ -8,33 +8,19 @@ import random
 import pandas as pd
 from geopy.geocoders import Nominatim
 import GPUtil
+import cpuinfo
 
 country_dataset_path = 'country_dataset_adjusted.csv'
 gpu_dataset_path = 'hardware\gpu.csv'
+cpu_dataset_path= 'hardware\cpu.csv'
 metrics_dataset_path = 'metrics\CO2_metrics.json'
 
 class Cumulator:
 
-    def __init__(self):
-        default_TDP=250
-        try:
-            gpus = GPUtil.getGPUs()
-            gpu_name=gpus[0].name
-            df=pd.read_csv(gpu_dataset_path)
-            #it uses contains for more flexibility
-            row=df[df['name'].str.contains(gpu_name)]
-            if row.empty:
-                #if gpu not found then assign standard TDP
-                TDP=default_TDP
-                print(f'GPU not found. Standard TDP={default_TDP} assigend.')
-            else:
-                #otherwise assign gpu's TDP
-                TDP=row.TDP.values[0]
-        #ValueError arise when GPUtil can't communicate with the GPU driver 
-        except (ValueError, IndexError):
-            #in case no GPU can be found
-            print(f'GPU not found. Standard TDP={default_TDP} assigend.')
-            TDP=default_TDP
+    def __init__(self, hardware="cpu"):
+        #default value of TDP
+        self.TDP=250
+        self.set_hardware(hardware)
         self.t0 = 0
         self.t1 = 0
         # times are in seconds
@@ -47,7 +33,7 @@ class Cumulator:
         self.n_gpu = 1
         # assumptions to approximate the carbon footprint
         # computation costs: consumption of a typical GPU in Watts converted to kWh/s
-        self.hardware_load = TDP / 3.6e6
+        self.hardware_load = self.TDP / 3.6e6
         # communication costs: average energy impact of traffic in a typical data centers, kWh/kB
         self.one_byte_model = 6.894E-8
         # conversion to carbon footprint: average carbon intensity value in gCO2eq/kWh in the EU in 2014
@@ -56,6 +42,52 @@ class Cumulator:
     # starts accumulating time
     def on(self):
         self.t0 = t.time()
+    
+    def set_hardware(self, hardware):
+        if hardware=="gpu":
+            #search_gpu will try to detect the gpu on the device and set the corresponding TDP value as TDP value of Cumulator
+            self.detect_gpu()
+        elif hardware=="cpu":
+            #search_cpu will try to detect the cpu on the device and set the corresponding TDP value as TDP value of Cumulator
+            self.detect_cpu()
+        #in case of wrong value of hardware let default TDP
+        else:
+            print(f'hardware expected to be "cpu" or "gpu". TDP set to default value {self.TDP}')
+    
+    #function for trying to detect gpu and set corresponding TDP value as TDP value of cumulator
+    def detect_gpu(self):
+        try:
+            gpus = GPUtil.getGPUs()
+            gpu_name=gpus[0].name
+            df=pd.read_csv(gpu_dataset_path)
+            #it uses contains for more flexibility
+            row=df[df['name'].str.contains(gpu_name)]
+            if row.empty:
+                #if gpu not found then leave standard TDP value
+                print(f'GPU not found. Standard TDP={self.TDP} assigned.')
+            else:
+                #otherwise assign gpu's TDP
+                self.TDP=row.TDP.values[0]
+        #ValueError arise when GPUtil can't communicate with the GPU driver 
+        except (ValueError, IndexError):
+            #in case no GPU can be found
+            print(f'GPU not found. Standard TDP={self.TDP} assigned.')
+
+    def detect_cpu(self):
+        try:
+            cpu_name=cpuinfo.get_cpu_info()['brand_raw']
+            df=pd.read_csv(cpu_dataset_path)
+            #it uses contains for more flexibility
+            row=df[df['name'].str.contains(cpu_name)]
+            if row.empty:
+                #if gpu not found then leave standard TDP value
+                print(f'CPU not found. Standard TDP={self.TDP} assigned.')
+            else:
+                #otherwise assign CPU's TDP
+                self.TDP=row.TDP.values[0]
+        except:
+            #in case no CPU can be found
+            print(f'[except] GPU not found. Standard TDP={self.TDP} assigned.')
 
     # stops accumulating time and records the value
     def off(self):
