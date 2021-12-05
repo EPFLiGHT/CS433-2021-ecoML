@@ -1,1 +1,4 @@
 hardware/dump.json
+datasets/creditcard.csv
+datasets/mnist/mnist_test.csv
+datasets/mnist/mnist_train.csv
