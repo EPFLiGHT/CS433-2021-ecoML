@@ -20,8 +20,6 @@ class Cumulator:
     def __init__(self, hardware="cpu"):
         #default value of TDP
         self.TDP=250
-        # conversion to carbon footprint: average carbon intensity value in gCO2eq/kWh in the EU in 2014
-        default_Carbon_Intensity = 447
         self.set_hardware(hardware)
         self.t0 = 0
         self.t1 = 0
