@@ -13,7 +13,7 @@ import cpuinfo
 country_dataset_path = 'country_dataset_adjusted.csv'
 gpu_dataset_path = 'hardware/gpu.csv'
 metrics_dataset_path = 'metrics/CO2_metrics.json'
-metrics_dataset_path = 'metrics/CO2_metrics.json'
+cpu_dataset_path = 'hardware/cpu.csv'
 
 
 class Cumulator:
