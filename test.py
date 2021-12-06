@@ -13,7 +13,7 @@ dataset_converter('country_data.csv')
 
 diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
 
-cumulator = Cumulator()
+cumulator = Cumulator(hardware="gpu")
 print("D")
 model = LinearRegression()
 cumulator.run(model.fit, X=diabetes_X, y=diabetes_y)
