@@ -18,8 +18,8 @@ cpu_dataset_path = 'hardware/cpu.csv'
 
 class Cumulator:
     def __init__(self, hardware="cpu"):
-        #default value of TDP
-        self.TDP=250
+        # default value of TDP
+        self.TDP = 250
         self.set_hardware(hardware)
         self.t0 = 0
         self.t1 = 0
@@ -42,51 +42,51 @@ class Cumulator:
     # starts accumulating time
     def on(self):
         self.t0 = t.time()
-    
+
     def set_hardware(self, hardware):
-        if hardware=="gpu":
-            #search_gpu will try to detect the gpu on the device and set the corresponding TDP value as TDP value of Cumulator
+        if hardware == "gpu":
+            # search_gpu will try to detect the gpu on the device and set the corresponding TDP value as TDP value of Cumulator
             self.detect_gpu()
-        elif hardware=="cpu":
-            #search_cpu will try to detect the cpu on the device and set the corresponding TDP value as TDP value of Cumulator
+        elif hardware == "cpu":
+            # search_cpu will try to detect the cpu on the device and set the corresponding TDP value as TDP value of Cumulator
             self.detect_cpu()
-        #in case of wrong value of hardware let default TDP
+        # in case of wrong value of hardware let default TDP
         else:
             print(f'hardware expected to be "cpu" or "gpu". TDP set to default value {self.TDP}')
-    
-    #function for trying to detect gpu and set corresponding TDP value as TDP value of cumulator
+
+    # function for trying to detect gpu and set corresponding TDP value as TDP value of cumulator
     def detect_gpu(self):
         try:
             gpus = GPUtil.getGPUs()
-            gpu_name=gpus[0].name
-            df=pd.read_csv(gpu_dataset_path)
-            #it uses contains for more flexibility
-            row=df[df['name'].str.contains(gpu_name)]
+            gpu_name = gpus[0].name
+            df = pd.read_csv(gpu_dataset_path)
+            # it uses contains for more flexibility
+            row = df[df['name'].str.contains(gpu_name)]
             if row.empty:
-                #if gpu not found then leave standard TDP value
+                # if gpu not found then leave standard TDP value
                 print(f'GPU not found. Standard TDP={self.TDP} assigned.')
             else:
-                #otherwise assign gpu's TDP
-                self.TDP=row.TDP.values[0]
-        #ValueError arise when GPUtil can't communicate with the GPU driver 
+                # otherwise assign gpu's TDP
+                self.TDP = row.TDP.values[0]
+        # ValueError arise when GPUtil can't communicate with the GPU driver
         except (ValueError, IndexError):
-            #in case no GPU can be found
+            # in case no GPU can be found
             print(f'GPU not found. Standard TDP={self.TDP} assigned.')
 
     def detect_cpu(self):
         try:
-            cpu_name=cpuinfo.get_cpu_info()['brand_raw']
-            df=pd.read_csv(cpu_dataset_path)
-            #it uses contains for more flexibility
-            row=df[df['name'].str.contains(cpu_name)]
+            cpu_name = cpuinfo.get_cpu_info()['brand_raw']
+            df = pd.read_csv(cpu_dataset_path)
+            # it uses contains for more flexibility
+            row = df[df['name'].str.contains(cpu_name)]
             if row.empty:
-                #if gpu not found then leave standard TDP value
+                # if gpu not found then leave standard TDP value
                 print(f'CPU not found. Standard TDP={self.TDP} assigned.')
             else:
-                #otherwise assign CPU's TDP
-                self.TDP=row.TDP.values[0]
+                # otherwise, assign CPU's TDP
+                self.TDP = row.TDP.values[0]
         except:
-            #in case no CPU can be found
+            # in case no CPU can be found
             print(f'[except] GPU not found. Standard TDP={self.TDP} assigned.')
 
     # stops accumulating time and records the value
