@@ -2,3 +2,6 @@ hardware/dump.json
 datasets/creditcard.csv
 datasets/mnist/mnist_test.csv
 datasets/mnist/mnist_train.csv
+notebooks/.ipynb_checkpoints/
+
+.ipynb_checkpoints/
