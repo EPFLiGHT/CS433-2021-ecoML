@@ -4,6 +4,11 @@ from base import Cumulator
 import torch
 import torch.nn.functional as F
 from torch import nn
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_classification
+import numpy as np
 
 def add_dataset_row(dataset, accuracy, consumption, used_algorithm, type_of_dataset='None'):
     points, features = dataset.shape
@@ -58,3 +63,35 @@ class LeNetModel(nn.Module):
         x = self.activation_function(self.fc2(x))
         x = self.fc3(x)
         return x
+
+def random_forest(X_train, y_train, X_test, y_test):
+    cumulator = Cumulator()
+    print('----------------RANDOM FOREST---------------')
+    clf = RandomForestClassifier(max_depth=2, random_state=0)
+    cumulator.run(clf.fit, X=X_train, y=y_train)
+    y_pred = clf.predict(X_test)
+    print(f'accuracy: {round(accuracy(y_pred, y_test), 2)}')
+    cumulator.display_carbon_footprint()
+
+
+def logistic_regression(X_train, y_train, X_test, y_test):
+    cumulator = Cumulator()
+    print('----------------LOGISTIC REGRESSION---------------')
+    clf = LogisticRegression(random_state=0, max_iter=500)
+    cumulator.run(clf.fit, X=X_train, y=y_train)
+    y_pred = clf.predict(X_test)
+    print(f'accuracy: {round(accuracy(y_pred, y_test), 2)}')
+    cumulator.display_carbon_footprint()
+
+
+def linear_regression(X_train, y_train, X_test, y_test):
+    cumulator = Cumulator()
+    print('----------------LINEAR REGRESSION---------------')
+    clf = LinearRegression()
+    cumulator.run(clf.fit, X=X_train, y=y_train)
+    y_pred = clf.predict(X_test)
+    print(f'accuracy: {round(accuracy(y_pred, y_test), 2)}')
+    cumulator.display_carbon_footprint()
+
+def accuracy(y_pred, y):
+    return (np.power(y_pred - y, 2)).mean()
