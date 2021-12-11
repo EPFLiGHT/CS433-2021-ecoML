@@ -10,6 +10,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.datasets import make_classification
 import numpy as np
 
+
 def add_dataset_row(dataset, accuracy, consumption, used_algorithm, type_of_dataset='None'):
     points, features = dataset.shape
 
@@ -64,7 +65,8 @@ class LeNetModel(nn.Module):
         x = self.fc3(x)
         return x
 
-def random_forest(X_train, y_train, X_test, y_test):
+
+def random_forest(X_train, X_test, y_train, y_test):
     cumulator = Cumulator()
     print('----------------RANDOM FOREST---------------')
     clf = RandomForestClassifier(max_depth=2, random_state=0)
@@ -74,7 +76,7 @@ def random_forest(X_train, y_train, X_test, y_test):
     cumulator.display_carbon_footprint()
 
 
-def logistic_regression(X_train, y_train, X_test, y_test):
+def logistic_regression(X_train, X_test, y_train, y_test):
     cumulator = Cumulator()
     print('----------------LOGISTIC REGRESSION---------------')
     clf = LogisticRegression(random_state=0, max_iter=500)
@@ -84,14 +86,27 @@ def logistic_regression(X_train, y_train, X_test, y_test):
     cumulator.display_carbon_footprint()
 
 
-def linear_regression(X_train, y_train, X_test, y_test):
+def linear_regression(X_train, X_test, y_train, y_test):
     cumulator = Cumulator()
     print('----------------LINEAR REGRESSION---------------')
     clf = LinearRegression()
     cumulator.run(clf.fit, X=X_train, y=y_train)
     y_pred = clf.predict(X_test)
+    y_pred_rounded = rounder(y_train)(y_pred)
     print(f'accuracy: {round(accuracy(y_pred, y_test), 2)}')
     cumulator.display_carbon_footprint()
 
+
 def accuracy(y_pred, y):
     return (np.power(y_pred - y, 2)).mean()
+
+
+# use rounder(y_train)(y_pred_to_round)
+def rounder(y_train):
+    values = np.array(list(set(y_train)))
+
+    def f(x):
+        idx = np.argmin(np.abs(values - x))
+        return values[idx]
+
+    return np.frompyfunc(f, 1, 1)
