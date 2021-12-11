@@ -5,6 +5,7 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
+
 def add_dataset_row(dataset, accuracy, consumption, used_algorithm, type_of_dataset='None'):
     points, features = dataset.shape
 

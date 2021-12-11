@@ -9,6 +9,7 @@ import pandas as pd
 from geopy.geocoders import Nominatim
 import GPUtil
 import cpuinfo
+import os
 
 country_dataset_path = 'country_dataset_adjusted.csv'
 gpu_dataset_path = 'hardware/gpu.csv'
@@ -19,8 +20,12 @@ cpu_dataset_path = 'hardware/cpu.csv'
 class Cumulator:
     def __init__(self, hardware="cpu"):
         # default value of TDP
+        self.carbon_intensity = 447
         self.TDP = 250
         self.set_hardware(hardware)
+
+        # define consumption on the current position, standard carbon footprint value: average carbon intensity value in gCO2eq/kWh in the EU in 2014
+        self.position_carbon_intensity(default_Carbon_Intensity=447)
         self.t0 = 0
         self.t1 = 0
         # times are in seconds
@@ -36,8 +41,6 @@ class Cumulator:
         self.hardware_load = self.TDP / 3.6e6
         # communication costs: average energy impact of traffic in a typical data centers, kWh/kB
         self.one_byte_model = 6.894E-8
-        # conversion to carbon footprint: average carbon intensity value in gCO2eq/kWh in the EU in 2014
-        self.carbon_intensity = 447
 
     # starts accumulating time
     def on(self):
@@ -59,7 +62,10 @@ class Cumulator:
         try:
             gpus = GPUtil.getGPUs()
             gpu_name = gpus[0].name
-            df = pd.read_csv(gpu_dataset_path)
+
+            dirname = os.path.dirname(__file__)
+            relative_gpu_dataset_path = os.path.join(dirname, gpu_dataset_path)
+            df = pd.read_csv(relative_gpu_dataset_path)
             # it uses contains for more flexibility
             row = df[df['name'].str.contains(gpu_name)]
             if row.empty:
@@ -76,7 +82,10 @@ class Cumulator:
     def detect_cpu(self):
         try:
             cpu_name = cpuinfo.get_cpu_info()['brand_raw']
-            df = pd.read_csv(cpu_dataset_path)
+
+            dirname = os.path.dirname(__file__)
+            relative_cpu_dataset_path = os.path.join(dirname, cpu_dataset_path)
+            df = pd.read_csv(relative_cpu_dataset_path)
             # it uses contains for more flexibility
             row = df[df['name'].str.contains(cpu_name)]
             if row.empty:
@@ -126,19 +135,27 @@ class Cumulator:
         self.off()
         return output
 
-    def position_carbon_intensity(self):
-        geolocator = Nominatim(user_agent="cumulator")
-        g = geocoder.ip('me')
-        df_data = pd.read_csv(country_dataset_path)
+    def position_carbon_intensity(self, default_Carbon_Intensity=447):
 
-        location = geolocator.reverse(g.latlng)
-        address = location.raw['address']
-        code = address.get('country_code').upper()
-        df_row = df_data[df_data['country'] == code]
-        self.carbon_intensity = float(
-            df_row['co2_per_unit_energy'] * 1000 if not df_row.empty else None)
-        if self.carbon_intensity is None:
-            raise AttributeError
+        try:
+            dirname = os.path.dirname(__file__)
+            relative_country_dataset_path = os.path.join(dirname, country_dataset_path)
+
+            geolocator = Nominatim(user_agent="cumulator")
+            g = geocoder.ip('me')
+            df_data = pd.read_csv(relative_country_dataset_path)
+
+            location = geolocator.reverse(g.latlng)
+            address = location.raw['address']
+            code = address.get('country_code').upper()
+            df_row = df_data[df_data['country'] == code]
+            self.carbon_intensity = float(
+                df_row['co2_per_unit_energy'] * 1000 if not df_row.empty else None)
+            if self.carbon_intensity is None:
+                raise AttributeError
+        except (AttributeError, FileNotFoundError):
+            print(f'Current position not found. Standard Carbon Intensity={default_Carbon_Intensity} assigned.')
+            self.carbon_intensity = default_Carbon_Intensity
 
     # records the amount of data transferred, file_size in kilo bytes
     def data_transferred(self, file_size):
@@ -166,7 +183,10 @@ class Cumulator:
         print('Carbon footprint due to communications: %s gCO2eq' %
               "{:.2e}".format(self.communication_costs()))
         # loading metrics dataset
-        with open(metrics_dataset_path) as file:
+        dirname = os.path.dirname(__file__)
+        relative_metric_dataset_path = os.path.join(dirname, metrics_dataset_path)
+
+        with open(relative_metric_dataset_path) as file:
             metrics = json.load(file)
             # computing equivalent of gCO2eq
             for metric in metrics:
