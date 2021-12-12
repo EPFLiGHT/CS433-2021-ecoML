@@ -7,8 +7,11 @@ from torch import nn
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
 from sklearn.datasets import make_classification
 import numpy as np
+
+from nn_utils import train
 
 
 def add_dataset_row(dataset, accuracy, consumption, used_algorithm, type_of_dataset='None'):
@@ -38,7 +41,7 @@ def standard_neural_network(x_training_set, y_training_set, x_test_set, y_test_s
 
     accuracy = alg.score(x_test_set, y_test_set)
 
-    print("accuracy is: " + str(accuracy))
+    print(f'accuracy: {round(accuracy, 2)}')
     cumulator.display_carbon_footprint()
 
 
@@ -64,6 +67,21 @@ class LeNetModel(nn.Module):
         x = self.activation_function(self.fc2(x))
         x = self.fc3(x)
         return x
+
+
+def lenet_neural_network(dataset_train, dataset_test, num_epochs=10, learning_rate = 1e-3):
+    cumulator = Cumulator()
+    lenet_model = LeNetModel()
+
+    # Loss and optimizer
+    criterion = torch.nn.CrossEntropyLoss()
+    optimizer = torch.optim.Adam(lenet_model.parameters(), lr=learning_rate)
+
+    # Training
+    accuracy = cumulator.run(train, lenet_model, criterion, dataset_train, dataset_test, optimizer, num_epochs)
+
+    print(f'accuracy: {round(accuracy, 2)}')
+    cumulator.display_carbon_footprint()
 
 
 def random_forest(X_train, X_test, y_train, y_test):
