@@ -22,7 +22,8 @@ def train(model, criterion, dataset_train, dataset_test, optimizer, num_epochs):
   @param optimizer: torch.optim.Optimizer
   @param num_epochs: int
   """
-    print("Starting training")
+    #print("Starting training")
+    accuracies = []
     for epoch in range(num_epochs):
         # Train an epoch
         model.train()
@@ -50,4 +51,7 @@ def train(model, criterion, dataset_train, dataset_test, optimizer, num_epochs):
             prediction = model(batch_x)
             accuracies_test.append(accuracy(prediction, batch_y))
 
-        print("Epoch {} | Test accuracy: {:.5f}".format(epoch, sum(accuracies_test).item() / len(accuracies_test)))
+        epoch_accuracy = sum(accuracies_test).item() / len(accuracies_test)
+        accuracies.append(epoch_accuracy)
+        print("Epoch {} | Test accuracy: {:.5f}".format(epoch, epoch_accuracy))
+    return accuracies[-1]
