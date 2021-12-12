@@ -195,3 +195,6 @@ class Cumulator:
             metric = metrics[random.randint(0, len(metrics) - 1)]
             print('This carbon footprint is equivalent to {:0.2e} {}.'.format(metric['equivalent'],
                                                                               metric['measure'].lower()))
+
+    def return_total_carbon_footprint(self):
+        return self.total_carbon_footprint()

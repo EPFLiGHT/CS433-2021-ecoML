@@ -1,3 +1,4 @@
+import sklearn.metrics
 from sklearn.neural_network import MLPClassifier, MLPRegressor
 import pandas as pd
 from base import Cumulator
@@ -7,7 +8,7 @@ from torch import nn
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, classification_report
 from sklearn.datasets import make_classification
 import numpy as np
 
@@ -30,7 +31,7 @@ def add_dataset_row(dataset, accuracy, consumption, used_algorithm, type_of_data
 
 
 def standard_neural_network(x_training_set, y_training_set, x_test_set, y_test_set, classification=True,
-                            hidden_layer_size=(8, 8, 8), activation='relu', solver='adam'):
+                            hidden_layer_size=(8, 8, 8), activation='relu', solver='adam', print_report=True):
     cumulator = Cumulator()
     if classification:
         alg = MLPClassifier(hidden_layer_size, activation=activation, solver=solver)
@@ -40,9 +41,11 @@ def standard_neural_network(x_training_set, y_training_set, x_test_set, y_test_s
     cumulator.run(alg.fit, X=x_training_set, y=y_training_set)
 
     accuracy = alg.score(x_test_set, y_test_set)
+    y_pred = alg.predict(x_test_set)
 
-    print(f'accuracy: {round(accuracy, 2)}')
-    cumulator.display_carbon_footprint()
+    if print_report:
+        print(classification_report(y_test_set, y_pred))
+    return round(accuracy, 2), cumulator.return_total_carbon_footprint()
 
 
 class LeNetModel(nn.Module):
@@ -69,7 +72,7 @@ class LeNetModel(nn.Module):
         return x
 
 
-def lenet_neural_network(dataset_train, dataset_test, num_epochs=10, learning_rate = 1e-3):
+def lenet_neural_network(dataset_train, dataset_test, num_epochs=10, learning_rate = 1e-3, print_report=True):
     cumulator = Cumulator()
     lenet_model = LeNetModel()
 
@@ -79,44 +82,58 @@ def lenet_neural_network(dataset_train, dataset_test, num_epochs=10, learning_ra
 
     # Training
     accuracy = cumulator.run(train, lenet_model, criterion, dataset_train, dataset_test, optimizer, num_epochs)
+    #y_pred = alg.predict(x_test_set)
 
-    print(f'accuracy: {round(accuracy, 2)}')
-    cumulator.display_carbon_footprint()
+    #if print_report:
+        #print(classification_report(y_test, y_pred))
+    return round(accuracy, 2), cumulator.return_total_carbon_footprint()
 
 
-def random_forest(X_train, X_test, y_train, y_test):
+def random_forest(X_train, X_test, y_train, y_test, n_trees=100, max_depth=None, print_report=True):
     cumulator = Cumulator()
     print('----------------RANDOM FOREST---------------')
-    clf = RandomForestClassifier(max_depth=2, random_state=0)
+    clf = RandomForestClassifier(n_estimators=n_trees, max_depth=max_depth, random_state=0)
     cumulator.run(clf.fit, X=X_train, y=y_train)
+    accuracy = clf.score(X_test, y_test)
+
     y_pred = clf.predict(X_test)
-    print(f'accuracy: {round(accuracy(y_pred, y_test), 2)}')
-    cumulator.display_carbon_footprint()
+
+    if print_report:
+        print(classification_report(y_test, y_pred))
+
+    return round(accuracy, 2), cumulator.return_total_carbon_footprint()
 
 
-def logistic_regression(X_train, X_test, y_train, y_test):
+def logistic_regression(X_train, X_test, y_train, y_test, print_report=True):
     cumulator = Cumulator()
     print('----------------LOGISTIC REGRESSION---------------')
     clf = LogisticRegression(random_state=0, max_iter=500)
     cumulator.run(clf.fit, X=X_train, y=y_train)
     y_pred = clf.predict(X_test)
-    print(f'accuracy: {round(accuracy(y_pred, y_test), 2)}')
-    cumulator.display_carbon_footprint()
+    # y_pred_rounded = rounder(y_train)(y_pred)
+    y_pred_rounded = np.round(abs(y_pred))
+    accuracy = accuracy_score(y_test, y_pred_rounded, normalize=True)
+
+    if print_report:
+        print(classification_report(y_test, y_pred_rounded))
+
+    return round(accuracy, 2), cumulator.return_total_carbon_footprint()
 
 
-def linear_regression(X_train, X_test, y_train, y_test):
+def linear_regression(X_train, X_test, y_train, y_test, print_report=True):
     cumulator = Cumulator()
     print('----------------LINEAR REGRESSION---------------')
     clf = LinearRegression()
     cumulator.run(clf.fit, X=X_train, y=y_train)
     y_pred = clf.predict(X_test)
-    y_pred_rounded = rounder(y_train)(y_pred)
-    print(f'accuracy: {round(accuracy(y_pred, y_test), 2)}')
-    cumulator.display_carbon_footprint()
+    #y_pred_rounded = rounder(y_train)(y_pred)
+    y_pred_rounded = np.round(abs(y_pred))
+    accuracy = accuracy_score(y_test, y_pred_rounded, normalize=True)
 
+    if print_report:
+        print(classification_report(y_test, y_pred_rounded))
 
-def accuracy(y_pred, y):
-    return (np.power(y_pred - y, 2)).mean()
+    return round(accuracy, 2), cumulator.return_total_carbon_footprint()
 
 
 # use rounder(y_train)(y_pred_to_round)
@@ -128,3 +145,5 @@ def rounder(y_train):
         return values[idx]
 
     return np.frompyfunc(f, 1, 1)
+
+
