@@ -14,6 +14,7 @@ import numpy as np
 
 from nn_utils import train
 
+ROUND_ACCURACY = 4
 
 def add_dataset_row(dataset, accuracy, consumption, used_algorithm, type_of_dataset='None'):
     points, features = dataset.shape
@@ -45,7 +46,7 @@ def standard_neural_network(x_training_set, y_training_set, x_test_set, y_test_s
 
     if print_report:
         print(classification_report(y_test_set, y_pred))
-    return round(accuracy, 2), cumulator.return_total_carbon_footprint()
+    return round(accuracy, ROUND_ACCURACY), cumulator.return_total_carbon_footprint()
 
 
 class LeNetModel(nn.Module):
@@ -86,7 +87,7 @@ def lenet_neural_network(dataset_train, dataset_test, num_epochs=10, learning_ra
 
     #if print_report:
         #print(classification_report(y_test, y_pred))
-    return round(accuracy, 2), cumulator.return_total_carbon_footprint()
+    return round(accuracy, ROUND_ACCURACY), cumulator.return_total_carbon_footprint()
 
 
 def random_forest(X_train, X_test, y_train, y_test, n_trees=100, max_depth=None, print_report=True):
@@ -101,7 +102,7 @@ def random_forest(X_train, X_test, y_train, y_test, n_trees=100, max_depth=None,
     if print_report:
         print(classification_report(y_test, y_pred))
 
-    return round(accuracy, 2), cumulator.return_total_carbon_footprint()
+    return round(accuracy, ROUND_ACCURACY), cumulator.return_total_carbon_footprint()
 
 
 def logistic_regression(X_train, X_test, y_train, y_test, print_report=True):
@@ -117,7 +118,7 @@ def logistic_regression(X_train, X_test, y_train, y_test, print_report=True):
     if print_report:
         print(classification_report(y_test, y_pred_rounded))
 
-    return round(accuracy, 2), cumulator.return_total_carbon_footprint()
+    return round(accuracy, ROUND_ACCURACY), cumulator.return_total_carbon_footprint()
 
 
 def linear_regression(X_train, X_test, y_train, y_test, print_report=True):
@@ -133,7 +134,7 @@ def linear_regression(X_train, X_test, y_train, y_test, print_report=True):
     if print_report:
         print(classification_report(y_test, y_pred_rounded))
 
-    return round(accuracy, 2), cumulator.return_total_carbon_footprint()
+    return round(accuracy, ROUND_ACCURACY), cumulator.return_total_carbon_footprint()
 
 
 # use rounder(y_train)(y_pred_to_round)
