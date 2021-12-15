@@ -1,6 +1,6 @@
 from sklearn.neural_network import MLPClassifier, MLPRegressor
 import pandas as pd
-from base_repository.base import Cumulator
+#from base_repository.base import Cumulator
 import torch
 import torch.nn.functional as F
 from torch import nn
@@ -15,6 +15,7 @@ from nn_utils import train
 ROUND_ACCURACY = 4
 
 def add_dataset_row(dataset, accuracy, consumption, used_algorithm, type_of_dataset='None'):
+    path='ml_dataset.csv'
     points, features = dataset.shape
 
     # MAX mutual Information between features and ML algorithm to use Computation
@@ -26,7 +27,10 @@ def add_dataset_row(dataset, accuracy, consumption, used_algorithm, type_of_data
 
     # open dataset
     row = pd.DataFrame(new_row, index=[0])
-    row.to_csv('ml_dataset.csv', mode='a', header=False)
+    row.to_csv(path, mode='a', header=False)
+    df.read_csv(path)
+    df=df.reset_index(drop=True)
+    df.to_csv(path)
 
 
 def standard_neural_network(x_training_set, y_training_set, x_test_set, y_test_set, classification=True,
@@ -144,5 +148,6 @@ def rounder(y_train):
         return values[idx]
 
     return np.frompyfunc(f, 1, 1)
+
 
 
