@@ -9,21 +9,23 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
+import os 
+
+rootdir =  os.path.dirname(__file__)
 
 from nn_utils import train
 
 ROUND_ACCURACY = 4
 
-def add_dataset_row(dataset, accuracy, consumption, used_algorithm, type_of_dataset='None'):
-    path='ml_dataset.csv'
+def add_dataset_row(dataset, F1, time, used_algorithm, max_corr, type_of_dataset='None'):
+    path=rootdir+"/ml_dataset.csv"
     points, features = dataset.shape
 
     # MAX mutual Information between features and ML algorithm to use Computation
     # HERE
     #
 
-    new_row = {'features': features, 'points': points, 'type': type_of_dataset, 'algo': used_algorithm, 'max_mut': 7,
-               'accuracy': accuracy, 'consumption': consumption}
+    new_row = {'features': features, 'points': points, 'type': type_of_dataset, 'algo': used_algorithm, 'F1': F1, 'time': time, 'TDP':250, 'country':'Switzerland', 'max_corr': max_corr}
 
     # open dataset
     row = pd.DataFrame(new_row, index=[0])
