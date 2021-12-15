@@ -27,11 +27,10 @@ def add_dataset_row(dataset, accuracy, consumption, used_algorithm, type_of_data
 
     # open dataset
     row = pd.DataFrame(new_row, index=[0])
-    row.to_csv(path, mode='a', header=False)
     df=pd.read_csv(path)
+    df=pd.concat([df, row])
     df=df.reset_index(drop=True)
-    df.to_csv(path)
-
+    df.to_csv(path, index=False)
 
 def standard_neural_network(x_training_set, y_training_set, x_test_set, y_test_set, classification=True,
                             hidden_layer_size=(8, 8, 8), activation='relu', solver='adam', print_report=True):
@@ -49,7 +48,6 @@ def standard_neural_network(x_training_set, y_training_set, x_test_set, y_test_s
     if print_report:
         print(classification_report(y_test_set, y_pred))
     return round(accuracy, ROUND_ACCURACY), cumulator.return_total_carbon_footprint()
-
 
 class LeNetModel(nn.Module):
     def __init__(self, activation_function: torch.nn.functional = torch.nn.functional.relu):
@@ -74,8 +72,7 @@ class LeNetModel(nn.Module):
         x = self.fc3(x)
         return x
 
-
-def lenet_neural_network(dataset_train, dataset_test, num_epochs=10, learning_rate=1e-3, print_report=True):
+def lenet_neural_network(dataset_train, dataset_test, num_epochs=10, learning_rate = 1e-3, print_report=True):
     cumulator = Cumulator()
     lenet_model = LeNetModel()
 
@@ -85,10 +82,10 @@ def lenet_neural_network(dataset_train, dataset_test, num_epochs=10, learning_ra
 
     # Training
     accuracy = cumulator.run(train, lenet_model, criterion, dataset_train, dataset_test, optimizer, num_epochs)
-    # y_pred = alg.predict(x_test_set)
+    #y_pred = alg.predict(x_test_set)
 
-    # if print_report:
-    # print(classification_report(y_test, y_pred))
+    #if print_report:
+        #print(classification_report(y_test, y_pred))
     return round(accuracy, ROUND_ACCURACY), cumulator.return_total_carbon_footprint()
 
 
@@ -129,7 +126,7 @@ def linear_regression(X_train, X_test, y_train, y_test, print_report=True):
     clf = LinearRegression()
     cumulator.run(clf.fit, X=X_train, y=y_train)
     y_pred = clf.predict(X_test)
-    # y_pred_rounded = rounder(y_train)(y_pred)
+    #y_pred_rounded = rounder(y_train)(y_pred)
     y_pred_rounded = np.round(abs(y_pred))
     accuracy = accuracy_score(y_test, y_pred_rounded, normalize=True)
 
@@ -148,4 +145,6 @@ def rounder(y_train):
         return values[idx]
 
     return np.frompyfunc(f, 1, 1)
+
+
 
