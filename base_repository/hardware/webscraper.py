@@ -50,7 +50,7 @@ def scrape_cpu_popular():
     df.to_csv('cpu.csv', index=False)
 
 #function for processing dump of all gpus obtained in scrape_gpu_all
-def process_dump_gpu(path_dump, path_csv):
+def process_dump(path_dump, path_csv):
     with open(path_dump, 'r') as file:
         dump=json.load(file)
         data_list=[]
@@ -67,7 +67,39 @@ def process_dump_gpu(path_dump, path_csv):
         df.to_csv(path_csv, index=False)
         
 #It first obtains a dump of all GPUs whose TDP is known, and then calls process_dump_gpu for processing it and obtaing gpu.csv
-def scrape_gpu_all():
+def scrape_all(cpu=True):
+    if cpu:
+        hardware="cpu"
+    else:
+        hardware="gpu"
+    url=f"https://www.techpowerup.com/{hardware}-specs/?sort=name"
+    r=requests.get(url, headers=headers)
+    soup=BeautifulSoup(r.text, 'html.parser')
+
+    #Obtain all TDPs
+    TDP_options=soup.select('select#tdp > option')
+    TDP=[]
+    #options:'All','unkown' are not considered
+    for option in TDP_options[1:-1]:
+        tdp=option.getText().split()[0]
+        TDP.append(tdp)
+
+    sleep_minutes=20
+    dump=[]
+    for tdp in tqdm(TDP):
+        print(f'\nTDP:{tdp}\n')
+        url=f"https://www.techpowerup.com/{hardware}-specs/?tdp={tdp}%20W&sort=name"
+        r=requests.get(url, headers=headers)
+        print(url)
+        while r.status_code != 200:
+            time.sleep(sleep_minutes*60)
+            r=requests.get(url, headers=headers)
+        dump.append({'TDP':tdp, 'html':r.text})
+        with open(f'dump_{hardware}.json', 'w') as file:
+            file.write(json.dumps(dump))
+    process_dump(f'dump_{hardware}.json', f'{hardware}.csv')
+
+def scarpe_cpu_all():
     url="https://www.techpowerup.com/gpu-specs/?sort=name"
     r=requests.get(url, headers=headers)
     soup=BeautifulSoup(r.text, 'html.parser')
@@ -99,4 +131,5 @@ def scrape_gpu_all():
 
 #scrape_cpu_popular()
 #scrape_gpu_popular()
-#scarpe_gpu_all()
+#scrape_gpu_all()
+scrape_all(cpu=True)
