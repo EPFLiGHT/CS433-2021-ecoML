@@ -1,7 +1,7 @@
-hardware/dump.json
-datasets/creditcard.csv
-datasets/mnist/mnist_test.csv
-datasets/mnist/mnist_train.csv
-notebooks/.ipynb_checkpoints/
+base_repository/hardware/dump.json
+prediction_feature/datasets/creditcard.csv
+prediction_feature/datasets/mnist/mnist_test.csv
+prediction_feature/datasets/mnist/mnist_train.csv
+prediction_feature/notebooks/.ipynb_checkpoints/
 
 .ipynb_checkpoints/
