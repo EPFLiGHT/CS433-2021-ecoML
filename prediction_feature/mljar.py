@@ -50,7 +50,7 @@ def run_automl():
     listdir = os.listdir(dataset_dir)
     for index, file_csv in enumerate(listdir):
         print('\n\n\n\n\n\n\n\n DATASET: ' + str(index) + ' of ' + str(len(listdir)))
-        df = pd.read_csv(dataset_dir + file_csv, sep='[,;]', engine='python')
+        df = pd.read_csv(dataset_dir + file_csv, sep='[,]', engine='python')
         X_train, X_test, y_train, y_test = train_test_split(df[df.columns[:-1]], df[df.columns[-1]], test_size=0.25)
         automl = AutoML(algorithms=algorithm_list, eval_metric='f1', results_path=results_dir + file_csv.split('.')[0],
                         explain_level=1, top_models_to_improve=4, random_state=2, optuna_verbose=False)
@@ -60,11 +60,12 @@ def run_automl():
 
 def create_dataset():
     for dir in os.listdir(results_dir):
+        print(dir)
         df = pd.read_csv(results_dir + dir + '/leaderboard.csv')
         dataset = pd.read_csv(dataset_dir + dir + '.csv')
         max_corr = compute_max_corr(dataset)
         df.apply(lambda x: add_dataset_row(dataset, x['metric_value'], x['train_time'], x['model_type'], max_corr), axis=1)
 
 
-run_automl()
+#run_automl()
 create_dataset()
