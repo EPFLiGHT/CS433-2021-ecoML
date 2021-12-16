@@ -1,6 +1,6 @@
 from sklearn.neural_network import MLPClassifier, MLPRegressor
 import pandas as pd
-#from base_repository.base import Cumulator
+# from base_repository.base import Cumulator
 import torch
 import torch.nn.functional as F
 from torch import nn
@@ -9,30 +9,14 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
-import os 
+import os
 
-rootdir =  os.path.dirname(__file__)
+rootdir = os.path.dirname(__file__)
 
 from nn_utils import train
 
 ROUND_ACCURACY = 4
 
-def add_dataset_row(dataset, F1, time, used_algorithm, max_corr, type_of_dataset='None'):
-    path=rootdir+"/ml_dataset.csv"
-    points, features = dataset.shape
-
-    # MAX mutual Information between features and ML algorithm to use Computation
-    # HERE
-    #
-
-    new_row = {'features': features, 'points': points, 'type': type_of_dataset, 'algo': used_algorithm, 'F1': F1, 'time': time, 'TDP':250, 'country':'Switzerland', 'max_corr': max_corr}
-
-    # open dataset
-    row = pd.DataFrame(new_row, index=[0])
-    df=pd.read_csv(path)
-    df=pd.concat([df, row])
-    df=df.reset_index(drop=True)
-    df.to_csv(path, index=False)
 
 def standard_neural_network(x_training_set, y_training_set, x_test_set, y_test_set, classification=True,
                             hidden_layer_size=(8, 8, 8), activation='relu', solver='adam', print_report=True):
@@ -50,6 +34,7 @@ def standard_neural_network(x_training_set, y_training_set, x_test_set, y_test_s
     if print_report:
         print(classification_report(y_test_set, y_pred))
     return round(accuracy, ROUND_ACCURACY), cumulator.return_total_carbon_footprint()
+
 
 class LeNetModel(nn.Module):
     def __init__(self, activation_function: torch.nn.functional = torch.nn.functional.relu):
@@ -74,7 +59,8 @@ class LeNetModel(nn.Module):
         x = self.fc3(x)
         return x
 
-def lenet_neural_network(dataset_train, dataset_test, num_epochs=10, learning_rate = 1e-3, print_report=True):
+
+def lenet_neural_network(dataset_train, dataset_test, num_epochs=10, learning_rate=1e-3, print_report=True):
     cumulator = Cumulator()
     lenet_model = LeNetModel()
 
@@ -84,10 +70,10 @@ def lenet_neural_network(dataset_train, dataset_test, num_epochs=10, learning_ra
 
     # Training
     accuracy = cumulator.run(train, lenet_model, criterion, dataset_train, dataset_test, optimizer, num_epochs)
-    #y_pred = alg.predict(x_test_set)
+    # y_pred = alg.predict(x_test_set)
 
-    #if print_report:
-        #print(classification_report(y_test, y_pred))
+    # if print_report:
+    # print(classification_report(y_test, y_pred))
     return round(accuracy, ROUND_ACCURACY), cumulator.return_total_carbon_footprint()
 
 
@@ -128,7 +114,7 @@ def linear_regression(X_train, X_test, y_train, y_test, print_report=True):
     clf = LinearRegression()
     cumulator.run(clf.fit, X=X_train, y=y_train)
     y_pred = clf.predict(X_test)
-    #y_pred_rounded = rounder(y_train)(y_pred)
+    # y_pred_rounded = rounder(y_train)(y_pred)
     y_pred_rounded = np.round(abs(y_pred))
     accuracy = accuracy_score(y_test, y_pred_rounded, normalize=True)
 
@@ -147,6 +133,3 @@ def rounder(y_train):
         return values[idx]
 
     return np.frompyfunc(f, 1, 1)
-
-
-
