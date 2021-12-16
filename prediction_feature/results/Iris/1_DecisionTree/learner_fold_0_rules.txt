@@ -1,0 +1,6 @@
+if (Id > 100.5) then class: Iris-virginica (proba: 100.0%) | based on 29 samples
+
+if (Id <= 100.5) and (PetalLengthCm > 2.45) then class: Iris-versicolor (proba: 100.0%) | based on 29 samples
+
+if (Id <= 100.5) and (PetalLengthCm <= 2.45) then class: Iris-setosa (proba: 100.0%) | based on 26 samples
+

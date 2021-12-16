@@ -1,0 +1,155 @@
+{
+    "uid": "a2dd55a4-4502-4dfb-a466-da4093a8cd01",
+    "name": "2_Linear",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        42.87084932937791,
+                        0.7551214030428045,
+                        0.4287879743930874,
+                        1.7236002734086378,
+                        0.740893313841022
+                    ],
+                    "mean": [
+                        77.08333333333333,
+                        5.825000000000001,
+                        3.0583333333333336,
+                        3.8273809523809526,
+                        1.2190476190476194
+                    ],
+                    "var": [
+                        1837.9097222222224,
+                        0.5702083333333337,
+                        0.18385912698412699,
+                        2.970797902494331,
+                        0.5489229024943311
+                    ],
+                    "n_samples_seen": 84,
+                    "n_features_in": 5,
+                    "columns": [
+                        "Id",
+                        "SepalLengthCm",
+                        "SepalWidthCm",
+                        "PetalLengthCm",
+                        "PetalWidthCm"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "Iris-setosa": 0,
+                "Iris-versicolor": 1,
+                "Iris-virginica": 2
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Id": [
+                        "scale_normal"
+                    ],
+                    "SepalLengthCm": [
+                        "scale_normal"
+                    ],
+                    "SepalWidthCm": [
+                        "scale_normal"
+                    ],
+                    "PetalLengthCm": [
+                        "scale_normal"
+                    ],
+                    "PetalWidthCm": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "421a7b1a-1b38-4266-ada2-6cc08584f178",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "seed": 3,
+                "num_class": 3,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Id": [
+                    "scale_normal"
+                ],
+                "SepalLengthCm": [
+                    "scale_normal"
+                ],
+                "SepalWidthCm": [
+                    "scale_normal"
+                ],
+                "PetalLengthCm": [
+                    "scale_normal"
+                ],
+                "PetalWidthCm": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/Iris/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/Iris/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/Iris"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "seed": 3,
+            "num_class": 3,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "multiclass_classification",
+        "explain_level": 1,
+        "name": "2_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_Linear/learner_fold_0.linear"
+    ],
+    "predictions_fname": "2_Linear/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.9642857142857143,
+    "train_time": 0.31392717361450195,
+    "is_stacked": false
+}

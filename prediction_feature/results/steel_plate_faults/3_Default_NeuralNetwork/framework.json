@@ -1,0 +1,318 @@
+{
+    "uid": "0e4d7929-7461-4c89-95ed-7ad4ab2a3080",
+    "name": "3_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        517.7542050013094,
+                        496.89935806738265,
+                        1821140.6536637573,
+                        1821160.038812249,
+                        5851.5892128929045,
+                        359.51636176457555,
+                        557.7298696458753,
+                        539982.5173143694,
+                        31.763564962213096,
+                        19.45531270288865,
+                        144.63948804300628,
+                        0.49178122526679197,
+                        55.21536221443598,
+                        0.273487017955201,
+                        0.24085540766420976,
+                        0.23228855032990223,
+                        0.4818776738041804,
+                        0.7710508335038754,
+                        0.4734060129365952,
+                        0.44847736898228324,
+                        0.33815507895149693
+                    ],
+                    "mean": [
+                        567.8102658111824,
+                        613.545371219065,
+                        1651891.8634280476,
+                        1651950.5343721358,
+                        1807.147571035747,
+                        109.24839596700275,
+                        85.12923923006416,
+                        194354.67002749772,
+                        85.27222731439046,
+                        130.46654445462877,
+                        1457.6874427131072,
+                        0.5902841429880843,
+                        78.9211732355637,
+                        0.5744967002749771,
+                        0.615296241979835,
+                        0.8164450045829514,
+                        0.5751604032997251,
+                        2.4750099908340975,
+                        1.3306952337305225,
+                        1.3902065077910175,
+                        0.5823793767186067
+                    ],
+                    "var": [
+                        268069.41679653793,
+                        246908.97204777694,
+                        3316553280426.857,
+                        3316623886966.632,
+                        34241096.316444606,
+                        129252.01437643715,
+                        311062.607495205,
+                        291581119005.1633,
+                        1008.9240591087315,
+                        378.5091923671805,
+                        20920.58150134296,
+                        0.2418487735249072,
+                        3048.7362244713645,
+                        0.07479514899002841,
+                        0.05801132740109268,
+                        0.05395797061436752,
+                        0.2322060925109281,
+                        0.594519387847021,
+                        0.2241132530845237,
+                        0.20113195048927104,
+                        0.11434885742069312
+                    ],
+                    "n_samples_seen": 1091,
+                    "n_features_in": 21,
+                    "columns": [
+                        "\"V1\"",
+                        "\"V2\"",
+                        "\"V3\"",
+                        "\"V4\"",
+                        "\"V5\"",
+                        "\"V6\"",
+                        "\"V7\"",
+                        "\"V8\"",
+                        "\"V9\"",
+                        "\"V10\"",
+                        "\"V11\"",
+                        "\"V13\"",
+                        "\"V14\"",
+                        "\"V17\"",
+                        "\"V19\"",
+                        "\"V20\"",
+                        "\"V21\"",
+                        "\"V22\"",
+                        "\"V23\"",
+                        "\"V24\"",
+                        "\"V27\""
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "1": 0,
+                "2": 1
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\"V1\"": [
+                        "scale_normal"
+                    ],
+                    "\"V2\"": [
+                        "scale_normal"
+                    ],
+                    "\"V3\"": [
+                        "scale_normal"
+                    ],
+                    "\"V4\"": [
+                        "scale_normal"
+                    ],
+                    "\"V5\"": [
+                        "scale_normal"
+                    ],
+                    "\"V6\"": [
+                        "scale_normal"
+                    ],
+                    "\"V7\"": [
+                        "scale_normal"
+                    ],
+                    "\"V8\"": [
+                        "scale_normal"
+                    ],
+                    "\"V9\"": [
+                        "scale_normal"
+                    ],
+                    "\"V10\"": [
+                        "scale_normal"
+                    ],
+                    "\"V11\"": [
+                        "scale_normal"
+                    ],
+                    "\"V13\"": [
+                        "scale_normal"
+                    ],
+                    "\"V14\"": [
+                        "scale_normal"
+                    ],
+                    "\"V17\"": [
+                        "scale_normal"
+                    ],
+                    "\"V19\"": [
+                        "scale_normal"
+                    ],
+                    "\"V20\"": [
+                        "scale_normal"
+                    ],
+                    "\"V21\"": [
+                        "scale_normal"
+                    ],
+                    "\"V22\"": [
+                        "scale_normal"
+                    ],
+                    "\"V23\"": [
+                        "scale_normal"
+                    ],
+                    "\"V24\"": [
+                        "scale_normal"
+                    ],
+                    "\"V27\"": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "304e43fa-5437-4096-9914-12dc4c9c9f12",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 3,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\"V1\"": [
+                    "scale_normal"
+                ],
+                "\"V2\"": [
+                    "scale_normal"
+                ],
+                "\"V3\"": [
+                    "scale_normal"
+                ],
+                "\"V4\"": [
+                    "scale_normal"
+                ],
+                "\"V5\"": [
+                    "scale_normal"
+                ],
+                "\"V6\"": [
+                    "scale_normal"
+                ],
+                "\"V7\"": [
+                    "scale_normal"
+                ],
+                "\"V8\"": [
+                    "scale_normal"
+                ],
+                "\"V9\"": [
+                    "scale_normal"
+                ],
+                "\"V10\"": [
+                    "scale_normal"
+                ],
+                "\"V11\"": [
+                    "scale_normal"
+                ],
+                "\"V13\"": [
+                    "scale_normal"
+                ],
+                "\"V14\"": [
+                    "scale_normal"
+                ],
+                "\"V17\"": [
+                    "scale_normal"
+                ],
+                "\"V19\"": [
+                    "scale_normal"
+                ],
+                "\"V20\"": [
+                    "scale_normal"
+                ],
+                "\"V21\"": [
+                    "scale_normal"
+                ],
+                "\"V22\"": [
+                    "scale_normal"
+                ],
+                "\"V23\"": [
+                    "scale_normal"
+                ],
+                "\"V24\"": [
+                    "scale_normal"
+                ],
+                "\"V27\"": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/steel_plate_faults/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/steel_plate_faults/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/steel_plate_faults"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 3,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "3_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Default_NeuralNetwork/learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "3_Default_NeuralNetwork/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.9843749999999999,
+    "train_time": 1.662498950958252,
+    "is_stacked": false,
+    "threshold": 0.4823628712321614
+}

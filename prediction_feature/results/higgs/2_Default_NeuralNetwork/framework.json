@@ -1,0 +1,388 @@
+{
+    "uid": "8f6df159-0475-4640-a088-32ec101ce7aa",
+    "name": "2_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        72332.99717209957,
+                        98.24266344286245,
+                        406.03503600206324,
+                        35.303954727634256,
+                        40.9738823878054,
+                        63.97501616648331,
+                        454.5199925394369,
+                        657.0339815537257,
+                        453.06999777025544,
+                        0.7844788446720996,
+                        22.769361505415887,
+                        115.99229584605467,
+                        0.8437680653428329,
+                        453.64005093838466,
+                        22.512097657644293,
+                        1.8170981002447353,
+                        22.122994031638566,
+                        1.8176373751720871,
+                        33.291002516905344,
+                        1.812756887080939,
+                        126.82115592607555,
+                        0.9778848635921648,
+                        533.0586654898912,
+                        489.34266427116734,
+                        489.33875239574854,
+                        480.0175805866257,
+                        453.4315095284829,
+                        453.43384865899833
+                    ],
+                    "mean": [
+                        225170.50390755557,
+                        73.22812456533335,
+                        -48.805675278222225,
+                        49.134899996444446,
+                        81.13958693688886,
+                        58.100433728,
+                        -708.326847025778,
+                        -601.4548499128889,
+                        -709.2561413902222,
+                        2.371573603555556,
+                        18.941146453333335,
+                        158.66948227555554,
+                        1.4369467662222222,
+                        -708.8889993315556,
+                        38.76948071822222,
+                        -0.002879615999999999,
+                        46.67187665777778,
+                        0.03906833066666667,
+                        41.782973404444434,
+                        -0.00864863288888889,
+                        209.96165078044444,
+                        0.9794986666666666,
+                        -348.26920453688894,
+                        -399.28273938488894,
+                        -399.2876032568888,
+                        -692.2203104071111,
+                        -709.0231732053334,
+                        -709.0215120426667
+                    ],
+                    "var": [
+                        5232062479.898965,
+                        9651.620920347541,
+                        164864.45046119677,
+                        1246.369219410849,
+                        1678.8590379297098,
+                        4092.8026935018006,
+                        206588.42361804974,
+                        431693.65291634155,
+                        205272.42287953928,
+                        0.6154070577380721,
+                        518.4438233643149,
+                        13454.212695638671,
+                        0.7119445480923872,
+                        205789.29581538023,
+                        506.79454094731364,
+                        3.301845505913026,
+                        489.42686492391556,
+                        3.303805627622475,
+                        1108.2908485805979,
+                        3.2860875316593763,
+                        16083.605590425968,
+                        0.9562588064426666,
+                        284151.5408538637,
+                        239456.2430760044,
+                        239452.41459622773,
+                        230416.8776722377,
+                        205600.13383327864,
+                        205602.2551097114
+                    ],
+                    "n_samples_seen": 140625,
+                    "n_features_in": 28,
+                    "columns": [
+                        "Id",
+                        "PRI_jet_all_pt",
+                        "DER_mass_MMC",
+                        "DER_mass_transverse_met_lep",
+                        "DER_mass_vis",
+                        "DER_pt_h",
+                        "DER_deltaeta_jet_jet",
+                        "DER_mass_jet_jet",
+                        "DER_prodeta_jet_jet",
+                        "DER_deltar_tau_lep",
+                        "DER_pt_tot",
+                        "DER_sum_pt",
+                        "DER_pt_ratio_lep_tau",
+                        "DER_lep_eta_centrality",
+                        "PRI_tau_pt",
+                        "PRI_tau_phi",
+                        "PRI_lep_pt",
+                        "PRI_lep_phi",
+                        "PRI_met",
+                        "PRI_met_phi",
+                        "PRI_met_sumet",
+                        "PRI_jet_num",
+                        "PRI_jet_leading_pt",
+                        "PRI_jet_leading_eta",
+                        "PRI_jet_leading_phi",
+                        "PRI_jet_subleading_pt",
+                        "PRI_jet_subleading_eta",
+                        "PRI_jet_subleading_phi"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "b": 0,
+                "s": 1
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "Id": [
+                        "scale_normal"
+                    ],
+                    "PRI_jet_all_pt": [
+                        "scale_normal"
+                    ],
+                    "DER_mass_MMC": [
+                        "scale_normal"
+                    ],
+                    "DER_mass_transverse_met_lep": [
+                        "scale_normal"
+                    ],
+                    "DER_mass_vis": [
+                        "scale_normal"
+                    ],
+                    "DER_pt_h": [
+                        "scale_normal"
+                    ],
+                    "DER_deltaeta_jet_jet": [
+                        "scale_normal"
+                    ],
+                    "DER_mass_jet_jet": [
+                        "scale_normal"
+                    ],
+                    "DER_prodeta_jet_jet": [
+                        "scale_normal"
+                    ],
+                    "DER_deltar_tau_lep": [
+                        "scale_normal"
+                    ],
+                    "DER_pt_tot": [
+                        "scale_normal"
+                    ],
+                    "DER_sum_pt": [
+                        "scale_normal"
+                    ],
+                    "DER_pt_ratio_lep_tau": [
+                        "scale_normal"
+                    ],
+                    "DER_lep_eta_centrality": [
+                        "scale_normal"
+                    ],
+                    "PRI_tau_pt": [
+                        "scale_normal"
+                    ],
+                    "PRI_tau_phi": [
+                        "scale_normal"
+                    ],
+                    "PRI_lep_pt": [
+                        "scale_normal"
+                    ],
+                    "PRI_lep_phi": [
+                        "scale_normal"
+                    ],
+                    "PRI_met": [
+                        "scale_normal"
+                    ],
+                    "PRI_met_phi": [
+                        "scale_normal"
+                    ],
+                    "PRI_met_sumet": [
+                        "scale_normal"
+                    ],
+                    "PRI_jet_num": [
+                        "scale_normal"
+                    ],
+                    "PRI_jet_leading_pt": [
+                        "scale_normal"
+                    ],
+                    "PRI_jet_leading_eta": [
+                        "scale_normal"
+                    ],
+                    "PRI_jet_leading_phi": [
+                        "scale_normal"
+                    ],
+                    "PRI_jet_subleading_pt": [
+                        "scale_normal"
+                    ],
+                    "PRI_jet_subleading_eta": [
+                        "scale_normal"
+                    ],
+                    "PRI_jet_subleading_phi": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "f8c0a338-4e6b-4df6-9115-45ffd4e1df78",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 2,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Id": [
+                    "scale_normal"
+                ],
+                "PRI_jet_all_pt": [
+                    "scale_normal"
+                ],
+                "DER_mass_MMC": [
+                    "scale_normal"
+                ],
+                "DER_mass_transverse_met_lep": [
+                    "scale_normal"
+                ],
+                "DER_mass_vis": [
+                    "scale_normal"
+                ],
+                "DER_pt_h": [
+                    "scale_normal"
+                ],
+                "DER_deltaeta_jet_jet": [
+                    "scale_normal"
+                ],
+                "DER_mass_jet_jet": [
+                    "scale_normal"
+                ],
+                "DER_prodeta_jet_jet": [
+                    "scale_normal"
+                ],
+                "DER_deltar_tau_lep": [
+                    "scale_normal"
+                ],
+                "DER_pt_tot": [
+                    "scale_normal"
+                ],
+                "DER_sum_pt": [
+                    "scale_normal"
+                ],
+                "DER_pt_ratio_lep_tau": [
+                    "scale_normal"
+                ],
+                "DER_lep_eta_centrality": [
+                    "scale_normal"
+                ],
+                "PRI_tau_pt": [
+                    "scale_normal"
+                ],
+                "PRI_tau_phi": [
+                    "scale_normal"
+                ],
+                "PRI_lep_pt": [
+                    "scale_normal"
+                ],
+                "PRI_lep_phi": [
+                    "scale_normal"
+                ],
+                "PRI_met": [
+                    "scale_normal"
+                ],
+                "PRI_met_phi": [
+                    "scale_normal"
+                ],
+                "PRI_met_sumet": [
+                    "scale_normal"
+                ],
+                "PRI_jet_num": [
+                    "scale_normal"
+                ],
+                "PRI_jet_leading_pt": [
+                    "scale_normal"
+                ],
+                "PRI_jet_leading_eta": [
+                    "scale_normal"
+                ],
+                "PRI_jet_leading_phi": [
+                    "scale_normal"
+                ],
+                "PRI_jet_subleading_pt": [
+                    "scale_normal"
+                ],
+                "PRI_jet_subleading_eta": [
+                    "scale_normal"
+                ],
+                "PRI_jet_subleading_phi": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/higgs/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/higgs/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/higgs"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 2,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "2_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_Default_NeuralNetwork/learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "2_Default_NeuralNetwork/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.742540796292124,
+    "train_time": 186.9827582836151,
+    "is_stacked": false,
+    "threshold": 0.4823668418731855
+}

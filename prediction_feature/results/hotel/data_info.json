@@ -1,0 +1,139 @@
+{
+    "columns": [
+        "reservation_status_date",
+        "is_canceled",
+        "lead_time",
+        "arrival_date_year",
+        "arrival_date_month",
+        "arrival_date_week_number",
+        "arrival_date_day_of_month",
+        "stays_in_weekend_nights",
+        "stays_in_week_nights",
+        "adults",
+        "children",
+        "babies",
+        "meal",
+        "country",
+        "market_segment",
+        "distribution_channel",
+        "is_repeated_guest",
+        "previous_cancellations",
+        "previous_bookings_not_canceled",
+        "reserved_room_type",
+        "assigned_room_type",
+        "booking_changes",
+        "deposit_type",
+        "agent",
+        "company",
+        "days_in_waiting_list",
+        "customer_type",
+        "adr",
+        "required_car_parking_spaces",
+        "total_of_special_requests",
+        "reservation_status"
+    ],
+    "rows": 89542,
+    "cols": 31,
+    "target_is_numeric": false,
+    "columns_info": {
+        "reservation_status_date": [
+            "categorical",
+            "many_categories"
+        ],
+        "is_canceled": [],
+        "lead_time": [
+            "scale"
+        ],
+        "arrival_date_year": [
+            "scale"
+        ],
+        "arrival_date_month": [
+            "categorical",
+            "few_categories"
+        ],
+        "arrival_date_week_number": [
+            "scale"
+        ],
+        "arrival_date_day_of_month": [
+            "scale"
+        ],
+        "stays_in_weekend_nights": [
+            "scale"
+        ],
+        "stays_in_week_nights": [
+            "scale"
+        ],
+        "adults": [
+            "scale"
+        ],
+        "children": [
+            "missing_values"
+        ],
+        "babies": [],
+        "meal": [
+            "categorical",
+            "few_categories"
+        ],
+        "country": [
+            "missing_values",
+            "categorical",
+            "many_categories"
+        ],
+        "market_segment": [
+            "categorical",
+            "few_categories"
+        ],
+        "distribution_channel": [
+            "categorical",
+            "few_categories"
+        ],
+        "is_repeated_guest": [],
+        "previous_cancellations": [],
+        "previous_bookings_not_canceled": [],
+        "reserved_room_type": [
+            "categorical",
+            "few_categories"
+        ],
+        "assigned_room_type": [
+            "categorical",
+            "few_categories"
+        ],
+        "booking_changes": [],
+        "deposit_type": [
+            "categorical",
+            "few_categories"
+        ],
+        "agent": [
+            "missing_values",
+            "scale"
+        ],
+        "company": [
+            "missing_values",
+            "scale"
+        ],
+        "days_in_waiting_list": [
+            "scale"
+        ],
+        "customer_type": [
+            "categorical",
+            "few_categories"
+        ],
+        "adr": [
+            "scale"
+        ],
+        "required_car_parking_spaces": [],
+        "total_of_special_requests": [
+            "scale"
+        ],
+        "reservation_status": [
+            "categorical",
+            "few_categories"
+        ]
+    },
+    "target_info": [
+        "convert_0_1"
+    ],
+    "n_features": 31,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

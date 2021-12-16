@@ -1,0 +1,50 @@
+{
+    "columns": [
+        "fixed acidity",
+        "volatile acidity",
+        "citric acid",
+        "residual sugar",
+        "chlorides",
+        "free sulfur dioxide",
+        "total sulfur dioxide",
+        "density",
+        "pH",
+        "sulphates",
+        "alcohol"
+    ],
+    "rows": 3673,
+    "cols": 11,
+    "target_is_numeric": true,
+    "columns_info": {
+        "fixed acidity": [
+            "scale"
+        ],
+        "volatile acidity": [],
+        "citric acid": [],
+        "residual sugar": [
+            "scale"
+        ],
+        "chlorides": [],
+        "free sulfur dioxide": [
+            "scale"
+        ],
+        "total sulfur dioxide": [
+            "scale"
+        ],
+        "density": [
+            "scale"
+        ],
+        "pH": [
+            "scale"
+        ],
+        "sulphates": [],
+        "alcohol": [
+            "scale"
+        ]
+    },
+    "target_info": [],
+    "n_features": 11,
+    "is_sample_weighted": false,
+    "n_classes": 7,
+    "num_class": 7
+}

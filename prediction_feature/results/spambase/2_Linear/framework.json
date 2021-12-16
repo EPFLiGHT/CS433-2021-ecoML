@@ -1,0 +1,177 @@
+{
+    "uid": "660060b0-da9e-404b-abbc-d62a91022cb3",
+    "name": "2_Linear",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        0.8521402025763988,
+                        1.8625885597929341,
+                        1.1792248378225456,
+                        1.6177721507929614,
+                        3.443033371484435,
+                        29.090572218553973,
+                        233.62365309222676,
+                        639.816909884699
+                    ],
+                    "mean": [
+                        0.531012756088133,
+                        1.6915848473134902,
+                        0.7922381136451488,
+                        0.5271356783919598,
+                        0.7817085427135678,
+                        4.882258214147662,
+                        52.92694240432934,
+                        284.3316582914573
+                    ],
+                    "var": [
+                        0.7261429248469459,
+                        3.469236143071517,
+                        1.390571218137609,
+                        2.6171867318812847,
+                        11.854478797155474,
+                        846.2613920029042,
+                        54580.01128415711,
+                        409365.6781744051
+                    ],
+                    "n_samples_seen": 2587,
+                    "n_features_in": 8,
+                    "columns": [
+                        "\"word_freq_will\"",
+                        "\"word_freq_you\"",
+                        "\"word_freq_your\"",
+                        "\"word_freq_hp\"",
+                        "\"word_freq_george\"",
+                        "\"capital_run_length_average\"",
+                        "\"capital_run_length_longest\"",
+                        "\"capital_run_length_total\""
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\"word_freq_will\"": [
+                        "scale_normal"
+                    ],
+                    "\"word_freq_you\"": [
+                        "scale_normal"
+                    ],
+                    "\"word_freq_your\"": [
+                        "scale_normal"
+                    ],
+                    "\"word_freq_hp\"": [
+                        "scale_normal"
+                    ],
+                    "\"word_freq_george\"": [
+                        "scale_normal"
+                    ],
+                    "\"capital_run_length_average\"": [
+                        "scale_normal"
+                    ],
+                    "\"capital_run_length_longest\"": [
+                        "scale_normal"
+                    ],
+                    "\"capital_run_length_total\"": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "ac6c97dc-a2eb-4ed0-b978-bb775a514bf5",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 3,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\"word_freq_will\"": [
+                    "scale_normal"
+                ],
+                "\"word_freq_you\"": [
+                    "scale_normal"
+                ],
+                "\"word_freq_your\"": [
+                    "scale_normal"
+                ],
+                "\"word_freq_hp\"": [
+                    "scale_normal"
+                ],
+                "\"word_freq_george\"": [
+                    "scale_normal"
+                ],
+                "\"capital_run_length_average\"": [
+                    "scale_normal"
+                ],
+                "\"capital_run_length_longest\"": [
+                    "scale_normal"
+                ],
+                "\"capital_run_length_total\"": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/spambase/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/spambase/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/spambase"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 3,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "2_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_Linear/learner_fold_0.linear"
+    ],
+    "predictions_fname": "2_Linear/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.8882175226586103,
+    "train_time": 1.8129489421844482,
+    "is_stacked": false,
+    "threshold": 0.48274783129414817
+}

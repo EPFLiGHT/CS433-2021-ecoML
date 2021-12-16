@@ -1,0 +1,274 @@
+{
+    "uid": "acf84fd1-d584-4c5c-abb2-1cfff2b2447d",
+    "name": "2_Linear",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "\"top-left-square\"": {
+                            "b": 0,
+                            "o": 1,
+                            "x": 2
+                        },
+                        "\"top-middle-square\"": {
+                            "b": 0,
+                            "o": 1,
+                            "x": 2
+                        },
+                        "\"top-right-square\"": {
+                            "b": 0,
+                            "o": 1,
+                            "x": 2
+                        },
+                        "\"middle-left-square\"": {
+                            "b": 0,
+                            "o": 1,
+                            "x": 2
+                        },
+                        "\"middle-middle-square\"": {
+                            "b": 0,
+                            "o": 1,
+                            "x": 2
+                        },
+                        "\"middle-right-square\"": {
+                            "b": 0,
+                            "o": 1,
+                            "x": 2
+                        },
+                        "\"bottom-left-square\"": {
+                            "b": 0,
+                            "o": 1,
+                            "x": 2
+                        },
+                        "\"bottom-middle-square\"": {
+                            "b": 0,
+                            "o": 1,
+                            "x": 2
+                        },
+                        "\"bottom-right-square\"": {
+                            "b": 0,
+                            "o": 1,
+                            "x": 2
+                        }
+                    },
+                    "columns": [
+                        "\"top-left-square\"",
+                        "\"top-middle-square\"",
+                        "\"top-right-square\"",
+                        "\"middle-left-square\"",
+                        "\"middle-middle-square\"",
+                        "\"middle-right-square\"",
+                        "\"bottom-left-square\"",
+                        "\"bottom-middle-square\"",
+                        "\"bottom-right-square\""
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        0.7662051834968744,
+                        0.801742481227607,
+                        0.7742254869761536,
+                        0.7972764441803611,
+                        0.7545941893842169,
+                        0.7937151207286105,
+                        0.8003968695390947,
+                        0.7957735123299124,
+                        0.7665139949679302
+                    ],
+                    "mean": [
+                        1.211895910780669,
+                        1.137546468401487,
+                        1.2342007434944238,
+                        1.1431226765799256,
+                        1.288104089219331,
+                        1.161710037174721,
+                        1.1895910780669146,
+                        1.1449814126394051,
+                        1.2063197026022305
+                    ],
+                    "var": [
+                        0.587070383217479,
+                        0.6427910062049998,
+                        0.5994251046834622,
+                        0.6356497284448805,
+                        0.5694123906524233,
+                        0.6299836928732327,
+                        0.6406351487679827,
+                        0.6332554829258854,
+                        0.587543704481696
+                    ],
+                    "n_samples_seen": 538,
+                    "n_features_in": 9,
+                    "columns": [
+                        "\"top-left-square\"",
+                        "\"top-middle-square\"",
+                        "\"top-right-square\"",
+                        "\"middle-left-square\"",
+                        "\"middle-middle-square\"",
+                        "\"middle-right-square\"",
+                        "\"bottom-left-square\"",
+                        "\"bottom-middle-square\"",
+                        "\"bottom-right-square\""
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "negative": 0,
+                "positive": 1
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\"top-left-square\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"top-middle-square\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"top-right-square\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"middle-left-square\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"middle-middle-square\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"middle-right-square\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"bottom-left-square\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"bottom-middle-square\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"bottom-right-square\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "3907ac3a-31a5-4e15-9c59-eaddd60e3ed7",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 3,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\"top-left-square\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"top-middle-square\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"top-right-square\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"middle-left-square\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"middle-middle-square\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"middle-right-square\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"bottom-left-square\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"bottom-middle-square\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"bottom-right-square\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/tic_tac_toe/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/tic_tac_toe/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/tic_tac_toe"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 3,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "2_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_Linear/learner_fold_0.linear"
+    ],
+    "predictions_fname": "2_Linear/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.7737226277372262,
+    "train_time": 0.9203639030456543,
+    "is_stacked": false,
+    "threshold": 0.5342475738604999
+}

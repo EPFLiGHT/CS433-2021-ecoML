@@ -1,0 +1,212 @@
+{
+    "uid": "e242ee0b-d32d-46d6-8f31-6a45e2025365",
+    "name": "3_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        9.379547801201149,
+                        0.46556138676257364,
+                        1.034374591648379,
+                        18.464169922697746,
+                        53.63865420490614,
+                        0.5434733864682869,
+                        23.499625263889904,
+                        1.2460385671104421,
+                        0.6106324363463991,
+                        1.0461496383137283,
+                        0.6000288343705863
+                    ],
+                    "mean": [
+                        54.62352941176471,
+                        0.6823529411764706,
+                        0.8647058823529412,
+                        132.18235294117648,
+                        247.33529411764707,
+                        0.5411764705882353,
+                        147.2235294117647,
+                        1.1123529411764705,
+                        1.3647058823529412,
+                        0.7705882352941177,
+                        2.323529411764706
+                    ],
+                    "var": [
+                        87.97591695501731,
+                        0.21674740484429067,
+                        1.0699307958477509,
+                        340.92557093425603,
+                        2877.105224913495,
+                        0.2953633217993079,
+                        552.2323875432526,
+                        1.5526121107266437,
+                        0.37287197231833913,
+                        1.0944290657439446,
+                        0.36003460207612453
+                    ],
+                    "n_samples_seen": 170,
+                    "n_features_in": 11,
+                    "columns": [
+                        "age",
+                        "sex",
+                        "cp",
+                        "trestbps",
+                        "chol",
+                        "restecg",
+                        "thalach",
+                        "oldpeak",
+                        "slope",
+                        "ca",
+                        "thal"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "scale_normal"
+                    ],
+                    "sex": [
+                        "scale_normal"
+                    ],
+                    "cp": [
+                        "scale_normal"
+                    ],
+                    "trestbps": [
+                        "scale_normal"
+                    ],
+                    "chol": [
+                        "scale_normal"
+                    ],
+                    "restecg": [
+                        "scale_normal"
+                    ],
+                    "thalach": [
+                        "scale_normal"
+                    ],
+                    "oldpeak": [
+                        "scale_normal"
+                    ],
+                    "slope": [
+                        "scale_normal"
+                    ],
+                    "ca": [
+                        "scale_normal"
+                    ],
+                    "thal": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "cc8d73c3-bb13-414c-b169-53a54335144b",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 3,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "age": [
+                    "scale_normal"
+                ],
+                "sex": [
+                    "scale_normal"
+                ],
+                "cp": [
+                    "scale_normal"
+                ],
+                "trestbps": [
+                    "scale_normal"
+                ],
+                "chol": [
+                    "scale_normal"
+                ],
+                "restecg": [
+                    "scale_normal"
+                ],
+                "thalach": [
+                    "scale_normal"
+                ],
+                "oldpeak": [
+                    "scale_normal"
+                ],
+                "slope": [
+                    "scale_normal"
+                ],
+                "ca": [
+                    "scale_normal"
+                ],
+                "thal": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/heart/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/heart/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/heart"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 3,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "3_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Default_NeuralNetwork/learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "3_Default_NeuralNetwork/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.8405797101449276,
+    "train_time": 0.7290709018707275,
+    "is_stacked": false,
+    "threshold": 0.866331354605091
+}

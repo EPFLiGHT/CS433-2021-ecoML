@@ -1,0 +1,133 @@
+{
+    "columns": [
+        "Id",
+        "PRI_jet_all_pt",
+        "DER_mass_MMC",
+        "DER_mass_transverse_met_lep",
+        "DER_mass_vis",
+        "DER_pt_h",
+        "DER_deltaeta_jet_jet",
+        "DER_mass_jet_jet",
+        "DER_prodeta_jet_jet",
+        "DER_deltar_tau_lep",
+        "DER_pt_tot",
+        "DER_sum_pt",
+        "DER_pt_ratio_lep_tau",
+        "DER_met_phi_centrality",
+        "DER_lep_eta_centrality",
+        "PRI_tau_pt",
+        "PRI_tau_eta",
+        "PRI_tau_phi",
+        "PRI_lep_pt",
+        "PRI_lep_eta",
+        "PRI_lep_phi",
+        "PRI_met",
+        "PRI_met_phi",
+        "PRI_met_sumet",
+        "PRI_jet_num",
+        "PRI_jet_leading_pt",
+        "PRI_jet_leading_eta",
+        "PRI_jet_leading_phi",
+        "PRI_jet_subleading_pt",
+        "PRI_jet_subleading_eta",
+        "PRI_jet_subleading_phi"
+    ],
+    "rows": 187500,
+    "cols": 31,
+    "target_is_numeric": false,
+    "columns_info": {
+        "Id": [
+            "scale"
+        ],
+        "PRI_jet_all_pt": [
+            "scale"
+        ],
+        "DER_mass_MMC": [
+            "scale"
+        ],
+        "DER_mass_transverse_met_lep": [
+            "scale"
+        ],
+        "DER_mass_vis": [
+            "scale"
+        ],
+        "DER_pt_h": [
+            "scale"
+        ],
+        "DER_deltaeta_jet_jet": [
+            "scale"
+        ],
+        "DER_mass_jet_jet": [
+            "scale"
+        ],
+        "DER_prodeta_jet_jet": [
+            "scale"
+        ],
+        "DER_deltar_tau_lep": [
+            "scale"
+        ],
+        "DER_pt_tot": [
+            "scale"
+        ],
+        "DER_sum_pt": [
+            "scale"
+        ],
+        "DER_pt_ratio_lep_tau": [
+            "scale"
+        ],
+        "DER_met_phi_centrality": [],
+        "DER_lep_eta_centrality": [
+            "scale"
+        ],
+        "PRI_tau_pt": [
+            "scale"
+        ],
+        "PRI_tau_eta": [],
+        "PRI_tau_phi": [
+            "scale"
+        ],
+        "PRI_lep_pt": [
+            "scale"
+        ],
+        "PRI_lep_eta": [],
+        "PRI_lep_phi": [
+            "scale"
+        ],
+        "PRI_met": [
+            "scale"
+        ],
+        "PRI_met_phi": [
+            "scale"
+        ],
+        "PRI_met_sumet": [
+            "scale"
+        ],
+        "PRI_jet_num": [
+            "scale"
+        ],
+        "PRI_jet_leading_pt": [
+            "scale"
+        ],
+        "PRI_jet_leading_eta": [
+            "scale"
+        ],
+        "PRI_jet_leading_phi": [
+            "scale"
+        ],
+        "PRI_jet_subleading_pt": [
+            "scale"
+        ],
+        "PRI_jet_subleading_eta": [
+            "scale"
+        ],
+        "PRI_jet_subleading_phi": [
+            "scale"
+        ]
+    },
+    "target_info": [
+        "convert_0_1"
+    ],
+    "n_features": 31,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

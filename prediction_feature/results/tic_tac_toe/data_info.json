@@ -1,0 +1,60 @@
+{
+    "columns": [
+        "\"top-left-square\"",
+        "\"top-middle-square\"",
+        "\"top-right-square\"",
+        "\"middle-left-square\"",
+        "\"middle-middle-square\"",
+        "\"middle-right-square\"",
+        "\"bottom-left-square\"",
+        "\"bottom-middle-square\"",
+        "\"bottom-right-square\""
+    ],
+    "rows": 718,
+    "cols": 9,
+    "target_is_numeric": false,
+    "columns_info": {
+        "\"top-left-square\"": [
+            "categorical",
+            "few_categories"
+        ],
+        "\"top-middle-square\"": [
+            "categorical",
+            "few_categories"
+        ],
+        "\"top-right-square\"": [
+            "categorical",
+            "few_categories"
+        ],
+        "\"middle-left-square\"": [
+            "categorical",
+            "few_categories"
+        ],
+        "\"middle-middle-square\"": [
+            "categorical",
+            "few_categories"
+        ],
+        "\"middle-right-square\"": [
+            "categorical",
+            "few_categories"
+        ],
+        "\"bottom-left-square\"": [
+            "categorical",
+            "few_categories"
+        ],
+        "\"bottom-middle-square\"": [
+            "categorical",
+            "few_categories"
+        ],
+        "\"bottom-right-square\"": [
+            "categorical",
+            "few_categories"
+        ]
+    },
+    "target_info": [
+        "convert_0_1"
+    ],
+    "n_features": 9,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

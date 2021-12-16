@@ -1,0 +1,32 @@
+if ("V69" > 9.644) and ("V16" > -58.993) and ("V125" <= 19.128) and ("V129" <= 97.5) then class: 6 (proba: 53.69%) | based on 1,328 samples
+
+if ("V69" > 9.644) and ("V16" <= -58.993) and ("V108" <= 8.44) and ("V9" > 77426.34) then class: 5 (proba: 95.82%) | based on 1,244 samples
+
+if ("V69" > 9.644) and ("V16" > -58.993) and ("V125" <= 19.128) and ("V129" > 97.5) then class: 4 (proba: 72.04%) | based on 887 samples
+
+if ("V69" <= 9.644) and ("V116" > 24.189) and ("V129" <= 400.0) and ("V79" > -9.532) then class: 2 (proba: 100.0%) | based on 866 samples
+
+if ("V69" > 9.644) and ("V16" > -58.993) and ("V125" > 19.128) and ("V71" <= -10.735) then class: 1 (proba: 90.24%) | based on 748 samples
+
+if ("V69" <= 9.644) and ("V116" <= 24.189) and ("V129" > 45.0) and ("V82" <= 3.536) then class: 3 (proba: 91.12%) | based on 608 samples
+
+if ("V69" <= 9.644) and ("V116" <= 24.189) and ("V129" > 45.0) and ("V82" > 3.536) then class: 3 (proba: 54.09%) | based on 575 samples
+
+if ("V69" > 9.644) and ("V16" <= -58.993) and ("V108" <= 8.44) and ("V9" <= 77426.34) then class: 5 (proba: 50.0%) | based on 418 samples
+
+if ("V69" > 9.644) and ("V16" > -58.993) and ("V125" > 19.128) and ("V71" > -10.735) then class: 2 (proba: 49.49%) | based on 396 samples
+
+if ("V69" <= 9.644) and ("V116" <= 24.189) and ("V129" <= 45.0) and ("V68" > 2.345) then class: 6 (proba: 52.08%) | based on 288 samples
+
+if ("V69" <= 9.644) and ("V116" <= 24.189) and ("V129" <= 45.0) and ("V68" <= 2.345) then class: 2 (proba: 91.44%) | based on 257 samples
+
+if ("V69" > 9.644) and ("V16" <= -58.993) and ("V108" > 8.44) and ("V123" <= 23.289) then class: 1 (proba: 100.0%) | based on 194 samples
+
+if ("V69" <= 9.644) and ("V116" > 24.189) and ("V129" > 400.0) and ("V124" <= 30.403) then class: 3 (proba: 100.0%) | based on 8 samples
+
+if ("V69" > 9.644) and ("V16" <= -58.993) and ("V108" > 8.44) and ("V123" > 23.289) then class: 5 (proba: 75.0%) | based on 4 samples
+
+if ("V69" <= 9.644) and ("V116" > 24.189) and ("V129" > 400.0) and ("V124" > 30.403) then class: 1 (proba: 100.0%) | based on 2 samples
+
+if ("V69" <= 9.644) and ("V116" > 24.189) and ("V129" <= 400.0) and ("V79" <= -9.532) then class: 1 (proba: 100.0%) | based on 1 samples
+

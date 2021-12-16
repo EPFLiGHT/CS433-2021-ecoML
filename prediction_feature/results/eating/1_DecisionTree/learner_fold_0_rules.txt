@@ -1,0 +1,32 @@
+if ("pcm_zcr_sma_de_peakMeanMeanDist" <= 0.035) and ("logHNR_sma_de_range" > 1.463) and ("audSpec_Rfilt_sma_de[21]_flatness" <= 0.506) and ("pcm_fftMag_mfcc_sma[3]_upleveltime25" > 0.852) then class: Banana (proba: 41.0%) | based on 100 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" <= 0.035) and ("logHNR_sma_de_range" > 1.463) and ("audSpec_Rfilt_sma_de[21]_flatness" > 0.506) and ("pcm_fftMag_mfcc_sma[3]_lpgain" > 6.71) then class: Haribo (proba: 36.26%) | based on 91 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" <= 0.035) and ("logHNR_sma_de_range" <= 1.463) and ("pcm_fftMag_mfcc_sma[3]_lpgain" <= 7.356) and ("pcm_fftMag_spectralVariance_sma_linregc2" <= 915739.156) then class: Biscuit (proba: 51.11%) | based on 90 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" <= 0.035) and ("logHNR_sma_de_range" <= 1.463) and ("pcm_fftMag_mfcc_sma[3]_lpgain" > 7.356) and ("pcm_fftMag_spectralVariance_sma_qregc3" <= 1475579.0) then class: Banana (proba: 31.71%) | based on 82 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" <= 0.035) and ("logHNR_sma_de_range" <= 1.463) and ("pcm_fftMag_mfcc_sma[3]_lpgain" <= 7.356) and ("pcm_fftMag_spectralVariance_sma_linregc2" > 915739.156) then class: Crisp (proba: 68.92%) | based on 74 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" > 0.035) and ("pcm_fftMag_spectralRollOff50.0_sma_de_flatness" <= 0.306) and ("pcm_fftMag_mfcc_sma[2]_minPos" <= 0.769) and ("pcm_fftMag_mfcc_sma_de[7]_peakRangeAbs" <= 15.99) then class: No_Food (proba: 100.0%) | based on 67 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" <= 0.035) and ("logHNR_sma_de_range" > 1.463) and ("audSpec_Rfilt_sma_de[21]_flatness" <= 0.506) and ("pcm_fftMag_mfcc_sma[3]_upleveltime25" <= 0.852) then class: No_Food (proba: 48.0%) | based on 50 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" <= 0.035) and ("logHNR_sma_de_range" > 1.463) and ("audSpec_Rfilt_sma_de[21]_flatness" > 0.506) and ("pcm_fftMag_mfcc_sma[3]_lpgain" <= 6.71) then class: Apple (proba: 40.54%) | based on 37 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" <= 0.035) and ("logHNR_sma_de_range" <= 1.463) and ("pcm_fftMag_mfcc_sma[3]_lpgain" > 7.356) and ("pcm_fftMag_spectralVariance_sma_qregc3" > 1475579.0) then class: Crisp (proba: 36.36%) | based on 33 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" > 0.035) and ("pcm_fftMag_spectralRollOff50.0_sma_de_flatness" > 0.306) and ("pcm_fftMag_mfcc_sma[11]_peakRangeRel" <= 0.683) and ("audSpec_Rfilt_sma[10]_lpc1" <= 2.765) then class: Biscuit (proba: 66.67%) | based on 3 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" > 0.035) and ("pcm_fftMag_spectralRollOff50.0_sma_de_flatness" > 0.306) and ("pcm_fftMag_mfcc_sma[11]_peakRangeRel" > 0.683) and ("audSpec_Rfilt_sma_de[14]_quartile3" > 0.122) then class: Banana (proba: 100.0%) | based on 2 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" > 0.035) and ("pcm_fftMag_spectralRollOff50.0_sma_de_flatness" > 0.306) and ("pcm_fftMag_mfcc_sma[11]_peakRangeRel" > 0.683) and ("audSpec_Rfilt_sma_de[14]_quartile3" <= 0.122) then class: Nectarine (proba: 100.0%) | based on 2 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" > 0.035) and ("pcm_fftMag_spectralRollOff50.0_sma_de_flatness" > 0.306) and ("pcm_fftMag_mfcc_sma[11]_peakRangeRel" <= 0.683) and ("audSpec_Rfilt_sma[10]_lpc1" > 2.765) then class: Crisp (proba: 100.0%) | based on 2 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" > 0.035) and ("pcm_fftMag_spectralRollOff50.0_sma_de_flatness" <= 0.306) and ("pcm_fftMag_mfcc_sma[2]_minPos" > 0.769) and ("audSpec_Rfilt_sma_de[0]_iqr2-3" > 0.007) then class: Biscuit (proba: 100.0%) | based on 2 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" > 0.035) and ("pcm_fftMag_spectralRollOff50.0_sma_de_flatness" <= 0.306) and ("pcm_fftMag_mfcc_sma[2]_minPos" > 0.769) and ("audSpec_Rfilt_sma_de[0]_iqr2-3" <= 0.007) then class: Crisp (proba: 100.0%) | based on 1 samples
+
+if ("pcm_zcr_sma_de_peakMeanMeanDist" > 0.035) and ("pcm_fftMag_spectralRollOff50.0_sma_de_flatness" <= 0.306) and ("pcm_fftMag_mfcc_sma[2]_minPos" <= 0.769) and ("pcm_fftMag_mfcc_sma_de[7]_peakRangeAbs" > 15.99) then class: Apple (proba: 100.0%) | based on 1 samples
+

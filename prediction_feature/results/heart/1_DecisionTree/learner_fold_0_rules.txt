@@ -1,0 +1,22 @@
+if (thalach > 161.5) and (ca <= 0.5) then class: 1 (proba: 100.0%) | based on 36 samples
+
+if (thalach <= 161.5) and (oldpeak > 1.85) and (cp <= 2.5) and (trestbps > 107.0) then class: 0 (proba: 100.0%) | based on 34 samples
+
+if (thalach <= 161.5) and (oldpeak <= 1.85) and (sex > 0.5) and (cp <= 0.5) then class: 0 (proba: 79.31%) | based on 29 samples
+
+if (thalach <= 161.5) and (oldpeak <= 1.85) and (sex > 0.5) and (cp > 0.5) then class: 1 (proba: 57.69%) | based on 26 samples
+
+if (thalach <= 161.5) and (oldpeak <= 1.85) and (sex <= 0.5) and (exang <= 0.5) then class: 1 (proba: 95.24%) | based on 21 samples
+
+if (thalach <= 161.5) and (oldpeak <= 1.85) and (sex <= 0.5) and (exang > 0.5) then class: 0 (proba: 55.56%) | based on 9 samples
+
+if (thalach > 161.5) and (ca > 0.5) and (cp > 0.5) and (cp <= 2.5) then class: 1 (proba: 100.0%) | based on 7 samples
+
+if (thalach > 161.5) and (ca > 0.5) and (cp > 0.5) and (cp > 2.5) then class: 0 (proba: 66.67%) | based on 3 samples
+
+if (thalach > 161.5) and (ca > 0.5) and (cp <= 0.5) then class: 0 (proba: 100.0%) | based on 3 samples
+
+if (thalach <= 161.5) and (oldpeak > 1.85) and (cp > 2.5) then class: 1 (proba: 100.0%) | based on 1 samples
+
+if (thalach <= 161.5) and (oldpeak > 1.85) and (cp <= 2.5) and (trestbps <= 107.0) then class: 1 (proba: 100.0%) | based on 1 samples
+

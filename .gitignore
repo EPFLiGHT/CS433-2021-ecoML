@@ -3,5 +3,4 @@ prediction_feature/datasets/creditcard.csv
 prediction_feature/datasets/mnist/mnist_test.csv
 prediction_feature/datasets/mnist/mnist_train.csv
 prediction_feature/notebooks/.ipynb_checkpoints/
-prediction_feature/results/
 .ipynb_checkpoints/

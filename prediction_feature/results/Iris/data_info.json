@@ -1,0 +1,34 @@
+{
+    "columns": [
+        "Id",
+        "SepalLengthCm",
+        "SepalWidthCm",
+        "PetalLengthCm",
+        "PetalWidthCm"
+    ],
+    "rows": 112,
+    "cols": 5,
+    "target_is_numeric": false,
+    "columns_info": {
+        "Id": [
+            "scale"
+        ],
+        "SepalLengthCm": [
+            "scale"
+        ],
+        "SepalWidthCm": [
+            "scale"
+        ],
+        "PetalLengthCm": [
+            "scale"
+        ],
+        "PetalWidthCm": [
+            "scale"
+        ]
+    },
+    "target_info": [],
+    "n_features": 5,
+    "is_sample_weighted": false,
+    "n_classes": 3,
+    "num_class": 3
+}

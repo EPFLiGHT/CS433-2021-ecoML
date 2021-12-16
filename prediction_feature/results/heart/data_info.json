@@ -1,0 +1,61 @@
+{
+    "columns": [
+        "age",
+        "sex",
+        "cp",
+        "trestbps",
+        "chol",
+        "fbs",
+        "restecg",
+        "thalach",
+        "exang",
+        "oldpeak",
+        "slope",
+        "ca",
+        "thal"
+    ],
+    "rows": 227,
+    "cols": 13,
+    "target_is_numeric": true,
+    "columns_info": {
+        "age": [
+            "scale"
+        ],
+        "sex": [
+            "scale"
+        ],
+        "cp": [
+            "scale"
+        ],
+        "trestbps": [
+            "scale"
+        ],
+        "chol": [
+            "scale"
+        ],
+        "fbs": [],
+        "restecg": [
+            "scale"
+        ],
+        "thalach": [
+            "scale"
+        ],
+        "exang": [],
+        "oldpeak": [
+            "scale"
+        ],
+        "slope": [
+            "scale"
+        ],
+        "ca": [
+            "scale"
+        ],
+        "thal": [
+            "scale"
+        ]
+    },
+    "target_info": [],
+    "n_features": 13,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

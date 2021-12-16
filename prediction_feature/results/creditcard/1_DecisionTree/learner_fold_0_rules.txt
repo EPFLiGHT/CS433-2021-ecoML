@@ -1,0 +1,26 @@
+if ("V17" > -2.421) and ("V14" > -4.391) and ("V14" > -1.425) and ("V7" <= 1.302) then class: "0" (proba: 99.99%) | based on 143,612 samples
+
+if ("V17" > -2.421) and ("V14" > -4.391) and ("V14" > -1.425) and ("V7" > 1.302) then class: "0" (proba: 99.88%) | based on 8,347 samples
+
+if ("V17" > -2.421) and ("V14" > -4.391) and ("V14" <= -1.425) and ("V4" <= 1.971) then class: "0" (proba: 99.89%) | based on 7,279 samples
+
+if ("V17" > -2.421) and ("V14" > -4.391) and ("V14" <= -1.425) and ("V4" > 1.971) then class: "0" (proba: 97.98%) | based on 494 samples
+
+if ("V17" > -2.421) and ("V14" <= -4.391) and ("V10" > -1.918) and ("V21" <= -0.046) then class: "0" (proba: 100.0%) | based on 134 samples
+
+if ("V17" <= -2.421) and ("V10" <= 1.291) and ("V26" > -0.205) and ("V3" <= -4.05) then class: "1" (proba: 100.0%) | based on 104 samples
+
+if ("V17" <= -2.421) and ("V10" <= 1.291) and ("V26" <= -0.205) and ("V11" <= 7.453) then class: "1" (proba: 71.08%) | based on 83 samples
+
+if ("V17" <= -2.421) and ("V10" > 1.291) then class: "0" (proba: 100.0%) | based on 39 samples
+
+if ("V17" <= -2.421) and ("V10" <= 1.291) and ("V26" > -0.205) and ("V3" > -4.05) then class: "1" (proba: 71.79%) | based on 39 samples
+
+if ("V17" > -2.421) and ("V14" <= -4.391) and ("V10" <= -1.918) and ("V16" <= 1.081) then class: "1" (proba: 100.0%) | based on 30 samples
+
+if ("V17" > -2.421) and ("V14" <= -4.391) and ("V10" <= -1.918) and ("V16" > 1.081) then class: "0" (proba: 63.16%) | based on 19 samples
+
+if ("V17" <= -2.421) and ("V10" <= 1.291) and ("V26" <= -0.205) and ("V11" > 7.453) then class: "0" (proba: 93.33%) | based on 15 samples
+
+if ("V17" > -2.421) and ("V14" <= -4.391) and ("V10" > -1.918) and ("V21" > -0.046) then class: "0" (proba: 75.0%) | based on 8 samples
+

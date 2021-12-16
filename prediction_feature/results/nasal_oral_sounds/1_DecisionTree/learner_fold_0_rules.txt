@@ -1,0 +1,30 @@
+if ("V4" <= 0.255) and ("V4" > -0.876) and ("V3" <= -0.105) and ("V4" <= -0.038) then class: 1 (proba: 99.36%) | based on 932 samples
+
+if ("V4" > 0.255) and ("V1" <= 0.769) and ("V1" <= -0.635) and ("V2" <= 0.026) then class: 2 (proba: 53.26%) | based on 445 samples
+
+if ("V4" > 0.255) and ("V1" <= 0.769) and ("V1" > -0.635) and ("V2" <= 0.496) then class: 2 (proba: 79.09%) | based on 440 samples
+
+if ("V4" <= 0.255) and ("V4" <= -0.876) and ("V2" > -0.518) and ("V1" <= -0.474) then class: 1 (proba: 90.44%) | based on 272 samples
+
+if ("V4" <= 0.255) and ("V4" > -0.876) and ("V3" > -0.105) and ("V3" <= 0.77) then class: 1 (proba: 86.44%) | based on 236 samples
+
+if ("V4" <= 0.255) and ("V4" <= -0.876) and ("V2" > -0.518) and ("V1" > -0.474) then class: 1 (proba: 59.49%) | based on 195 samples
+
+if ("V4" > 0.255) and ("V1" <= 0.769) and ("V1" > -0.635) and ("V2" > 0.496) then class: 1 (proba: 57.34%) | based on 143 samples
+
+if ("V4" <= 0.255) and ("V4" > -0.876) and ("V3" <= -0.105) and ("V4" > -0.038) then class: 1 (proba: 88.62%) | based on 123 samples
+
+if ("V4" <= 0.255) and ("V4" <= -0.876) and ("V2" <= -0.518) and ("V2" > -1.0) then class: 2 (proba: 67.39%) | based on 92 samples
+
+if ("V4" <= 0.255) and ("V4" <= -0.876) and ("V2" <= -0.518) and ("V2" <= -1.0) then class: 1 (proba: 70.15%) | based on 67 samples
+
+if ("V4" > 0.255) and ("V1" > 0.769) and ("V3" <= 0.265) then class: 1 (proba: 100.0%) | based on 42 samples
+
+if ("V4" > 0.255) and ("V1" <= 0.769) and ("V1" <= -0.635) and ("V2" > 0.026) then class: 1 (proba: 100.0%) | based on 33 samples
+
+if ("V4" <= 0.255) and ("V4" > -0.876) and ("V3" > -0.105) and ("V3" > 0.77) then class: 2 (proba: 70.0%) | based on 10 samples
+
+if ("V4" > 0.255) and ("V1" > 0.769) and ("V3" > 0.265) and ("V4" > 0.54) then class: 1 (proba: 100.0%) | based on 6 samples
+
+if ("V4" > 0.255) and ("V1" > 0.769) and ("V3" > 0.265) and ("V4" <= 0.54) then class: 2 (proba: 100.0%) | based on 3 samples
+

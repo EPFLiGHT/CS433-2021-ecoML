@@ -1,0 +1,32 @@
+if ("V10" > 3.5) and ("V8" > 3.5) and ("V2" > 3.5) and ("V6" > 3.5) then class: 2 (proba: 46.36%) | based on 194,584 samples
+
+if ("V10" > 3.5) and ("V8" > 3.5) and ("V2" <= 3.5) and ("V4" > 3.5) then class: 1 (proba: 58.33%) | based on 63,573 samples
+
+if ("V10" <= 3.5) and ("V6" > 3.5) and ("V2" > 3.5) and ("V8" > 3.5) then class: 1 (proba: 57.83%) | based on 63,371 samples
+
+if ("V10" > 3.5) and ("V8" <= 3.5) and ("V2" > 3.5) and ("V6" > 3.5) then class: 1 (proba: 58.08%) | based on 62,887 samples
+
+if ("V10" > 3.5) and ("V8" > 3.5) and ("V2" > 3.5) and ("V6" <= 3.5) then class: 1 (proba: 57.68%) | based on 62,851 samples
+
+if ("V10" > 3.5) and ("V8" <= 3.5) and ("V2" <= 3.5) and ("V4" > 3.5) then class: 1 (proba: 50.39%) | based on 18,419 samples
+
+if ("V10" <= 3.5) and ("V6" <= 3.5) and ("V4" > 3.5) and ("V8" > 3.5) then class: 1 (proba: 49.92%) | based on 18,405 samples
+
+if ("V10" <= 3.5) and ("V6" > 3.5) and ("V2" > 3.5) and ("V8" <= 3.5) then class: 1 (proba: 49.82%) | based on 18,312 samples
+
+if ("V10" <= 3.5) and ("V6" > 3.5) and ("V2" <= 3.5) and ("V4" > 3.5) then class: 1 (proba: 49.86%) | based on 18,239 samples
+
+if ("V10" > 3.5) and ("V8" <= 3.5) and ("V2" > 3.5) and ("V6" <= 3.5) then class: 1 (proba: 50.34%) | based on 18,167 samples
+
+if ("V10" > 3.5) and ("V8" > 3.5) and ("V2" <= 3.5) and ("V4" <= 3.5) then class: 1 (proba: 49.35%) | based on 17,995 samples
+
+if ("V10" <= 3.5) and ("V6" > 3.5) and ("V2" <= 3.5) and ("V4" <= 3.5) then class: 2 (proba: 63.79%) | based on 4,708 samples
+
+if ("V10" > 3.5) and ("V8" <= 3.5) and ("V2" <= 3.5) and ("V4" <= 3.5) then class: 2 (proba: 61.4%) | based on 4,705 samples
+
+if ("V10" <= 3.5) and ("V6" <= 3.5) and ("V4" > 3.5) and ("V8" <= 3.5) then class: 2 (proba: 61.06%) | based on 4,653 samples
+
+if ("V10" <= 3.5) and ("V6" <= 3.5) and ("V4" <= 3.5) and ("V2" > 3.5) then class: 2 (proba: 62.17%) | based on 4,647 samples
+
+if ("V10" <= 3.5) and ("V6" <= 3.5) and ("V4" <= 3.5) and ("V2" <= 3.5) then class: 2 (proba: 46.29%) | based on 1,065 samples
+
