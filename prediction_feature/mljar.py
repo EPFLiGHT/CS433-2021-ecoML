@@ -67,5 +67,5 @@ def create_dataset():
         df.apply(lambda x: add_dataset_row(dataset, x['metric_value'], x['train_time'], x['model_type'], max_corr), axis=1)
 
 
-#run_automl()
+run_automl()
 create_dataset()
