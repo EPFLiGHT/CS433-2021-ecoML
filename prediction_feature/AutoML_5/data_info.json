@@ -1,0 +1,38 @@
+{
+    "columns": [
+        "features",
+        "points",
+        "type",
+        "TDP",
+        "country",
+        "max_corr"
+    ],
+    "rows": 98,
+    "cols": 6,
+    "target_is_numeric": false,
+    "columns_info": {
+        "features": [
+            "scale"
+        ],
+        "points": [
+            "scale"
+        ],
+        "type": [
+            "constant_column"
+        ],
+        "TDP": [
+            "constant_column"
+        ],
+        "country": [
+            "constant_column"
+        ],
+        "max_corr": [
+            "missing_values"
+        ]
+    },
+    "target_info": [],
+    "n_features": 6,
+    "is_sample_weighted": false,
+    "n_classes": 4,
+    "num_class": 4
+}
