@@ -1,0 +1,796 @@
+{
+    "uid": "b042585b-e61f-435b-bf37-24135a2f4929",
+    "name": "2_Linear",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        10.295629922998753,
+                        4.31963210101024,
+                        7.494364623714666,
+                        15.07898087805,
+                        2.6714135870362736,
+                        3.6559909149949634,
+                        5.380588077474958,
+                        4.532111460821161,
+                        8.021538700888238,
+                        3.808518325501323,
+                        4.1163133357788535,
+                        3.7031934749947,
+                        2.2232643427703227,
+                        3.8206848449686865,
+                        2.171245318668724,
+                        1.2408509621679507,
+                        2.048074711980654,
+                        4.690568396282782,
+                        3.7164543828924708,
+                        8.480175057341683,
+                        2.121657814117733,
+                        5.831567315537473,
+                        15.205726625159375,
+                        10.379352971770992,
+                        3.0539113322839704,
+                        7.184676277947575,
+                        2.251507682167939,
+                        8.296956146159603,
+                        9.199717317875239,
+                        1.732319009624383,
+                        2.1241697010805884,
+                        2.541651557277196,
+                        2.9906700414378387,
+                        10.511843363792687,
+                        3.174053382285739,
+                        7.560238790651709,
+                        2.856105084542586,
+                        14.154135706513177,
+                        4.594353790978565,
+                        2.816952211954528,
+                        2.0895104965509943,
+                        4.726829287228427,
+                        4.579746012835821,
+                        2.3204675838129205,
+                        4.152009975382936,
+                        1.9736747323590436,
+                        2.471832121361905,
+                        2.3293178776955092,
+                        6.754768921934995,
+                        30.962316358652927,
+                        4.553836545576322,
+                        2.1030229196912984,
+                        2.816976910212218,
+                        1.2369960619974905,
+                        4.938551141934197,
+                        12.52799436362679,
+                        2.612753749038918,
+                        2.10513383052302,
+                        15.116187802816938,
+                        5.196719071907202,
+                        4.009629474041673,
+                        2.7264957192196904,
+                        3.558857289069678,
+                        2.576968014592588,
+                        4.650160218008154,
+                        5.3697659791183625,
+                        4.005884223232078,
+                        5.8098362188844375,
+                        2.659598800291488
+                    ],
+                    "mean": [
+                        30.752118644067796,
+                        8.957627118644067,
+                        6.370762711864407,
+                        56.96186440677966,
+                        2.8241525423728815,
+                        4.298728813559322,
+                        12.976694915254237,
+                        8.985169491525424,
+                        12.548728813559322,
+                        4.389830508474576,
+                        12.029661016949152,
+                        7.809322033898305,
+                        2.3220338983050848,
+                        4.591101694915254,
+                        1.9576271186440677,
+                        1.2266949152542372,
+                        1.86864406779661,
+                        13.802966101694915,
+                        6.8008474576271185,
+                        11.665254237288135,
+                        1.5529661016949152,
+                        8.786016949152541,
+                        15.455508474576272,
+                        15.652542372881356,
+                        4.387711864406779,
+                        25.83686440677966,
+                        2.6059322033898304,
+                        11.040254237288135,
+                        19.875,
+                        1.1631355932203389,
+                        1.8453389830508475,
+                        4.379237288135593,
+                        3.1483050847457625,
+                        11.533898305084746,
+                        6.311440677966102,
+                        15.35593220338983,
+                        3.9110169491525424,
+                        45.610169491525426,
+                        9.347457627118644,
+                        4.237288135593221,
+                        2.582627118644068,
+                        5.36864406779661,
+                        3.1610169491525424,
+                        2.402542372881356,
+                        7.985169491525424,
+                        2.375,
+                        3.093220338983051,
+                        3.419491525423729,
+                        19.593220338983052,
+                        76.73516949152543,
+                        4.955508474576271,
+                        3.097457627118644,
+                        4.858050847457627,
+                        0.9597457627118644,
+                        7.523305084745763,
+                        44.394067796610166,
+                        3.0783898305084745,
+                        2.1546610169491527,
+                        22.383474576271187,
+                        6.5508474576271185,
+                        6.1758474576271185,
+                        4.773305084745763,
+                        4.921610169491525,
+                        3.330508474576271,
+                        4.968220338983051,
+                        14.567796610169491,
+                        4.959745762711864,
+                        5.25635593220339,
+                        4.552966101694915
+                    ],
+                    "var": [
+                        105.99999551134731,
+                        18.659221488078135,
+                        56.16550111318586,
+                        227.37566432059754,
+                        7.13645055300201,
+                        13.366269570525711,
+                        28.950728059465668,
+                        20.54003429330652,
+                        64.34508312984775,
+                        14.504811835679401,
+                        16.94403547831083,
+                        13.713641913243322,
+                        4.942904337833956,
+                        14.597632684573396,
+                        4.71430623384085,
+                        1.5397111103131287,
+                        4.19461002585464,
+                        22.001431880206837,
+                        13.812033180120656,
+                        71.91336900316001,
+                        4.501431880206837,
+                        34.00717735564493,
+                        231.21412219908075,
+                        107.73096811261131,
+                        9.326374425452455,
+                        51.619573218902616,
+                        5.0692868428612465,
+                        68.83948129129561,
+                        84.63479872881356,
+                        3.0009291511060034,
+                        4.512096918988796,
+                        6.459992638609594,
+                        8.944107296753804,
+                        110.49885090491237,
+                        10.07461487359954,
+                        57.15721057167481,
+                        8.157336253950014,
+                        200.33955759839125,
+                        21.108086756679114,
+                        7.935219764435507,
+                        4.366054115196782,
+                        22.342915110600405,
+                        20.974073542085605,
+                        5.3845698075265735,
+                        17.239186835679405,
+                        3.8953919491525424,
+                        6.109954036196495,
+                        5.425721775351911,
+                        45.626903188738865,
+                        958.6650342933066,
+                        20.73742728382649,
+                        4.422705400746913,
+                        7.935358912668774,
+                        1.5301592573972995,
+                        24.389287381499567,
+                        156.95064277506464,
+                        6.826482153116921,
+                        4.431588444412524,
+                        228.49913369003158,
+                        27.00588911232405,
+                        16.077128519103706,
+                        7.433778906923298,
+                        12.665465203964377,
+                        6.6407641482332656,
+                        21.623990053145647,
+                        28.834386670496986,
+                        16.04710840993967,
+                        33.75419689026142,
+                        7.073465778511922
+                    ],
+                    "n_samples_seen": 472,
+                    "n_features_in": 69,
+                    "columns": [
+                        "\"a\"",
+                        "\"all\"",
+                        "\"an\"",
+                        "\"and\"",
+                        "\"any\"",
+                        "\"are\"",
+                        "\"as\"",
+                        "\"at\"",
+                        "\"be\"",
+                        "\"been\"",
+                        "\"but\"",
+                        "\"by\"",
+                        "\"can\"",
+                        "\"do\"",
+                        "\"down\"",
+                        "\"even\"",
+                        "\"every\"",
+                        "\"for\"",
+                        "\"from\"",
+                        "\"had\"",
+                        "\"has\"",
+                        "\"have\"",
+                        "\"her\"",
+                        "\"his\"",
+                        "\"if\"",
+                        "\"in\"",
+                        "\"into\"",
+                        "\"is\"",
+                        "\"it\"",
+                        "\"its\"",
+                        "\"may\"",
+                        "\"more\"",
+                        "\"must\"",
+                        "\"my\"",
+                        "\"no\"",
+                        "\"not\"",
+                        "\"now\"",
+                        "\"of\"",
+                        "\"on\"",
+                        "\"one\"",
+                        "\"only\"",
+                        "\"or\"",
+                        "\"our\"",
+                        "\"should\"",
+                        "\"so\"",
+                        "\"some\"",
+                        "\"such\"",
+                        "\"than\"",
+                        "\"that\"",
+                        "\"the\"",
+                        "\"their\"",
+                        "\"then\"",
+                        "\"there\"",
+                        "\"things\"",
+                        "\"this\"",
+                        "\"to\"",
+                        "\"up\"",
+                        "\"upon\"",
+                        "\"was\"",
+                        "\"were\"",
+                        "\"what\"",
+                        "\"when\"",
+                        "\"which\"",
+                        "\"who\"",
+                        "\"will\"",
+                        "\"with\"",
+                        "\"would\"",
+                        "\"your\"",
+                        "\"BookID\""
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "Austen": 0,
+                "London": 1,
+                "Milton": 2,
+                "Shakespeare": 3
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\"a\"": [
+                        "scale_normal"
+                    ],
+                    "\"all\"": [
+                        "scale_normal"
+                    ],
+                    "\"an\"": [
+                        "scale_normal"
+                    ],
+                    "\"and\"": [
+                        "scale_normal"
+                    ],
+                    "\"any\"": [
+                        "scale_normal"
+                    ],
+                    "\"are\"": [
+                        "scale_normal"
+                    ],
+                    "\"as\"": [
+                        "scale_normal"
+                    ],
+                    "\"at\"": [
+                        "scale_normal"
+                    ],
+                    "\"be\"": [
+                        "scale_normal"
+                    ],
+                    "\"been\"": [
+                        "scale_normal"
+                    ],
+                    "\"but\"": [
+                        "scale_normal"
+                    ],
+                    "\"by\"": [
+                        "scale_normal"
+                    ],
+                    "\"can\"": [
+                        "scale_normal"
+                    ],
+                    "\"do\"": [
+                        "scale_normal"
+                    ],
+                    "\"down\"": [
+                        "scale_normal"
+                    ],
+                    "\"even\"": [
+                        "scale_normal"
+                    ],
+                    "\"every\"": [
+                        "scale_normal"
+                    ],
+                    "\"for\"": [
+                        "scale_normal"
+                    ],
+                    "\"from\"": [
+                        "scale_normal"
+                    ],
+                    "\"had\"": [
+                        "scale_normal"
+                    ],
+                    "\"has\"": [
+                        "scale_normal"
+                    ],
+                    "\"have\"": [
+                        "scale_normal"
+                    ],
+                    "\"her\"": [
+                        "scale_normal"
+                    ],
+                    "\"his\"": [
+                        "scale_normal"
+                    ],
+                    "\"if\"": [
+                        "scale_normal"
+                    ],
+                    "\"in\"": [
+                        "scale_normal"
+                    ],
+                    "\"into\"": [
+                        "scale_normal"
+                    ],
+                    "\"is\"": [
+                        "scale_normal"
+                    ],
+                    "\"it\"": [
+                        "scale_normal"
+                    ],
+                    "\"its\"": [
+                        "scale_normal"
+                    ],
+                    "\"may\"": [
+                        "scale_normal"
+                    ],
+                    "\"more\"": [
+                        "scale_normal"
+                    ],
+                    "\"must\"": [
+                        "scale_normal"
+                    ],
+                    "\"my\"": [
+                        "scale_normal"
+                    ],
+                    "\"no\"": [
+                        "scale_normal"
+                    ],
+                    "\"not\"": [
+                        "scale_normal"
+                    ],
+                    "\"now\"": [
+                        "scale_normal"
+                    ],
+                    "\"of\"": [
+                        "scale_normal"
+                    ],
+                    "\"on\"": [
+                        "scale_normal"
+                    ],
+                    "\"one\"": [
+                        "scale_normal"
+                    ],
+                    "\"only\"": [
+                        "scale_normal"
+                    ],
+                    "\"or\"": [
+                        "scale_normal"
+                    ],
+                    "\"our\"": [
+                        "scale_normal"
+                    ],
+                    "\"should\"": [
+                        "scale_normal"
+                    ],
+                    "\"so\"": [
+                        "scale_normal"
+                    ],
+                    "\"some\"": [
+                        "scale_normal"
+                    ],
+                    "\"such\"": [
+                        "scale_normal"
+                    ],
+                    "\"than\"": [
+                        "scale_normal"
+                    ],
+                    "\"that\"": [
+                        "scale_normal"
+                    ],
+                    "\"the\"": [
+                        "scale_normal"
+                    ],
+                    "\"their\"": [
+                        "scale_normal"
+                    ],
+                    "\"then\"": [
+                        "scale_normal"
+                    ],
+                    "\"there\"": [
+                        "scale_normal"
+                    ],
+                    "\"things\"": [
+                        "scale_normal"
+                    ],
+                    "\"this\"": [
+                        "scale_normal"
+                    ],
+                    "\"to\"": [
+                        "scale_normal"
+                    ],
+                    "\"up\"": [
+                        "scale_normal"
+                    ],
+                    "\"upon\"": [
+                        "scale_normal"
+                    ],
+                    "\"was\"": [
+                        "scale_normal"
+                    ],
+                    "\"were\"": [
+                        "scale_normal"
+                    ],
+                    "\"what\"": [
+                        "scale_normal"
+                    ],
+                    "\"when\"": [
+                        "scale_normal"
+                    ],
+                    "\"which\"": [
+                        "scale_normal"
+                    ],
+                    "\"who\"": [
+                        "scale_normal"
+                    ],
+                    "\"will\"": [
+                        "scale_normal"
+                    ],
+                    "\"with\"": [
+                        "scale_normal"
+                    ],
+                    "\"would\"": [
+                        "scale_normal"
+                    ],
+                    "\"your\"": [
+                        "scale_normal"
+                    ],
+                    "\"BookID\"": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Logistic Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "f5ff00bd-8b27-4ba0-8a40-bc2020b200c2",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "seed": 3,
+                "num_class": 4,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\"a\"": [
+                    "scale_normal"
+                ],
+                "\"all\"": [
+                    "scale_normal"
+                ],
+                "\"an\"": [
+                    "scale_normal"
+                ],
+                "\"and\"": [
+                    "scale_normal"
+                ],
+                "\"any\"": [
+                    "scale_normal"
+                ],
+                "\"are\"": [
+                    "scale_normal"
+                ],
+                "\"as\"": [
+                    "scale_normal"
+                ],
+                "\"at\"": [
+                    "scale_normal"
+                ],
+                "\"be\"": [
+                    "scale_normal"
+                ],
+                "\"been\"": [
+                    "scale_normal"
+                ],
+                "\"but\"": [
+                    "scale_normal"
+                ],
+                "\"by\"": [
+                    "scale_normal"
+                ],
+                "\"can\"": [
+                    "scale_normal"
+                ],
+                "\"do\"": [
+                    "scale_normal"
+                ],
+                "\"down\"": [
+                    "scale_normal"
+                ],
+                "\"even\"": [
+                    "scale_normal"
+                ],
+                "\"every\"": [
+                    "scale_normal"
+                ],
+                "\"for\"": [
+                    "scale_normal"
+                ],
+                "\"from\"": [
+                    "scale_normal"
+                ],
+                "\"had\"": [
+                    "scale_normal"
+                ],
+                "\"has\"": [
+                    "scale_normal"
+                ],
+                "\"have\"": [
+                    "scale_normal"
+                ],
+                "\"her\"": [
+                    "scale_normal"
+                ],
+                "\"his\"": [
+                    "scale_normal"
+                ],
+                "\"if\"": [
+                    "scale_normal"
+                ],
+                "\"in\"": [
+                    "scale_normal"
+                ],
+                "\"into\"": [
+                    "scale_normal"
+                ],
+                "\"is\"": [
+                    "scale_normal"
+                ],
+                "\"it\"": [
+                    "scale_normal"
+                ],
+                "\"its\"": [
+                    "scale_normal"
+                ],
+                "\"may\"": [
+                    "scale_normal"
+                ],
+                "\"more\"": [
+                    "scale_normal"
+                ],
+                "\"must\"": [
+                    "scale_normal"
+                ],
+                "\"my\"": [
+                    "scale_normal"
+                ],
+                "\"no\"": [
+                    "scale_normal"
+                ],
+                "\"not\"": [
+                    "scale_normal"
+                ],
+                "\"now\"": [
+                    "scale_normal"
+                ],
+                "\"of\"": [
+                    "scale_normal"
+                ],
+                "\"on\"": [
+                    "scale_normal"
+                ],
+                "\"one\"": [
+                    "scale_normal"
+                ],
+                "\"only\"": [
+                    "scale_normal"
+                ],
+                "\"or\"": [
+                    "scale_normal"
+                ],
+                "\"our\"": [
+                    "scale_normal"
+                ],
+                "\"should\"": [
+                    "scale_normal"
+                ],
+                "\"so\"": [
+                    "scale_normal"
+                ],
+                "\"some\"": [
+                    "scale_normal"
+                ],
+                "\"such\"": [
+                    "scale_normal"
+                ],
+                "\"than\"": [
+                    "scale_normal"
+                ],
+                "\"that\"": [
+                    "scale_normal"
+                ],
+                "\"the\"": [
+                    "scale_normal"
+                ],
+                "\"their\"": [
+                    "scale_normal"
+                ],
+                "\"then\"": [
+                    "scale_normal"
+                ],
+                "\"there\"": [
+                    "scale_normal"
+                ],
+                "\"things\"": [
+                    "scale_normal"
+                ],
+                "\"this\"": [
+                    "scale_normal"
+                ],
+                "\"to\"": [
+                    "scale_normal"
+                ],
+                "\"up\"": [
+                    "scale_normal"
+                ],
+                "\"upon\"": [
+                    "scale_normal"
+                ],
+                "\"was\"": [
+                    "scale_normal"
+                ],
+                "\"were\"": [
+                    "scale_normal"
+                ],
+                "\"what\"": [
+                    "scale_normal"
+                ],
+                "\"when\"": [
+                    "scale_normal"
+                ],
+                "\"which\"": [
+                    "scale_normal"
+                ],
+                "\"who\"": [
+                    "scale_normal"
+                ],
+                "\"will\"": [
+                    "scale_normal"
+                ],
+                "\"with\"": [
+                    "scale_normal"
+                ],
+                "\"would\"": [
+                    "scale_normal"
+                ],
+                "\"your\"": [
+                    "scale_normal"
+                ],
+                "\"BookID\"": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "seed": 3,
+            "num_class": 4,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "multiclass_classification",
+        "explain_level": 1,
+        "name": "2_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_Linear/learner_fold_0.linear"
+    ],
+    "predictions_fname": "2_Linear/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -1.0,
+    "train_time": 0.7999451160430908,
+    "is_stacked": false
+}

@@ -1,0 +1,10 @@
+if ("educational_level" <= 3.5) and ("age" <= 3.5) and ("marital_status" <= 3.5) and ("educational_level" > 1.5) then class: 2 (proba: 64.29%) | based on 42 samples
+
+if ("educational_level" <= 3.5) and ("age" <= 3.5) and ("marital_status" <= 3.5) and ("educational_level" <= 1.5) then class: 1 (proba: 74.19%) | based on 31 samples
+
+if ("educational_level" > 3.5) then class: 3 (proba: 100.0%) | based on 8 samples
+
+if ("educational_level" <= 3.5) and ("age" > 3.5) then class: 3 (proba: 100.0%) | based on 5 samples
+
+if ("educational_level" <= 3.5) and ("age" <= 3.5) and ("marital_status" > 3.5) then class: 3 (proba: 100.0%) | based on 4 samples
+

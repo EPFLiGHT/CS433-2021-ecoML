@@ -1,0 +1,10 @@
+if ("V27" > 0.5) then class: 2 (proba: 100.0%) | based on 331 samples
+
+if ("V27" <= 0.5) and ("V26" <= 0.5) and ("V31" <= 0.5) and ("V32" <= 0.5) then class: 10 (proba: 34.14%) | based on 331 samples
+
+if ("V27" <= 0.5) and ("V26" > 0.5) then class: 1 (proba: 100.0%) | based on 208 samples
+
+if ("V27" <= 0.5) and ("V26" <= 0.5) and ("V31" > 0.5) then class: 6 (proba: 100.0%) | based on 179 samples
+
+if ("V27" <= 0.5) and ("V26" <= 0.5) and ("V31" <= 0.5) and ("V32" > 0.5) then class: 7 (proba: 100.0%) | based on 146 samples
+

@@ -1,0 +1,32 @@
+if ("a1" <= 1.5) and ("g1" <= 1.5) and ("b1" <= 1.5) and ("a1" <= 0.5) then class: 2 (proba: 77.24%) | based on 5,466 samples
+
+if ("a1" <= 1.5) and ("g1" <= 1.5) and ("b1" > 1.5) and ("g1" <= 0.5) then class: 2 (proba: 63.8%) | based on 4,798 samples
+
+if ("a1" <= 1.5) and ("g1" > 1.5) and ("d1" <= 1.5) and ("g2" <= 1.5) then class: 2 (proba: 60.26%) | based on 4,756 samples
+
+if ("a1" <= 1.5) and ("g1" <= 1.5) and ("b1" <= 1.5) and ("a1" > 0.5) then class: 2 (proba: 89.24%) | based on 4,516 samples
+
+if ("a1" > 1.5) and ("g1" <= 1.5) and ("g1" <= 0.5) and ("a2" <= 1.5) then class: 2 (proba: 58.87%) | based on 4,345 samples
+
+if ("a1" <= 1.5) and ("g1" <= 1.5) and ("b1" > 1.5) and ("g1" > 0.5) then class: 2 (proba: 76.53%) | based on 2,949 samples
+
+if ("a1" > 1.5) and ("g1" <= 1.5) and ("g1" > 0.5) and ("g2" <= 1.5) then class: 2 (proba: 73.02%) | based on 2,643 samples
+
+if ("a1" > 1.5) and ("g1" <= 1.5) and ("g1" <= 0.5) and ("a2" > 1.5) then class: 1 (proba: 50.13%) | based on 1,538 samples
+
+if ("a1" <= 1.5) and ("g1" > 1.5) and ("d1" <= 1.5) and ("g2" > 1.5) then class: 1 (proba: 47.12%) | based on 1,231 samples
+
+if ("a1" > 1.5) and ("g1" > 1.5) and ("a2" <= 1.5) and ("a2" <= 0.5) then class: 1 (proba: 52.8%) | based on 1,216 samples
+
+if ("a1" > 1.5) and ("g1" <= 1.5) and ("g1" > 0.5) and ("g2" > 1.5) then class: 2 (proba: 51.23%) | based on 1,136 samples
+
+if ("a1" > 1.5) and ("g1" > 1.5) and ("a2" <= 1.5) and ("a2" > 0.5) then class: 2 (proba: 52.03%) | based on 1,082 samples
+
+if ("a1" <= 1.5) and ("g1" > 1.5) and ("d1" > 1.5) and ("d2" > 0.5) then class: 2 (proba: 65.98%) | based on 967 samples
+
+if ("a1" <= 1.5) and ("g1" > 1.5) and ("d1" > 1.5) and ("d2" <= 0.5) then class: 2 (proba: 82.8%) | based on 837 samples
+
+if ("a1" > 1.5) and ("g1" > 1.5) and ("a2" > 1.5) and ("d2" <= 0.5) then class: 1 (proba: 56.14%) | based on 399 samples
+
+if ("a1" > 1.5) and ("g1" > 1.5) and ("a2" > 1.5) and ("d2" > 0.5) then class: 1 (proba: 83.47%) | based on 121 samples
+

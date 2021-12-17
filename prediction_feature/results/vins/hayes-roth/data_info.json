@@ -1,0 +1,30 @@
+{
+    "columns": [
+        "\"hobby\"",
+        "\"age\"",
+        "\"educational_level\"",
+        "\"marital_status\""
+    ],
+    "rows": 120,
+    "cols": 4,
+    "target_is_numeric": true,
+    "columns_info": {
+        "\"hobby\"": [
+            "scale"
+        ],
+        "\"age\"": [
+            "scale"
+        ],
+        "\"educational_level\"": [
+            "scale"
+        ],
+        "\"marital_status\"": [
+            "scale"
+        ]
+    },
+    "target_info": [],
+    "n_features": 4,
+    "is_sample_weighted": false,
+    "n_classes": 3,
+    "num_class": 3
+}

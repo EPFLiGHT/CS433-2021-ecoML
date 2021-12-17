@@ -1,0 +1,86 @@
+{
+    "uid": "be5f4c16-0bc0-4ca1-af8a-0d9d0301aba0",
+    "name": "1_DecisionTree",
+    "preprocessing": [
+        {
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Decision Tree",
+            "algorithm_short_name": "Decision Tree",
+            "uid": "e53e22e3-e441-462d-8c05-9202a490f775",
+            "params": {
+                "model_type": "Decision Tree",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 3,
+                "criterion": "entropy",
+                "max_depth": 4,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 1,
+            "train_cant_improve_limit": 0,
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {},
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/scene/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/scene/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/scene"
+        },
+        "learner": {
+            "model_type": "Decision Tree",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 3,
+            "criterion": "entropy",
+            "max_depth": 4,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "1_DecisionTree",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "1_DecisionTree/learner_fold_0.decision_tree"
+    ],
+    "predictions_fname": "1_DecisionTree/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.7473684210526316,
+    "train_time": 5.377424955368042,
+    "is_stacked": false,
+    "threshold": 0.3422712933753943
+}

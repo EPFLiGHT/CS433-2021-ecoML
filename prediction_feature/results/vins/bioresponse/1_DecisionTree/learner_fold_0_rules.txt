@@ -1,0 +1,32 @@
+if ("D27" > 0.5) and ("D85" <= 0.006) and ("D66" <= 0.053) and ("D106" > 0.103) then class: 1 (proba: 77.72%) | based on 570 samples
+
+if ("D27" > 0.5) and ("D85" <= 0.006) and ("D66" > 0.053) and ("D15" > 0.35) then class: 1 (proba: 91.62%) | based on 358 samples
+
+if ("D27" <= 0.5) and ("D78" <= 0.03) and ("D2" > 0.491) and ("D44" > 0.027) then class: 0 (proba: 82.67%) | based on 352 samples
+
+if ("D27" <= 0.5) and ("D78" <= 0.03) and ("D2" > 0.491) and ("D44" <= 0.027) then class: 0 (proba: 67.68%) | based on 297 samples
+
+if ("D27" <= 0.5) and ("D78" <= 0.03) and ("D2" <= 0.491) and ("D21" > 0.003) then class: 0 (proba: 98.57%) | based on 140 samples
+
+if ("D27" <= 0.5) and ("D78" > 0.03) and ("D91" > 0.37) and ("D95" <= 0.007) then class: 1 (proba: 74.45%) | based on 137 samples
+
+if ("D27" > 0.5) and ("D85" > 0.006) and ("D802" <= 0.063) and ("D71" <= 0.296) then class: 0 (proba: 67.86%) | based on 84 samples
+
+if ("D27" <= 0.5) and ("D78" > 0.03) and ("D91" <= 0.37) and ("D1607" <= 0.5) then class: 0 (proba: 88.14%) | based on 59 samples
+
+if ("D27" > 0.5) and ("D85" <= 0.006) and ("D66" > 0.053) and ("D15" <= 0.35) then class: 1 (proba: 58.62%) | based on 29 samples
+
+if ("D27" > 0.5) and ("D85" > 0.006) and ("D802" > 0.063) and ("D25" > 0.47) then class: 1 (proba: 52.38%) | based on 21 samples
+
+if ("D27" > 0.5) and ("D85" > 0.006) and ("D802" > 0.063) and ("D25" <= 0.47) then class: 1 (proba: 100.0%) | based on 18 samples
+
+if ("D27" <= 0.5) and ("D78" > 0.03) and ("D91" > 0.37) and ("D95" > 0.007) then class: 0 (proba: 84.62%) | based on 13 samples
+
+if ("D27" <= 0.5) and ("D78" > 0.03) and ("D91" <= 0.37) and ("D1607" > 0.5) then class: 1 (proba: 72.73%) | based on 11 samples
+
+if ("D27" > 0.5) and ("D85" > 0.006) and ("D802" <= 0.063) and ("D71" > 0.296) then class: 1 (proba: 100.0%) | based on 7 samples
+
+if ("D27" <= 0.5) and ("D78" <= 0.03) and ("D2" <= 0.491) and ("D21" <= 0.003) then class: 1 (proba: 57.14%) | based on 7 samples
+
+if ("D27" > 0.5) and ("D85" <= 0.006) and ("D66" <= 0.053) and ("D106" <= 0.103) then class: 0 (proba: 100.0%) | based on 6 samples
+

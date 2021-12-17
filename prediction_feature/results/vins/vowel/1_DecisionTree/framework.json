@@ -1,0 +1,148 @@
+{
+    "uid": "50d4cba3-af3f-4c63-afed-0eb31203095e",
+    "name": "1_DecisionTree",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "\"Speaker_Number\"": {
+                            "Andrew": 0,
+                            "Bill": 1,
+                            "David": 2,
+                            "Jo": 3,
+                            "Kate": 4,
+                            "Mark": 5,
+                            "Mike": 6,
+                            "Nick": 7,
+                            "Penny": 8,
+                            "Rich": 9,
+                            "Rose": 10,
+                            "Sarah": 11,
+                            "Sue": 12,
+                            "Tim": 13,
+                            "Wendy": 14
+                        },
+                        "\"Sex\"": {
+                            "Female": 0,
+                            "Male": 1
+                        }
+                    },
+                    "columns": [
+                        "\"Speaker_Number\"",
+                        "\"Sex\""
+                    ]
+                }
+            ],
+            "categorical_y": {
+                "hAd": 0,
+                "hEd": 1,
+                "hId": 2,
+                "hOd": 3,
+                "hUd": 4,
+                "hYd": 5,
+                "had": 6,
+                "hed": 7,
+                "hid": 8,
+                "hod": 9,
+                "hud": 10
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\"Speaker_Number\"": [
+                        "categorical_to_int"
+                    ],
+                    "\"Sex\"": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Decision Tree",
+            "algorithm_short_name": "Decision Tree",
+            "uid": "b32cd5e2-5742-4ed4-94b3-2ec84d01b45a",
+            "params": {
+                "model_type": "Decision Tree",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "seed": 3,
+                "criterion": "entropy",
+                "max_depth": 4,
+                "num_class": 11,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 1,
+            "train_cant_improve_limit": 0,
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\"Speaker_Number\"": [
+                    "categorical_to_int"
+                ],
+                "\"Sex\"": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/vowel/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/vowel/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/vowel"
+        },
+        "learner": {
+            "model_type": "Decision Tree",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "seed": 3,
+            "criterion": "entropy",
+            "max_depth": 4,
+            "num_class": 11,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "multiclass_classification",
+        "explain_level": 1,
+        "name": "1_DecisionTree",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "1_DecisionTree/learner_fold_0.decision_tree"
+    ],
+    "predictions_fname": "1_DecisionTree/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.43010752688172044,
+    "train_time": 0.6419308185577393,
+    "is_stacked": false
+}

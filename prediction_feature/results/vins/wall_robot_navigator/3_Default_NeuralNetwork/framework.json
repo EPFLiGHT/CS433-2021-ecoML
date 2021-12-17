@@ -1,0 +1,351 @@
+{
+    "uid": "a84d53ea-d72a-40a3-97e0-26b2b6cd914f",
+    "name": "3_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        0.8235403437227021,
+                        1.4078124525879105,
+                        1.2428011989228869,
+                        1.2964207256164635,
+                        1.3331414242765705,
+                        1.2839631844935453,
+                        1.4089472814109347,
+                        1.1056548745283425,
+                        1.3466314238413628,
+                        1.2981511443005307,
+                        1.3842511569124918,
+                        1.2360761877496136,
+                        1.4057971603349904,
+                        1.579935399200106,
+                        1.7195588781773685,
+                        1.0702341355293832,
+                        0.9232757672085152,
+                        0.8586900389233014,
+                        1.1339344355753729,
+                        1.186942933273256,
+                        0.9316188802348989,
+                        1.579001612871072,
+                        1.2947569986285021,
+                        1.1686094057868055
+                    ],
+                    "mean": [
+                        1.4950615835777126,
+                        2.3145405669599217,
+                        2.492820136852395,
+                        2.799177256435321,
+                        2.9730391006842614,
+                        2.9170172694688827,
+                        3.3469934832192894,
+                        2.5331195829260347,
+                        3.1188057999348326,
+                        2.81334082763115,
+                        2.550131964809384,
+                        2.0640736396220265,
+                        2.1225177582274357,
+                        2.2009895731508635,
+                        2.216195829260345,
+                        1.1881544477028347,
+                        0.9823796024763766,
+                        0.8965923753665689,
+                        1.0531133919843598,
+                        1.108672531769306,
+                        1.0425415444770283,
+                        1.8069918540241119,
+                        1.5644877810361684,
+                        1.6017745193874224
+                    ],
+                    "var": [
+                        0.6782186977389064,
+                        1.981935901661588,
+                        1.544554820044165,
+                        1.6807066978079175,
+                        1.7772660571221628,
+                        1.6485614591348057,
+                        1.9851324417952638,
+                        1.2224727015682848,
+                        1.813416191677016,
+                        1.6851963934487775,
+                        1.9161512654135717,
+                        1.5278843419216181,
+                        1.9762656560059226,
+                        2.496195865645598,
+                        2.95688273551861,
+                        1.145401104852326,
+                        0.8524381423144723,
+                        0.7373485829461008,
+                        1.2858073041836393,
+                        1.4088335268473209,
+                        0.8679137380101268,
+                        2.4932460934494465,
+                        1.6763956854974873,
+                        1.3656479432933906
+                    ],
+                    "n_samples_seen": 3069,
+                    "n_features_in": 24,
+                    "columns": [
+                        "\"V1\"",
+                        "\"V2\"",
+                        "\"V3\"",
+                        "\"V4\"",
+                        "\"V5\"",
+                        "\"V6\"",
+                        "\"V7\"",
+                        "\"V8\"",
+                        "\"V9\"",
+                        "\"V10\"",
+                        "\"V11\"",
+                        "\"V12\"",
+                        "\"V13\"",
+                        "\"V14\"",
+                        "\"V15\"",
+                        "\"V16\"",
+                        "\"V17\"",
+                        "\"V18\"",
+                        "\"V19\"",
+                        "\"V20\"",
+                        "\"V21\"",
+                        "\"V22\"",
+                        "\"V23\"",
+                        "\"V24\""
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\"V1\"": [
+                        "scale_normal"
+                    ],
+                    "\"V2\"": [
+                        "scale_normal"
+                    ],
+                    "\"V3\"": [
+                        "scale_normal"
+                    ],
+                    "\"V4\"": [
+                        "scale_normal"
+                    ],
+                    "\"V5\"": [
+                        "scale_normal"
+                    ],
+                    "\"V6\"": [
+                        "scale_normal"
+                    ],
+                    "\"V7\"": [
+                        "scale_normal"
+                    ],
+                    "\"V8\"": [
+                        "scale_normal"
+                    ],
+                    "\"V9\"": [
+                        "scale_normal"
+                    ],
+                    "\"V10\"": [
+                        "scale_normal"
+                    ],
+                    "\"V11\"": [
+                        "scale_normal"
+                    ],
+                    "\"V12\"": [
+                        "scale_normal"
+                    ],
+                    "\"V13\"": [
+                        "scale_normal"
+                    ],
+                    "\"V14\"": [
+                        "scale_normal"
+                    ],
+                    "\"V15\"": [
+                        "scale_normal"
+                    ],
+                    "\"V16\"": [
+                        "scale_normal"
+                    ],
+                    "\"V17\"": [
+                        "scale_normal"
+                    ],
+                    "\"V18\"": [
+                        "scale_normal"
+                    ],
+                    "\"V19\"": [
+                        "scale_normal"
+                    ],
+                    "\"V20\"": [
+                        "scale_normal"
+                    ],
+                    "\"V21\"": [
+                        "scale_normal"
+                    ],
+                    "\"V22\"": [
+                        "scale_normal"
+                    ],
+                    "\"V23\"": [
+                        "scale_normal"
+                    ],
+                    "\"V24\"": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "6e23737e-4b9b-4749-9aca-2b01794fae3c",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 3,
+                "num_class": 4,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\"V1\"": [
+                    "scale_normal"
+                ],
+                "\"V2\"": [
+                    "scale_normal"
+                ],
+                "\"V3\"": [
+                    "scale_normal"
+                ],
+                "\"V4\"": [
+                    "scale_normal"
+                ],
+                "\"V5\"": [
+                    "scale_normal"
+                ],
+                "\"V6\"": [
+                    "scale_normal"
+                ],
+                "\"V7\"": [
+                    "scale_normal"
+                ],
+                "\"V8\"": [
+                    "scale_normal"
+                ],
+                "\"V9\"": [
+                    "scale_normal"
+                ],
+                "\"V10\"": [
+                    "scale_normal"
+                ],
+                "\"V11\"": [
+                    "scale_normal"
+                ],
+                "\"V12\"": [
+                    "scale_normal"
+                ],
+                "\"V13\"": [
+                    "scale_normal"
+                ],
+                "\"V14\"": [
+                    "scale_normal"
+                ],
+                "\"V15\"": [
+                    "scale_normal"
+                ],
+                "\"V16\"": [
+                    "scale_normal"
+                ],
+                "\"V17\"": [
+                    "scale_normal"
+                ],
+                "\"V18\"": [
+                    "scale_normal"
+                ],
+                "\"V19\"": [
+                    "scale_normal"
+                ],
+                "\"V20\"": [
+                    "scale_normal"
+                ],
+                "\"V21\"": [
+                    "scale_normal"
+                ],
+                "\"V22\"": [
+                    "scale_normal"
+                ],
+                "\"V23\"": [
+                    "scale_normal"
+                ],
+                "\"V24\"": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/wall_robot_navigator/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/wall_robot_navigator/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/wall_robot_navigator"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 3,
+            "num_class": 4,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "multiclass_classification",
+        "explain_level": 1,
+        "name": "3_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Default_NeuralNetwork/learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "3_Default_NeuralNetwork/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.8875855327468231,
+    "train_time": 1.6402199268341064,
+    "is_stacked": false
+}

@@ -1,0 +1,16 @@
+if ("V79" <= 412.32) and ("V100" <= 336.38) and ("V58" <= 324.89) and ("V5" > 1.035) then class: 0 (proba: 55.33%) | based on 338 samples
+
+if ("V79" > 412.32) and ("V21" > 479.115) and ("V77" > 521.15) and ("V92" > 690.575) then class: 1 (proba: 53.08%) | based on 292 samples
+
+if ("V79" > 412.32) and ("V21" > 479.115) and ("V77" > 521.15) and ("V92" <= 690.575) then class: 1 (proba: 88.24%) | based on 17 samples
+
+if ("V79" <= 412.32) and ("V100" > 336.38) then class: 0 (proba: 100.0%) | based on 10 samples
+
+if ("V79" > 412.32) and ("V21" <= 479.115) then class: 1 (proba: 100.0%) | based on 8 samples
+
+if ("V79" <= 412.32) and ("V100" <= 336.38) and ("V58" > 324.89) then class: 1 (proba: 100.0%) | based on 6 samples
+
+if ("V79" > 412.32) and ("V21" > 479.115) and ("V77" <= 521.15) then class: 0 (proba: 100.0%) | based on 5 samples
+
+if ("V79" <= 412.32) and ("V100" <= 336.38) and ("V58" <= 324.89) and ("V5" <= 1.035) then class: 1 (proba: 100.0%) | based on 5 samples
+

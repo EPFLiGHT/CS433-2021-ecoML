@@ -1,0 +1,31 @@
+{
+    "columns": [
+        "\"V1\"",
+        "\"V2\"",
+        "\"V3\"",
+        "\"V4\""
+    ],
+    "rows": 1029,
+    "cols": 4,
+    "target_is_numeric": true,
+    "columns_info": {
+        "\"V1\"": [
+            "scale"
+        ],
+        "\"V2\"": [
+            "scale"
+        ],
+        "\"V3\"": [
+            "scale"
+        ],
+        "\"V4\"": [
+            "scale"
+        ]
+    },
+    "target_info": [
+        "convert_0_1"
+    ],
+    "n_features": 4,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}

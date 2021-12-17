@@ -1,0 +1,6 @@
+name,model_type,metric_type,metric_value,train_time
+1_DecisionTree,Decision Tree,f1,0.9556962025316456,4.81
+2_Linear,Linear,f1,1.0,1.89
+3_Default_NeuralNetwork,Neural Network,f1,0.9873417721518988,2.05
+4_Default_RandomForest,Random Forest,f1,0.9873417721518988,3.93
+Ensemble,Ensemble,f1,1.0,0.19

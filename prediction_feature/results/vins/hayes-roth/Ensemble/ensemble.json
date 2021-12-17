@@ -1,0 +1,16 @@
+{
+    "name": "Ensemble",
+    "ml_task": "multiclass_classification",
+    "optimize_metric": "f1",
+    "selected_models": [
+        {
+            "model": "4_Default_RandomForest",
+            "repeat": 1.0
+        }
+    ],
+    "predictions_fname": "Ensemble/predictions_ensemble.csv",
+    "metric_name": "f1",
+    "final_loss": -0.8000000000000002,
+    "train_time": 0.15578269958496094,
+    "is_stacked": false
+}

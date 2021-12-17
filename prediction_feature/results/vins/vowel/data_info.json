@@ -1,0 +1,54 @@
+{
+    "columns": [
+        "\"Speaker_Number\"",
+        "\"Sex\"",
+        "\"Feature_0\"",
+        "\"Feature_1\"",
+        "\"Feature_2\"",
+        "\"Feature_3\"",
+        "\"Feature_4\"",
+        "\"Feature_5\"",
+        "\"Feature_6\"",
+        "\"Feature_7\"",
+        "\"Feature_8\"",
+        "\"Feature_9\""
+    ],
+    "rows": 742,
+    "cols": 12,
+    "target_is_numeric": false,
+    "columns_info": {
+        "\"Speaker_Number\"": [
+            "categorical",
+            "few_categories"
+        ],
+        "\"Sex\"": [
+            "categorical",
+            "few_categories"
+        ],
+        "\"Feature_0\"": [
+            "scale"
+        ],
+        "\"Feature_1\"": [
+            "scale"
+        ],
+        "\"Feature_2\"": [
+            "scale"
+        ],
+        "\"Feature_3\"": [
+            "scale"
+        ],
+        "\"Feature_4\"": [],
+        "\"Feature_5\"": [
+            "scale"
+        ],
+        "\"Feature_6\"": [],
+        "\"Feature_7\"": [],
+        "\"Feature_8\"": [],
+        "\"Feature_9\"": []
+    },
+    "target_info": [],
+    "n_features": 12,
+    "is_sample_weighted": false,
+    "n_classes": 11,
+    "num_class": 11
+}

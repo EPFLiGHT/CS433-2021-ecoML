@@ -1,0 +1,42 @@
+{
+    "columns": [
+        "\"V1\"",
+        "\"V2\"",
+        "\"V3\"",
+        "\"V4\"",
+        "\"V5\"",
+        "\"V6\"",
+        "\"V7\""
+    ],
+    "rows": 7663,
+    "cols": 7,
+    "target_is_numeric": true,
+    "columns_info": {
+        "\"V1\"": [
+            "scale"
+        ],
+        "\"V2\"": [
+            "scale"
+        ],
+        "\"V3\"": [
+            "scale"
+        ],
+        "\"V4\"": [
+            "scale"
+        ],
+        "\"V5\"": [
+            "scale"
+        ],
+        "\"V6\"": [
+            "scale"
+        ],
+        "\"V7\"": [
+            "scale"
+        ]
+    },
+    "target_info": [],
+    "n_features": 7,
+    "is_sample_weighted": false,
+    "n_classes": 10,
+    "num_class": 10
+}

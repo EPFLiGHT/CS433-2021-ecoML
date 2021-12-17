@@ -1,0 +1,5 @@
+feature,mean_importance
+"""hobby""",0.0
+"""marital_status""",0.23045501810171584
+"""educational_level""",0.24761833484839527
+"""age""",0.3010243504967488

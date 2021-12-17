@@ -1,0 +1,696 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Linear",
+            "Random Forest",
+            "Decision Tree",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 0.17527031898498535
+            },
+            {
+                "model_name": "1_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 14.378769874572754
+            },
+            {
+                "model_name": "2_Linear",
+                "model_type": "Linear",
+                "fit_level": "simple_algorithms",
+                "train_time": 1.0573320388793945
+            },
+            {
+                "model_name": "3_Default_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "default_algorithms",
+                "train_time": 1.6231880187988281
+            },
+            {
+                "model_name": "4_Default_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "default_algorithms",
+                "train_time": 1.477937936782837
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 0.2773470878601074
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "INTERNODE_29": [
+                            "categorical_to_int"
+                        ],
+                        "TREE": [
+                            "categorical_to_int"
+                        ],
+                        "BR": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_2": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_3": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_4": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_5": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_6": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_7": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_8": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_9": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_10": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_11": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_12": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_13": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_14": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_15": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_16": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_17": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_18": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_19": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_20": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_21": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_22": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_23": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_24": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_25": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_26": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_27": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_28": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "seed": 3,
+                    "criterion": "entropy",
+                    "max_depth": 4,
+                    "num_class": 6,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "1_DecisionTree",
+                "status": "trained",
+                "final_loss": -0.9980952380952381,
+                "train_time": 16.211394786834717,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "N": [
+                            "scale_normal"
+                        ],
+                        "INTERNODE_29": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "TREE": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BR": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "TL": [
+                            "scale_normal"
+                        ],
+                        "IN": [
+                            "scale_normal"
+                        ],
+                        "INTERNODE_2": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_3": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_4": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_5": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_6": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_7": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_8": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_9": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_10": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_11": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_12": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_13": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_14": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_15": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_16": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_17": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_18": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_19": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_20": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_21": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_22": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_23": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_24": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_25": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_26": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_27": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_28": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs"
+                },
+                "learner": {
+                    "model_type": "Linear",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "seed": 3,
+                    "num_class": 6,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "2_Linear",
+                "status": "trained",
+                "final_loss": -0.9161904761904762,
+                "train_time": 2.6896378993988037,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "N": [
+                            "scale_normal"
+                        ],
+                        "INTERNODE_29": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "TREE": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "BR": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "TL": [
+                            "scale_normal"
+                        ],
+                        "IN": [
+                            "scale_normal"
+                        ],
+                        "INTERNODE_2": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_3": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_4": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_5": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_6": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_7": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_8": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_9": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_10": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_11": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_12": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_13": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_14": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_15": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_16": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_17": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_18": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_19": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_20": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_21": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_22": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_23": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_24": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_25": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_26": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_27": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "INTERNODE_28": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 3,
+                    "num_class": 6,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "3_Default_NeuralNetwork",
+                "status": "trained",
+                "final_loss": -0.9371428571428572,
+                "train_time": 3.1566243171691895,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "INTERNODE_29": [
+                            "categorical_to_int"
+                        ],
+                        "TREE": [
+                            "categorical_to_int"
+                        ],
+                        "BR": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_2": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_3": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_4": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_5": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_6": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_7": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_8": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_9": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_10": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_11": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_12": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_13": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_14": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_15": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_16": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_17": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_18": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_19": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_20": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_21": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_22": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_23": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_24": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_25": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_26": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_27": [
+                            "categorical_to_int"
+                        ],
+                        "INTERNODE_28": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cjs"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 4,
+                    "eval_metric_name": "f1",
+                    "num_class": 6,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "4_Default_RandomForest",
+                "status": "trained",
+                "final_loss": -0.9980952380952381,
+                "train_time": 2.9990551471710205,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": -0.9980952380952381,
+                "train_time": 0.2773470878601074
+            }
+        ]
+    },
+    "adjust_validation": false
+}

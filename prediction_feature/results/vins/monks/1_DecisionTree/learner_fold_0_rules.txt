@@ -1,0 +1,12 @@
+if (attr5 <= 1.5) then class: 1 (proba: 100.0%) | based on 86 samples
+
+if (attr5 > 1.5) and (attr2 > 1.5) and (attr1 > 1.5) and (attr5 <= 3.5) then class: 1 (proba: 58.06%) | based on 62 samples
+
+if (attr5 > 1.5) and (attr2 <= 1.5) and (attr1 > 1.5) then class: 0 (proba: 100.0%) | based on 62 samples
+
+if (attr5 > 1.5) and (attr2 > 1.5) and (attr1 <= 1.5) then class: 0 (proba: 100.0%) | based on 43 samples
+
+if (attr5 > 1.5) and (attr2 > 1.5) and (attr1 > 1.5) and (attr5 > 3.5) then class: 0 (proba: 52.94%) | based on 34 samples
+
+if (attr5 > 1.5) and (attr2 <= 1.5) and (attr1 <= 1.5) then class: 1 (proba: 100.0%) | based on 25 samples
+

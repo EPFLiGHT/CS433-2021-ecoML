@@ -1,0 +1,670 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Linear",
+            "Random Forest",
+            "Decision Tree",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 0.15106606483459473
+            },
+            {
+                "model_name": "1_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 3.708667039871216
+            },
+            {
+                "model_name": "2_Linear",
+                "model_type": "Linear",
+                "fit_level": "simple_algorithms",
+                "train_time": 0.7999451160430908
+            },
+            {
+                "model_name": "3_Default_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "default_algorithms",
+                "train_time": 0.9077169895172119
+            },
+            {
+                "model_name": "4_Default_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "default_algorithms",
+                "train_time": 2.782867193222046
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 0.18658924102783203
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "seed": 3,
+                    "criterion": "entropy",
+                    "max_depth": 4,
+                    "num_class": 4,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "1_DecisionTree",
+                "status": "trained",
+                "final_loss": -0.9556962025316456,
+                "train_time": 4.806708812713623,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"a\"": [
+                            "scale_normal"
+                        ],
+                        "\"all\"": [
+                            "scale_normal"
+                        ],
+                        "\"an\"": [
+                            "scale_normal"
+                        ],
+                        "\"and\"": [
+                            "scale_normal"
+                        ],
+                        "\"any\"": [
+                            "scale_normal"
+                        ],
+                        "\"are\"": [
+                            "scale_normal"
+                        ],
+                        "\"as\"": [
+                            "scale_normal"
+                        ],
+                        "\"at\"": [
+                            "scale_normal"
+                        ],
+                        "\"be\"": [
+                            "scale_normal"
+                        ],
+                        "\"been\"": [
+                            "scale_normal"
+                        ],
+                        "\"but\"": [
+                            "scale_normal"
+                        ],
+                        "\"by\"": [
+                            "scale_normal"
+                        ],
+                        "\"can\"": [
+                            "scale_normal"
+                        ],
+                        "\"do\"": [
+                            "scale_normal"
+                        ],
+                        "\"down\"": [
+                            "scale_normal"
+                        ],
+                        "\"even\"": [
+                            "scale_normal"
+                        ],
+                        "\"every\"": [
+                            "scale_normal"
+                        ],
+                        "\"for\"": [
+                            "scale_normal"
+                        ],
+                        "\"from\"": [
+                            "scale_normal"
+                        ],
+                        "\"had\"": [
+                            "scale_normal"
+                        ],
+                        "\"has\"": [
+                            "scale_normal"
+                        ],
+                        "\"have\"": [
+                            "scale_normal"
+                        ],
+                        "\"her\"": [
+                            "scale_normal"
+                        ],
+                        "\"his\"": [
+                            "scale_normal"
+                        ],
+                        "\"if\"": [
+                            "scale_normal"
+                        ],
+                        "\"in\"": [
+                            "scale_normal"
+                        ],
+                        "\"into\"": [
+                            "scale_normal"
+                        ],
+                        "\"is\"": [
+                            "scale_normal"
+                        ],
+                        "\"it\"": [
+                            "scale_normal"
+                        ],
+                        "\"its\"": [
+                            "scale_normal"
+                        ],
+                        "\"may\"": [
+                            "scale_normal"
+                        ],
+                        "\"more\"": [
+                            "scale_normal"
+                        ],
+                        "\"must\"": [
+                            "scale_normal"
+                        ],
+                        "\"my\"": [
+                            "scale_normal"
+                        ],
+                        "\"no\"": [
+                            "scale_normal"
+                        ],
+                        "\"not\"": [
+                            "scale_normal"
+                        ],
+                        "\"now\"": [
+                            "scale_normal"
+                        ],
+                        "\"of\"": [
+                            "scale_normal"
+                        ],
+                        "\"on\"": [
+                            "scale_normal"
+                        ],
+                        "\"one\"": [
+                            "scale_normal"
+                        ],
+                        "\"only\"": [
+                            "scale_normal"
+                        ],
+                        "\"or\"": [
+                            "scale_normal"
+                        ],
+                        "\"our\"": [
+                            "scale_normal"
+                        ],
+                        "\"should\"": [
+                            "scale_normal"
+                        ],
+                        "\"so\"": [
+                            "scale_normal"
+                        ],
+                        "\"some\"": [
+                            "scale_normal"
+                        ],
+                        "\"such\"": [
+                            "scale_normal"
+                        ],
+                        "\"than\"": [
+                            "scale_normal"
+                        ],
+                        "\"that\"": [
+                            "scale_normal"
+                        ],
+                        "\"the\"": [
+                            "scale_normal"
+                        ],
+                        "\"their\"": [
+                            "scale_normal"
+                        ],
+                        "\"then\"": [
+                            "scale_normal"
+                        ],
+                        "\"there\"": [
+                            "scale_normal"
+                        ],
+                        "\"things\"": [
+                            "scale_normal"
+                        ],
+                        "\"this\"": [
+                            "scale_normal"
+                        ],
+                        "\"to\"": [
+                            "scale_normal"
+                        ],
+                        "\"up\"": [
+                            "scale_normal"
+                        ],
+                        "\"upon\"": [
+                            "scale_normal"
+                        ],
+                        "\"was\"": [
+                            "scale_normal"
+                        ],
+                        "\"were\"": [
+                            "scale_normal"
+                        ],
+                        "\"what\"": [
+                            "scale_normal"
+                        ],
+                        "\"when\"": [
+                            "scale_normal"
+                        ],
+                        "\"which\"": [
+                            "scale_normal"
+                        ],
+                        "\"who\"": [
+                            "scale_normal"
+                        ],
+                        "\"will\"": [
+                            "scale_normal"
+                        ],
+                        "\"with\"": [
+                            "scale_normal"
+                        ],
+                        "\"would\"": [
+                            "scale_normal"
+                        ],
+                        "\"your\"": [
+                            "scale_normal"
+                        ],
+                        "\"BookID\"": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship"
+                },
+                "learner": {
+                    "model_type": "Linear",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "seed": 3,
+                    "num_class": 4,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "2_Linear",
+                "status": "trained",
+                "final_loss": -1.0,
+                "train_time": 1.8850853443145752,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"a\"": [
+                            "scale_normal"
+                        ],
+                        "\"all\"": [
+                            "scale_normal"
+                        ],
+                        "\"an\"": [
+                            "scale_normal"
+                        ],
+                        "\"and\"": [
+                            "scale_normal"
+                        ],
+                        "\"any\"": [
+                            "scale_normal"
+                        ],
+                        "\"are\"": [
+                            "scale_normal"
+                        ],
+                        "\"as\"": [
+                            "scale_normal"
+                        ],
+                        "\"at\"": [
+                            "scale_normal"
+                        ],
+                        "\"be\"": [
+                            "scale_normal"
+                        ],
+                        "\"been\"": [
+                            "scale_normal"
+                        ],
+                        "\"but\"": [
+                            "scale_normal"
+                        ],
+                        "\"by\"": [
+                            "scale_normal"
+                        ],
+                        "\"can\"": [
+                            "scale_normal"
+                        ],
+                        "\"do\"": [
+                            "scale_normal"
+                        ],
+                        "\"down\"": [
+                            "scale_normal"
+                        ],
+                        "\"even\"": [
+                            "scale_normal"
+                        ],
+                        "\"every\"": [
+                            "scale_normal"
+                        ],
+                        "\"for\"": [
+                            "scale_normal"
+                        ],
+                        "\"from\"": [
+                            "scale_normal"
+                        ],
+                        "\"had\"": [
+                            "scale_normal"
+                        ],
+                        "\"has\"": [
+                            "scale_normal"
+                        ],
+                        "\"have\"": [
+                            "scale_normal"
+                        ],
+                        "\"her\"": [
+                            "scale_normal"
+                        ],
+                        "\"his\"": [
+                            "scale_normal"
+                        ],
+                        "\"if\"": [
+                            "scale_normal"
+                        ],
+                        "\"in\"": [
+                            "scale_normal"
+                        ],
+                        "\"into\"": [
+                            "scale_normal"
+                        ],
+                        "\"is\"": [
+                            "scale_normal"
+                        ],
+                        "\"it\"": [
+                            "scale_normal"
+                        ],
+                        "\"its\"": [
+                            "scale_normal"
+                        ],
+                        "\"may\"": [
+                            "scale_normal"
+                        ],
+                        "\"more\"": [
+                            "scale_normal"
+                        ],
+                        "\"must\"": [
+                            "scale_normal"
+                        ],
+                        "\"my\"": [
+                            "scale_normal"
+                        ],
+                        "\"no\"": [
+                            "scale_normal"
+                        ],
+                        "\"not\"": [
+                            "scale_normal"
+                        ],
+                        "\"now\"": [
+                            "scale_normal"
+                        ],
+                        "\"of\"": [
+                            "scale_normal"
+                        ],
+                        "\"on\"": [
+                            "scale_normal"
+                        ],
+                        "\"one\"": [
+                            "scale_normal"
+                        ],
+                        "\"only\"": [
+                            "scale_normal"
+                        ],
+                        "\"or\"": [
+                            "scale_normal"
+                        ],
+                        "\"our\"": [
+                            "scale_normal"
+                        ],
+                        "\"should\"": [
+                            "scale_normal"
+                        ],
+                        "\"so\"": [
+                            "scale_normal"
+                        ],
+                        "\"some\"": [
+                            "scale_normal"
+                        ],
+                        "\"such\"": [
+                            "scale_normal"
+                        ],
+                        "\"than\"": [
+                            "scale_normal"
+                        ],
+                        "\"that\"": [
+                            "scale_normal"
+                        ],
+                        "\"the\"": [
+                            "scale_normal"
+                        ],
+                        "\"their\"": [
+                            "scale_normal"
+                        ],
+                        "\"then\"": [
+                            "scale_normal"
+                        ],
+                        "\"there\"": [
+                            "scale_normal"
+                        ],
+                        "\"things\"": [
+                            "scale_normal"
+                        ],
+                        "\"this\"": [
+                            "scale_normal"
+                        ],
+                        "\"to\"": [
+                            "scale_normal"
+                        ],
+                        "\"up\"": [
+                            "scale_normal"
+                        ],
+                        "\"upon\"": [
+                            "scale_normal"
+                        ],
+                        "\"was\"": [
+                            "scale_normal"
+                        ],
+                        "\"were\"": [
+                            "scale_normal"
+                        ],
+                        "\"what\"": [
+                            "scale_normal"
+                        ],
+                        "\"when\"": [
+                            "scale_normal"
+                        ],
+                        "\"which\"": [
+                            "scale_normal"
+                        ],
+                        "\"who\"": [
+                            "scale_normal"
+                        ],
+                        "\"will\"": [
+                            "scale_normal"
+                        ],
+                        "\"with\"": [
+                            "scale_normal"
+                        ],
+                        "\"would\"": [
+                            "scale_normal"
+                        ],
+                        "\"your\"": [
+                            "scale_normal"
+                        ],
+                        "\"BookID\"": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 3,
+                    "num_class": 4,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "3_Default_NeuralNetwork",
+                "status": "trained",
+                "final_loss": -0.9873417721518988,
+                "train_time": 2.0481767654418945,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/analcatdata_authorship"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 4,
+                    "eval_metric_name": "f1",
+                    "num_class": 4,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "4_Default_RandomForest",
+                "status": "trained",
+                "final_loss": -0.9873417721518988,
+                "train_time": 3.9269421100616455,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": -1.0,
+                "train_time": 0.18658924102783203
+            }
+        ]
+    },
+    "adjust_validation": false
+}

@@ -1,0 +1,399 @@
+{
+    "uid": "d647734f-2985-4534-b71e-8233883ad304",
+    "name": "2_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "\"workclass\"": {
+                            " ?": 0,
+                            " Federal-gov": 1,
+                            " Local-gov": 2,
+                            " Never-worked": 3,
+                            " Private": 4,
+                            " Self-emp-inc": 5,
+                            " Self-emp-not-inc": 6,
+                            " State-gov": 7,
+                            " Without-pay": 8
+                        },
+                        "\"education\"": {
+                            " 10th": 0,
+                            " 11th": 1,
+                            " 12th": 2,
+                            " 1st-4th": 3,
+                            " 5th-6th": 4,
+                            " 7th-8th": 5,
+                            " 9th": 6,
+                            " Assoc-acdm": 7,
+                            " Assoc-voc": 8,
+                            " Bachelors": 9,
+                            " Doctorate": 10,
+                            " HS-grad": 11,
+                            " Masters": 12,
+                            " Preschool": 13,
+                            " Prof-school": 14,
+                            " Some-college": 15
+                        },
+                        "\"marital-status\"": {
+                            " Divorced": 0,
+                            " Married-AF-spouse": 1,
+                            " Married-civ-spouse": 2,
+                            " Married-spouse-absent": 3,
+                            " Never-married": 4,
+                            " Separated": 5,
+                            " Widowed": 6
+                        },
+                        "\"occupation\"": {
+                            " ?": 0,
+                            " Adm-clerical": 1,
+                            " Armed-Forces": 2,
+                            " Craft-repair": 3,
+                            " Exec-managerial": 4,
+                            " Farming-fishing": 5,
+                            " Handlers-cleaners": 6,
+                            " Machine-op-inspct": 7,
+                            " Other-service": 8,
+                            " Priv-house-serv": 9,
+                            " Prof-specialty": 10,
+                            " Protective-serv": 11,
+                            " Sales": 12,
+                            " Tech-support": 13,
+                            " Transport-moving": 14
+                        },
+                        "\"relationship\"": {
+                            " Husband": 0,
+                            " Not-in-family": 1,
+                            " Other-relative": 2,
+                            " Own-child": 3,
+                            " Unmarried": 4,
+                            " Wife": 5
+                        },
+                        "\"race\"": {
+                            " Amer-Indian-Eskimo": 0,
+                            " Asian-Pac-Islander": 1,
+                            " Black": 2,
+                            " Other": 3,
+                            " White": 4
+                        },
+                        "\"sex\"": {
+                            " Female": 0,
+                            " Male": 1
+                        },
+                        "\"native-country\"": {
+                            " ?": 0,
+                            " Cambodia": 1,
+                            " Canada": 2,
+                            " China": 3,
+                            " Columbia": 4,
+                            " Cuba": 5,
+                            " Dominican-Republic": 6,
+                            " Ecuador": 7,
+                            " El-Salvador": 8,
+                            " England": 9,
+                            " France": 10,
+                            " Germany": 11,
+                            " Greece": 12,
+                            " Guatemala": 13,
+                            " Haiti": 14,
+                            " Holand-Netherlands": 15,
+                            " Honduras": 16,
+                            " Hong": 17,
+                            " Hungary": 18,
+                            " India": 19,
+                            " Iran": 20,
+                            " Ireland": 21,
+                            " Italy": 22,
+                            " Jamaica": 23,
+                            " Japan": 24,
+                            " Laos": 25,
+                            " Mexico": 26,
+                            " Nicaragua": 27,
+                            " Outlying-US(Guam-USVI-etc)": 28,
+                            " Peru": 29,
+                            " Philippines": 30,
+                            " Poland": 31,
+                            " Portugal": 32,
+                            " Puerto-Rico": 33,
+                            " Scotland": 34,
+                            " South": 35,
+                            " Taiwan": 36,
+                            " Thailand": 37,
+                            " Trinadad&Tobago": 38,
+                            " United-States": 39,
+                            " Vietnam": 40,
+                            " Yugoslavia": 41
+                        }
+                    },
+                    "columns": [
+                        "\"workclass\"",
+                        "\"education\"",
+                        "\"marital-status\"",
+                        "\"occupation\"",
+                        "\"relationship\"",
+                        "\"race\"",
+                        "\"sex\"",
+                        "\"native-country\""
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        13.703492308595699,
+                        1.4560557252012487,
+                        104108.47465374655,
+                        3.8574179477654194,
+                        2.5914398066615725,
+                        1.5088350145697358,
+                        4.225158467575773,
+                        1.6046085184465049,
+                        0.850457943821337,
+                        0.4713186563669136,
+                        7802.574094262984,
+                        390.7241091925177,
+                        12.417305844053926,
+                        7.867703313060876
+                    ],
+                    "mean": [
+                        38.67440760018928,
+                        3.876424125505041,
+                        189224.200232956,
+                        10.294252538856332,
+                        10.090379645470097,
+                        2.6304735558548393,
+                        6.619335347432024,
+                        1.4475303024787973,
+                        3.6636333855057694,
+                        0.6669093291595385,
+                        1145.1896043388053,
+                        82.16317839333163,
+                        40.482364503330544,
+                        36.69257088778073
+                    ],
+                    "var": [
+                        187.7857014517415,
+                        2.120098274891334,
+                        10838574494.72979,
+                        14.87967322374278,
+                        6.715560271550168,
+                        2.276583101191655,
+                        17.851964076127256,
+                        2.5747684974710876,
+                        0.7232787142088164,
+                        0.2221412758395128,
+                        60880162.49646382,
+                        152665.32950428646,
+                        154.18948442477577,
+                        61.90075542234907
+                    ],
+                    "n_samples_seen": 27473,
+                    "n_features_in": 14,
+                    "columns": [
+                        "\"age\"",
+                        "\"workclass\"",
+                        "\"fnlwgt\"",
+                        "\"education\"",
+                        "\"education-num\"",
+                        "\"marital-status\"",
+                        "\"occupation\"",
+                        "\"relationship\"",
+                        "\"race\"",
+                        "\"sex\"",
+                        "\"capital-gain\"",
+                        "\"capital-loss\"",
+                        "\"hours-per-week\"",
+                        "\"native-country\""
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                " <=50K": 0,
+                " >50K": 1
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\"age\"": [
+                        "scale_normal"
+                    ],
+                    "\"workclass\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"fnlwgt\"": [
+                        "scale_normal"
+                    ],
+                    "\"education\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"education-num\"": [
+                        "scale_normal"
+                    ],
+                    "\"marital-status\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"occupation\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"relationship\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"race\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"sex\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"capital-gain\"": [
+                        "scale_normal"
+                    ],
+                    "\"capital-loss\"": [
+                        "scale_normal"
+                    ],
+                    "\"hours-per-week\"": [
+                        "scale_normal"
+                    ],
+                    "\"native-country\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "90fc545c-bd02-4061-9702-f1e5a53be268",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 2,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\"age\"": [
+                    "scale_normal"
+                ],
+                "\"workclass\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"fnlwgt\"": [
+                    "scale_normal"
+                ],
+                "\"education\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"education-num\"": [
+                    "scale_normal"
+                ],
+                "\"marital-status\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"occupation\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"relationship\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"race\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"sex\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"capital-gain\"": [
+                    "scale_normal"
+                ],
+                "\"capital-loss\"": [
+                    "scale_normal"
+                ],
+                "\"hours-per-week\"": [
+                    "scale_normal"
+                ],
+                "\"native-country\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 2,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "2_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_Default_NeuralNetwork/learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "2_Default_NeuralNetwork/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.651103129810159,
+    "train_time": 9.510854244232178,
+    "is_stacked": false,
+    "threshold": 0.45019472420344536
+}

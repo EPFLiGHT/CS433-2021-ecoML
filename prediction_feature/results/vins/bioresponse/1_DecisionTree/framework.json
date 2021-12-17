@@ -1,0 +1,97 @@
+{
+    "uid": "58f7e08f-65cc-4b82-bdae-4f526f8d0763",
+    "name": "1_DecisionTree",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "\"D823\""
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\"D823\"": [
+                        "remove_column"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Decision Tree",
+            "algorithm_short_name": "Decision Tree",
+            "uid": "e7444cdb-430c-4323-b0fc-11a05cd632f4",
+            "params": {
+                "model_type": "Decision Tree",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 3,
+                "criterion": "entropy",
+                "max_depth": 4,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 1,
+            "train_cant_improve_limit": 0,
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\"D823\"": [
+                    "remove_column"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse"
+        },
+        "learner": {
+            "model_type": "Decision Tree",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 3,
+            "criterion": "entropy",
+            "max_depth": 4,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "1_DecisionTree",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "1_DecisionTree/learner_fold_0.decision_tree"
+    ],
+    "predictions_fname": "1_DecisionTree/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.7684346701164295,
+    "train_time": 50.2748658657074,
+    "is_stacked": false,
+    "threshold": 0.458910500995355
+}

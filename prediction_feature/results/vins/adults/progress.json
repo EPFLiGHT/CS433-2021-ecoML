@@ -1,0 +1,304 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Random Forest",
+            "Decision Tree",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 0.5083611011505127
+            },
+            {
+                "model_name": "1_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 16.00503969192505
+            },
+            {
+                "model_name": "2_Default_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "default_algorithms",
+                "train_time": 9.510854244232178
+            },
+            {
+                "model_name": "3_Default_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "default_algorithms",
+                "train_time": 4.300284147262573
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 2.1153147220611572
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"workclass\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"education\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"marital-status\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"occupation\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"relationship\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"race\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"sex\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"native-country\"": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 3,
+                    "criterion": "entropy",
+                    "max_depth": 4,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "1_DecisionTree",
+                "status": "trained",
+                "final_loss": -0.6143049932523617,
+                "train_time": 17.726892948150635,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"age\"": [
+                            "scale_normal"
+                        ],
+                        "\"workclass\"": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "\"fnlwgt\"": [
+                            "scale_normal"
+                        ],
+                        "\"education\"": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "\"education-num\"": [
+                            "scale_normal"
+                        ],
+                        "\"marital-status\"": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "\"occupation\"": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "\"relationship\"": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "\"race\"": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "\"sex\"": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "\"capital-gain\"": [
+                            "scale_normal"
+                        ],
+                        "\"capital-loss\"": [
+                            "scale_normal"
+                        ],
+                        "\"hours-per-week\"": [
+                            "scale_normal"
+                        ],
+                        "\"native-country\"": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 2,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "2_Default_NeuralNetwork",
+                "status": "trained",
+                "final_loss": -0.651103129810159,
+                "train_time": 11.324278354644775,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"workclass\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"education\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"marital-status\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"occupation\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"relationship\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"race\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"sex\"": [
+                            "categorical_to_int"
+                        ],
+                        "\"native-country\"": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/adults"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 3,
+                    "eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "3_Default_RandomForest",
+                "status": "trained",
+                "final_loss": -0.6341594827586208,
+                "train_time": 6.035566091537476,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": -0.651103129810159,
+                "train_time": 2.1153147220611572
+            }
+        ]
+    },
+    "adjust_validation": false
+}

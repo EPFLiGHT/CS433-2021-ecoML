@@ -1,0 +1,22 @@
+if ("V3" <= 294.0) and ("V17" > 0.005) then class: 2 (proba: 100.0%) | based on 163 samples
+
+if ("V3" > 294.0) and ("V15" <= 0.507) and ("V20" <= 0.915) and ("V15" > 0.005) then class: 2 (proba: 100.0%) | based on 65 samples
+
+if ("V3" > 294.0) and ("V15" > 0.507) and ("V16" <= 0.451) and ("V13" <= 0.842) then class: 2 (proba: 66.67%) | based on 30 samples
+
+if ("V3" > 294.0) and ("V15" > 0.507) and ("V16" > 0.451) and ("V9" > 0.286) then class: 2 (proba: 100.0%) | based on 23 samples
+
+if ("V3" > 294.0) and ("V15" > 0.507) and ("V16" > 0.451) and ("V9" <= 0.286) then class: 2 (proba: 55.56%) | based on 9 samples
+
+if ("V3" > 294.0) and ("V15" > 0.507) and ("V16" <= 0.451) and ("V13" > 0.842) then class: 1 (proba: 100.0%) | based on 5 samples
+
+if ("V3" > 294.0) and ("V15" <= 0.507) and ("V20" > 0.915) and ("V12" > 0.138) then class: 2 (proba: 100.0%) | based on 3 samples
+
+if ("V3" > 294.0) and ("V15" <= 0.507) and ("V20" > 0.915) and ("V12" <= 0.138) then class: 1 (proba: 100.0%) | based on 2 samples
+
+if ("V3" > 294.0) and ("V15" <= 0.507) and ("V20" <= 0.915) and ("V15" <= 0.005) then class: 1 (proba: 100.0%) | based on 1 samples
+
+if ("V3" <= 294.0) and ("V17" <= 0.005) and ("V6" > 0.341) then class: 2 (proba: 100.0%) | based on 1 samples
+
+if ("V3" <= 294.0) and ("V17" <= 0.005) and ("V6" <= 0.341) then class: 1 (proba: 100.0%) | based on 1 samples
+

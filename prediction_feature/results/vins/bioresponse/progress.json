@@ -1,0 +1,395 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Random Forest",
+            "Decision Tree",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 3.710982322692871
+            },
+            {
+                "model_name": "1_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 50.2748658657074
+            },
+            {
+                "model_name": "2_Default_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "default_algorithms",
+                "train_time": 54.58022212982178
+            },
+            {
+                "model_name": "3_Default_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "default_algorithms",
+                "train_time": 68.98510193824768
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 0.6577389240264893
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"D823\"": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 3,
+                    "criterion": "entropy",
+                    "max_depth": 4,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "1_DecisionTree",
+                "status": "trained",
+                "final_loss": -0.7684346701164295,
+                "train_time": 51.975367069244385,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"D2\"": [
+                            "scale_normal"
+                        ],
+                        "\"D6\"": [
+                            "scale_normal"
+                        ],
+                        "\"D9\"": [
+                            "scale_normal"
+                        ],
+                        "\"D15\"": [
+                            "scale_normal"
+                        ],
+                        "\"D17\"": [
+                            "scale_normal"
+                        ],
+                        "\"D23\"": [
+                            "scale_normal"
+                        ],
+                        "\"D26\"": [
+                            "scale_normal"
+                        ],
+                        "\"D27\"": [
+                            "scale_normal"
+                        ],
+                        "\"D28\"": [
+                            "scale_normal"
+                        ],
+                        "\"D50\"": [
+                            "scale_normal"
+                        ],
+                        "\"D52\"": [
+                            "scale_normal"
+                        ],
+                        "\"D70\"": [
+                            "scale_normal"
+                        ],
+                        "\"D89\"": [
+                            "scale_normal"
+                        ],
+                        "\"D99\"": [
+                            "scale_normal"
+                        ],
+                        "\"D100\"": [
+                            "scale_normal"
+                        ],
+                        "\"D104\"": [
+                            "scale_normal"
+                        ],
+                        "\"D105\"": [
+                            "scale_normal"
+                        ],
+                        "\"D107\"": [
+                            "scale_normal"
+                        ],
+                        "\"D178\"": [
+                            "scale_normal"
+                        ],
+                        "\"D181\"": [
+                            "scale_normal"
+                        ],
+                        "\"D183\"": [
+                            "scale_normal"
+                        ],
+                        "\"D187\"": [
+                            "scale_normal"
+                        ],
+                        "\"D190\"": [
+                            "scale_normal"
+                        ],
+                        "\"D200\"": [
+                            "scale_normal"
+                        ],
+                        "\"D201\"": [
+                            "scale_normal"
+                        ],
+                        "\"D202\"": [
+                            "scale_normal"
+                        ],
+                        "\"D205\"": [
+                            "scale_normal"
+                        ],
+                        "\"D207\"": [
+                            "scale_normal"
+                        ],
+                        "\"D208\"": [
+                            "scale_normal"
+                        ],
+                        "\"D210\"": [
+                            "scale_normal"
+                        ],
+                        "\"D217\"": [
+                            "scale_normal"
+                        ],
+                        "\"D222\"": [
+                            "scale_normal"
+                        ],
+                        "\"D823\"": [
+                            "remove_column"
+                        ],
+                        "\"D961\"": [
+                            "scale_normal"
+                        ],
+                        "\"D965\"": [
+                            "scale_normal"
+                        ],
+                        "\"D969\"": [
+                            "scale_normal"
+                        ],
+                        "\"D972\"": [
+                            "scale_normal"
+                        ],
+                        "\"D974\"": [
+                            "scale_normal"
+                        ],
+                        "\"D979\"": [
+                            "scale_normal"
+                        ],
+                        "\"D980\"": [
+                            "scale_normal"
+                        ],
+                        "\"D981\"": [
+                            "scale_normal"
+                        ],
+                        "\"D989\"": [
+                            "scale_normal"
+                        ],
+                        "\"D990\"": [
+                            "scale_normal"
+                        ],
+                        "\"D998\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1001\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1004\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1005\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1016\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1022\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1031\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1034\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1036\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1044\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1051\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1057\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1075\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1077\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1096\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1109\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1128\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1176\"": [
+                            "scale_normal"
+                        ],
+                        "\"D1190\"": [
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 2,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "2_Default_NeuralNetwork",
+                "status": "trained",
+                "final_loss": -0.784688995215311,
+                "train_time": 56.266831159591675,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"D823\"": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bioresponse"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 3,
+                    "eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "3_Default_RandomForest",
+                "status": "trained",
+                "final_loss": -0.7725540025412961,
+                "train_time": 70.71068263053894,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": -0.7955112219451371,
+                "train_time": 0.6577389240264893
+            }
+        ]
+    },
+    "adjust_validation": false
+}

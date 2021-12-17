@@ -1,0 +1,188 @@
+{
+    "uid": "0009bdb5-b2ad-4237-8998-dda21e4cce10",
+    "name": "2_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        1.4346055268595197,
+                        1.0979349291906426,
+                        47556.76000543737,
+                        47549.86371089678,
+                        47239.461306730554,
+                        47224.97248930034,
+                        47467.59827770782
+                    ],
+                    "mean": [
+                        3.2091596303365577,
+                        2.430709671853601,
+                        82479.67086150561,
+                        82466.58553050154,
+                        81859.27909158551,
+                        81927.38040395544,
+                        82113.32130956618
+                    ],
+                    "var": [
+                        2.0580930176958803,
+                        1.2054611087368612,
+                        2261645422.2147675,
+                        2260989538.9248586,
+                        2231566704.550093,
+                        2230198026.615174,
+                        2253172886.25385
+                    ],
+                    "n_samples_seen": 92733,
+                    "n_features_in": 7,
+                    "columns": [
+                        "\"V1\"",
+                        "\"V2\"",
+                        "\"V3\"",
+                        "\"V4\"",
+                        "\"V5\"",
+                        "\"V6\"",
+                        "\"V7\""
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "1": 0,
+                "2": 1,
+                "3": 2,
+                "4": 3,
+                "5": 4,
+                "6": 5,
+                "7": 6,
+                "8": 7,
+                "9": 8,
+                "10": 9,
+                "11": 10
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\"V1\"": [
+                        "scale_normal"
+                    ],
+                    "\"V2\"": [
+                        "scale_normal"
+                    ],
+                    "\"V3\"": [
+                        "scale_normal"
+                    ],
+                    "\"V4\"": [
+                        "scale_normal"
+                    ],
+                    "\"V5\"": [
+                        "scale_normal"
+                    ],
+                    "\"V6\"": [
+                        "scale_normal"
+                    ],
+                    "\"V7\"": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "507c0ca7-760d-4edc-8551-a28ac75ea86b",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 2,
+                "num_class": 11,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\"V1\"": [
+                    "scale_normal"
+                ],
+                "\"V2\"": [
+                    "scale_normal"
+                ],
+                "\"V3\"": [
+                    "scale_normal"
+                ],
+                "\"V4\"": [
+                    "scale_normal"
+                ],
+                "\"V5\"": [
+                    "scale_normal"
+                ],
+                "\"V6\"": [
+                    "scale_normal"
+                ],
+                "\"V7\"": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/idpa/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/idpa/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/idpa"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 2,
+            "num_class": 11,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "multiclass_classification",
+        "explain_level": 1,
+        "name": "2_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_Default_NeuralNetwork/learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "2_Default_NeuralNetwork/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.6227031573498965,
+    "train_time": 73.23050904273987,
+    "is_stacked": false
+}

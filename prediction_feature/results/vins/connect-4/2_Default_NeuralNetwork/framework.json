@@ -1,0 +1,210 @@
+{
+    "uid": "695f91cb-cb8a-437c-abcd-9c929a9dc3c3",
+    "name": "2_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        0.8349986298859161,
+                        0.7780811399769381,
+                        0.839345504155625,
+                        0.7944801938332708,
+                        0.8114263283182822,
+                        0.8096332725444776,
+                        0.8361194160990638,
+                        0.6917859479520624,
+                        0.7965705996467649,
+                        0.8328740909555546
+                    ],
+                    "mean": [
+                        0.9578421052631579,
+                        0.5349473684210526,
+                        1.056421052631579,
+                        0.5831052631578947,
+                        1.2366052631578948,
+                        0.6637368421052632,
+                        0.861078947368421,
+                        0.5107894736842106,
+                        0.7092631578947368,
+                        0.8386578947368422
+                    ],
+                    "var": [
+                        0.6972227119113572,
+                        0.6054102603878115,
+                        0.7045008753462604,
+                        0.6311987783933516,
+                        0.6584126862880887,
+                        0.6555060360110804,
+                        0.6990956779778394,
+                        0.4785677977839336,
+                        0.6345247202216067,
+                        0.6936792513850415
+                    ],
+                    "n_samples_seen": 38000,
+                    "n_features_in": 10,
+                    "columns": [
+                        "\"a1\"",
+                        "\"a2\"",
+                        "\"b1\"",
+                        "\"b2\"",
+                        "\"c1\"",
+                        "\"c2\"",
+                        "\"d1\"",
+                        "\"e1\"",
+                        "\"f1\"",
+                        "\"g1\""
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "0": 0,
+                "1": 1,
+                "2": 2
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\"a1\"": [
+                        "scale_normal"
+                    ],
+                    "\"a2\"": [
+                        "scale_normal"
+                    ],
+                    "\"b1\"": [
+                        "scale_normal"
+                    ],
+                    "\"b2\"": [
+                        "scale_normal"
+                    ],
+                    "\"c1\"": [
+                        "scale_normal"
+                    ],
+                    "\"c2\"": [
+                        "scale_normal"
+                    ],
+                    "\"d1\"": [
+                        "scale_normal"
+                    ],
+                    "\"e1\"": [
+                        "scale_normal"
+                    ],
+                    "\"f1\"": [
+                        "scale_normal"
+                    ],
+                    "\"g1\"": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "344f2e5b-a574-48c0-a662-ad4cd6a53a4e",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 2,
+                "num_class": 3,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\"a1\"": [
+                    "scale_normal"
+                ],
+                "\"a2\"": [
+                    "scale_normal"
+                ],
+                "\"b1\"": [
+                    "scale_normal"
+                ],
+                "\"b2\"": [
+                    "scale_normal"
+                ],
+                "\"c1\"": [
+                    "scale_normal"
+                ],
+                "\"c2\"": [
+                    "scale_normal"
+                ],
+                "\"d1\"": [
+                    "scale_normal"
+                ],
+                "\"e1\"": [
+                    "scale_normal"
+                ],
+                "\"f1\"": [
+                    "scale_normal"
+                ],
+                "\"g1\"": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/connect-4/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/connect-4/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/connect-4"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 2,
+            "num_class": 3,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "multiclass_classification",
+        "explain_level": 1,
+        "name": "2_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_Default_NeuralNetwork/learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "2_Default_NeuralNetwork/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.7751638114786453,
+    "train_time": 13.97331714630127,
+    "is_stacked": false
+}

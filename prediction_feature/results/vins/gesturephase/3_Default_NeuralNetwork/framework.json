@@ -1,0 +1,95 @@
+{
+    "uid": "ec419fc3-cd0d-4165-adf7-f67a68a10a5c",
+    "name": "3_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "categorical_y": {
+                "'D'": 0,
+                "'H'": 1,
+                "'P'": 2,
+                "'R'": 3,
+                "'S'": 4
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "621d399c-c20b-419c-b4ac-20b9a12be6ea",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 3,
+                "num_class": 5,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {},
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/gesturephase/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/gesturephase/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/gesturephase"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 3,
+            "num_class": 5,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "multiclass_classification",
+        "explain_level": 1,
+        "name": "3_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Default_NeuralNetwork/learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "3_Default_NeuralNetwork/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.5542949756888168,
+    "train_time": 2.8108630180358887,
+    "is_stacked": false
+}

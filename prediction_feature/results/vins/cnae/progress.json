@@ -1,0 +1,1602 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Linear",
+            "Random Forest",
+            "Decision Tree",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 1.6308867931365967
+            },
+            {
+                "model_name": "1_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 9.733946800231934
+            },
+            {
+                "model_name": "2_Linear",
+                "model_type": "Linear",
+                "fit_level": "simple_algorithms",
+                "train_time": 8.545584917068481
+            },
+            {
+                "model_name": "3_Default_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "default_algorithms",
+                "train_time": 9.769244194030762
+            },
+            {
+                "model_name": "4_Default_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "default_algorithms",
+                "train_time": 28.534942865371704
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 0.23245811462402344
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"V2\"": [
+                            "remove_column"
+                        ],
+                        "\"V4\"": [
+                            "remove_column"
+                        ],
+                        "\"V5\"": [
+                            "remove_column"
+                        ],
+                        "\"V10\"": [
+                            "remove_column"
+                        ],
+                        "\"V17\"": [
+                            "remove_column"
+                        ],
+                        "\"V21\"": [
+                            "remove_column"
+                        ],
+                        "\"V29\"": [
+                            "remove_column"
+                        ],
+                        "\"V43\"": [
+                            "remove_column"
+                        ],
+                        "\"V44\"": [
+                            "remove_column"
+                        ],
+                        "\"V51\"": [
+                            "remove_column"
+                        ],
+                        "\"V64\"": [
+                            "remove_column"
+                        ],
+                        "\"V81\"": [
+                            "remove_column"
+                        ],
+                        "\"V89\"": [
+                            "remove_column"
+                        ],
+                        "\"V90\"": [
+                            "remove_column"
+                        ],
+                        "\"V97\"": [
+                            "remove_column"
+                        ],
+                        "\"V110\"": [
+                            "remove_column"
+                        ],
+                        "\"V115\"": [
+                            "remove_column"
+                        ],
+                        "\"V116\"": [
+                            "remove_column"
+                        ],
+                        "\"V130\"": [
+                            "remove_column"
+                        ],
+                        "\"V132\"": [
+                            "remove_column"
+                        ],
+                        "\"V136\"": [
+                            "remove_column"
+                        ],
+                        "\"V159\"": [
+                            "remove_column"
+                        ],
+                        "\"V166\"": [
+                            "remove_column"
+                        ],
+                        "\"V168\"": [
+                            "remove_column"
+                        ],
+                        "\"V192\"": [
+                            "remove_column"
+                        ],
+                        "\"V204\"": [
+                            "remove_column"
+                        ],
+                        "\"V217\"": [
+                            "remove_column"
+                        ],
+                        "\"V220\"": [
+                            "remove_column"
+                        ],
+                        "\"V228\"": [
+                            "remove_column"
+                        ],
+                        "\"V231\"": [
+                            "remove_column"
+                        ],
+                        "\"V239\"": [
+                            "remove_column"
+                        ],
+                        "\"V245\"": [
+                            "remove_column"
+                        ],
+                        "\"V249\"": [
+                            "remove_column"
+                        ],
+                        "\"V253\"": [
+                            "remove_column"
+                        ],
+                        "\"V256\"": [
+                            "remove_column"
+                        ],
+                        "\"V267\"": [
+                            "remove_column"
+                        ],
+                        "\"V293\"": [
+                            "remove_column"
+                        ],
+                        "\"V311\"": [
+                            "remove_column"
+                        ],
+                        "\"V313\"": [
+                            "remove_column"
+                        ],
+                        "\"V323\"": [
+                            "remove_column"
+                        ],
+                        "\"V327\"": [
+                            "remove_column"
+                        ],
+                        "\"V343\"": [
+                            "remove_column"
+                        ],
+                        "\"V344\"": [
+                            "remove_column"
+                        ],
+                        "\"V346\"": [
+                            "remove_column"
+                        ],
+                        "\"V368\"": [
+                            "remove_column"
+                        ],
+                        "\"V372\"": [
+                            "remove_column"
+                        ],
+                        "\"V376\"": [
+                            "remove_column"
+                        ],
+                        "\"V380\"": [
+                            "remove_column"
+                        ],
+                        "\"V392\"": [
+                            "remove_column"
+                        ],
+                        "\"V408\"": [
+                            "remove_column"
+                        ],
+                        "\"V410\"": [
+                            "remove_column"
+                        ],
+                        "\"V413\"": [
+                            "remove_column"
+                        ],
+                        "\"V418\"": [
+                            "remove_column"
+                        ],
+                        "\"V430\"": [
+                            "remove_column"
+                        ],
+                        "\"V436\"": [
+                            "remove_column"
+                        ],
+                        "\"V440\"": [
+                            "remove_column"
+                        ],
+                        "\"V443\"": [
+                            "remove_column"
+                        ],
+                        "\"V450\"": [
+                            "remove_column"
+                        ],
+                        "\"V454\"": [
+                            "remove_column"
+                        ],
+                        "\"V466\"": [
+                            "remove_column"
+                        ],
+                        "\"V467\"": [
+                            "remove_column"
+                        ],
+                        "\"V493\"": [
+                            "remove_column"
+                        ],
+                        "\"V501\"": [
+                            "remove_column"
+                        ],
+                        "\"V503\"": [
+                            "remove_column"
+                        ],
+                        "\"V509\"": [
+                            "remove_column"
+                        ],
+                        "\"V517\"": [
+                            "remove_column"
+                        ],
+                        "\"V522\"": [
+                            "remove_column"
+                        ],
+                        "\"V529\"": [
+                            "remove_column"
+                        ],
+                        "\"V531\"": [
+                            "remove_column"
+                        ],
+                        "\"V543\"": [
+                            "remove_column"
+                        ],
+                        "\"V545\"": [
+                            "remove_column"
+                        ],
+                        "\"V563\"": [
+                            "remove_column"
+                        ],
+                        "\"V575\"": [
+                            "remove_column"
+                        ],
+                        "\"V596\"": [
+                            "remove_column"
+                        ],
+                        "\"V599\"": [
+                            "remove_column"
+                        ],
+                        "\"V621\"": [
+                            "remove_column"
+                        ],
+                        "\"V623\"": [
+                            "remove_column"
+                        ],
+                        "\"V626\"": [
+                            "remove_column"
+                        ],
+                        "\"V629\"": [
+                            "remove_column"
+                        ],
+                        "\"V630\"": [
+                            "remove_column"
+                        ],
+                        "\"V643\"": [
+                            "remove_column"
+                        ],
+                        "\"V651\"": [
+                            "remove_column"
+                        ],
+                        "\"V652\"": [
+                            "remove_column"
+                        ],
+                        "\"V653\"": [
+                            "remove_column"
+                        ],
+                        "\"V655\"": [
+                            "remove_column"
+                        ],
+                        "\"V660\"": [
+                            "remove_column"
+                        ],
+                        "\"V676\"": [
+                            "remove_column"
+                        ],
+                        "\"V682\"": [
+                            "remove_column"
+                        ],
+                        "\"V689\"": [
+                            "remove_column"
+                        ],
+                        "\"V703\"": [
+                            "remove_column"
+                        ],
+                        "\"V707\"": [
+                            "remove_column"
+                        ],
+                        "\"V709\"": [
+                            "remove_column"
+                        ],
+                        "\"V718\"": [
+                            "remove_column"
+                        ],
+                        "\"V719\"": [
+                            "remove_column"
+                        ],
+                        "\"V733\"": [
+                            "remove_column"
+                        ],
+                        "\"V738\"": [
+                            "remove_column"
+                        ],
+                        "\"V744\"": [
+                            "remove_column"
+                        ],
+                        "\"V747\"": [
+                            "remove_column"
+                        ],
+                        "\"V753\"": [
+                            "remove_column"
+                        ],
+                        "\"V757\"": [
+                            "remove_column"
+                        ],
+                        "\"V765\"": [
+                            "remove_column"
+                        ],
+                        "\"V769\"": [
+                            "remove_column"
+                        ],
+                        "\"V773\"": [
+                            "remove_column"
+                        ],
+                        "\"V775\"": [
+                            "remove_column"
+                        ],
+                        "\"V777\"": [
+                            "remove_column"
+                        ],
+                        "\"V779\"": [
+                            "remove_column"
+                        ],
+                        "\"V793\"": [
+                            "remove_column"
+                        ],
+                        "\"V795\"": [
+                            "remove_column"
+                        ],
+                        "\"V816\"": [
+                            "remove_column"
+                        ],
+                        "\"V838\"": [
+                            "remove_column"
+                        ],
+                        "\"V841\"": [
+                            "remove_column"
+                        ],
+                        "\"V847\"": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.9,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "seed": 3,
+                    "criterion": "entropy",
+                    "max_depth": 4,
+                    "num_class": 9,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "1_DecisionTree",
+                "status": "trained",
+                "final_loss": -0.43209876543209874,
+                "train_time": 11.153152704238892,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"V2\"": [
+                            "remove_column"
+                        ],
+                        "\"V4\"": [
+                            "remove_column"
+                        ],
+                        "\"V5\"": [
+                            "remove_column"
+                        ],
+                        "\"V10\"": [
+                            "remove_column"
+                        ],
+                        "\"V17\"": [
+                            "remove_column"
+                        ],
+                        "\"V21\"": [
+                            "remove_column"
+                        ],
+                        "\"V29\"": [
+                            "remove_column"
+                        ],
+                        "\"V43\"": [
+                            "remove_column"
+                        ],
+                        "\"V44\"": [
+                            "remove_column"
+                        ],
+                        "\"V51\"": [
+                            "remove_column"
+                        ],
+                        "\"V64\"": [
+                            "remove_column"
+                        ],
+                        "\"V81\"": [
+                            "remove_column"
+                        ],
+                        "\"V89\"": [
+                            "remove_column"
+                        ],
+                        "\"V90\"": [
+                            "remove_column"
+                        ],
+                        "\"V97\"": [
+                            "remove_column"
+                        ],
+                        "\"V110\"": [
+                            "remove_column"
+                        ],
+                        "\"V115\"": [
+                            "remove_column"
+                        ],
+                        "\"V116\"": [
+                            "remove_column"
+                        ],
+                        "\"V130\"": [
+                            "remove_column"
+                        ],
+                        "\"V132\"": [
+                            "remove_column"
+                        ],
+                        "\"V136\"": [
+                            "remove_column"
+                        ],
+                        "\"V159\"": [
+                            "remove_column"
+                        ],
+                        "\"V166\"": [
+                            "remove_column"
+                        ],
+                        "\"V168\"": [
+                            "remove_column"
+                        ],
+                        "\"V192\"": [
+                            "remove_column"
+                        ],
+                        "\"V204\"": [
+                            "remove_column"
+                        ],
+                        "\"V217\"": [
+                            "remove_column"
+                        ],
+                        "\"V220\"": [
+                            "remove_column"
+                        ],
+                        "\"V228\"": [
+                            "remove_column"
+                        ],
+                        "\"V231\"": [
+                            "remove_column"
+                        ],
+                        "\"V239\"": [
+                            "remove_column"
+                        ],
+                        "\"V245\"": [
+                            "remove_column"
+                        ],
+                        "\"V249\"": [
+                            "remove_column"
+                        ],
+                        "\"V253\"": [
+                            "remove_column"
+                        ],
+                        "\"V256\"": [
+                            "remove_column"
+                        ],
+                        "\"V267\"": [
+                            "remove_column"
+                        ],
+                        "\"V293\"": [
+                            "remove_column"
+                        ],
+                        "\"V311\"": [
+                            "remove_column"
+                        ],
+                        "\"V313\"": [
+                            "remove_column"
+                        ],
+                        "\"V323\"": [
+                            "remove_column"
+                        ],
+                        "\"V327\"": [
+                            "remove_column"
+                        ],
+                        "\"V343\"": [
+                            "remove_column"
+                        ],
+                        "\"V344\"": [
+                            "remove_column"
+                        ],
+                        "\"V346\"": [
+                            "remove_column"
+                        ],
+                        "\"V368\"": [
+                            "remove_column"
+                        ],
+                        "\"V372\"": [
+                            "remove_column"
+                        ],
+                        "\"V376\"": [
+                            "remove_column"
+                        ],
+                        "\"V380\"": [
+                            "remove_column"
+                        ],
+                        "\"V392\"": [
+                            "remove_column"
+                        ],
+                        "\"V408\"": [
+                            "remove_column"
+                        ],
+                        "\"V410\"": [
+                            "remove_column"
+                        ],
+                        "\"V413\"": [
+                            "remove_column"
+                        ],
+                        "\"V418\"": [
+                            "remove_column"
+                        ],
+                        "\"V430\"": [
+                            "remove_column"
+                        ],
+                        "\"V436\"": [
+                            "remove_column"
+                        ],
+                        "\"V440\"": [
+                            "remove_column"
+                        ],
+                        "\"V443\"": [
+                            "remove_column"
+                        ],
+                        "\"V450\"": [
+                            "remove_column"
+                        ],
+                        "\"V454\"": [
+                            "remove_column"
+                        ],
+                        "\"V466\"": [
+                            "remove_column"
+                        ],
+                        "\"V467\"": [
+                            "remove_column"
+                        ],
+                        "\"V493\"": [
+                            "remove_column"
+                        ],
+                        "\"V501\"": [
+                            "remove_column"
+                        ],
+                        "\"V503\"": [
+                            "remove_column"
+                        ],
+                        "\"V509\"": [
+                            "remove_column"
+                        ],
+                        "\"V517\"": [
+                            "remove_column"
+                        ],
+                        "\"V522\"": [
+                            "remove_column"
+                        ],
+                        "\"V529\"": [
+                            "remove_column"
+                        ],
+                        "\"V531\"": [
+                            "remove_column"
+                        ],
+                        "\"V543\"": [
+                            "remove_column"
+                        ],
+                        "\"V545\"": [
+                            "remove_column"
+                        ],
+                        "\"V563\"": [
+                            "remove_column"
+                        ],
+                        "\"V575\"": [
+                            "remove_column"
+                        ],
+                        "\"V596\"": [
+                            "remove_column"
+                        ],
+                        "\"V599\"": [
+                            "remove_column"
+                        ],
+                        "\"V621\"": [
+                            "remove_column"
+                        ],
+                        "\"V623\"": [
+                            "remove_column"
+                        ],
+                        "\"V626\"": [
+                            "remove_column"
+                        ],
+                        "\"V629\"": [
+                            "remove_column"
+                        ],
+                        "\"V630\"": [
+                            "remove_column"
+                        ],
+                        "\"V643\"": [
+                            "remove_column"
+                        ],
+                        "\"V651\"": [
+                            "remove_column"
+                        ],
+                        "\"V652\"": [
+                            "remove_column"
+                        ],
+                        "\"V653\"": [
+                            "remove_column"
+                        ],
+                        "\"V655\"": [
+                            "remove_column"
+                        ],
+                        "\"V660\"": [
+                            "remove_column"
+                        ],
+                        "\"V676\"": [
+                            "remove_column"
+                        ],
+                        "\"V682\"": [
+                            "remove_column"
+                        ],
+                        "\"V689\"": [
+                            "remove_column"
+                        ],
+                        "\"V703\"": [
+                            "remove_column"
+                        ],
+                        "\"V707\"": [
+                            "remove_column"
+                        ],
+                        "\"V709\"": [
+                            "remove_column"
+                        ],
+                        "\"V718\"": [
+                            "remove_column"
+                        ],
+                        "\"V719\"": [
+                            "remove_column"
+                        ],
+                        "\"V733\"": [
+                            "remove_column"
+                        ],
+                        "\"V738\"": [
+                            "remove_column"
+                        ],
+                        "\"V744\"": [
+                            "remove_column"
+                        ],
+                        "\"V747\"": [
+                            "remove_column"
+                        ],
+                        "\"V753\"": [
+                            "remove_column"
+                        ],
+                        "\"V757\"": [
+                            "remove_column"
+                        ],
+                        "\"V765\"": [
+                            "remove_column"
+                        ],
+                        "\"V769\"": [
+                            "remove_column"
+                        ],
+                        "\"V773\"": [
+                            "remove_column"
+                        ],
+                        "\"V775\"": [
+                            "remove_column"
+                        ],
+                        "\"V777\"": [
+                            "remove_column"
+                        ],
+                        "\"V779\"": [
+                            "remove_column"
+                        ],
+                        "\"V793\"": [
+                            "remove_column"
+                        ],
+                        "\"V795\"": [
+                            "remove_column"
+                        ],
+                        "\"V816\"": [
+                            "remove_column"
+                        ],
+                        "\"V838\"": [
+                            "remove_column"
+                        ],
+                        "\"V841\"": [
+                            "remove_column"
+                        ],
+                        "\"V847\"": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.9,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae"
+                },
+                "learner": {
+                    "model_type": "Linear",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "seed": 3,
+                    "num_class": 9,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "2_Linear",
+                "status": "trained",
+                "final_loss": -1.0,
+                "train_time": 10.063358068466187,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"V2\"": [
+                            "remove_column"
+                        ],
+                        "\"V4\"": [
+                            "remove_column"
+                        ],
+                        "\"V5\"": [
+                            "remove_column"
+                        ],
+                        "\"V10\"": [
+                            "remove_column"
+                        ],
+                        "\"V17\"": [
+                            "remove_column"
+                        ],
+                        "\"V21\"": [
+                            "remove_column"
+                        ],
+                        "\"V29\"": [
+                            "remove_column"
+                        ],
+                        "\"V43\"": [
+                            "remove_column"
+                        ],
+                        "\"V44\"": [
+                            "remove_column"
+                        ],
+                        "\"V51\"": [
+                            "remove_column"
+                        ],
+                        "\"V64\"": [
+                            "remove_column"
+                        ],
+                        "\"V81\"": [
+                            "remove_column"
+                        ],
+                        "\"V89\"": [
+                            "remove_column"
+                        ],
+                        "\"V90\"": [
+                            "remove_column"
+                        ],
+                        "\"V97\"": [
+                            "remove_column"
+                        ],
+                        "\"V110\"": [
+                            "remove_column"
+                        ],
+                        "\"V115\"": [
+                            "remove_column"
+                        ],
+                        "\"V116\"": [
+                            "remove_column"
+                        ],
+                        "\"V130\"": [
+                            "remove_column"
+                        ],
+                        "\"V132\"": [
+                            "remove_column"
+                        ],
+                        "\"V136\"": [
+                            "remove_column"
+                        ],
+                        "\"V159\"": [
+                            "remove_column"
+                        ],
+                        "\"V166\"": [
+                            "remove_column"
+                        ],
+                        "\"V168\"": [
+                            "remove_column"
+                        ],
+                        "\"V192\"": [
+                            "remove_column"
+                        ],
+                        "\"V204\"": [
+                            "remove_column"
+                        ],
+                        "\"V217\"": [
+                            "remove_column"
+                        ],
+                        "\"V220\"": [
+                            "remove_column"
+                        ],
+                        "\"V228\"": [
+                            "remove_column"
+                        ],
+                        "\"V231\"": [
+                            "remove_column"
+                        ],
+                        "\"V239\"": [
+                            "remove_column"
+                        ],
+                        "\"V245\"": [
+                            "remove_column"
+                        ],
+                        "\"V249\"": [
+                            "remove_column"
+                        ],
+                        "\"V253\"": [
+                            "remove_column"
+                        ],
+                        "\"V256\"": [
+                            "remove_column"
+                        ],
+                        "\"V267\"": [
+                            "remove_column"
+                        ],
+                        "\"V293\"": [
+                            "remove_column"
+                        ],
+                        "\"V311\"": [
+                            "remove_column"
+                        ],
+                        "\"V313\"": [
+                            "remove_column"
+                        ],
+                        "\"V323\"": [
+                            "remove_column"
+                        ],
+                        "\"V327\"": [
+                            "remove_column"
+                        ],
+                        "\"V343\"": [
+                            "remove_column"
+                        ],
+                        "\"V344\"": [
+                            "remove_column"
+                        ],
+                        "\"V346\"": [
+                            "remove_column"
+                        ],
+                        "\"V368\"": [
+                            "remove_column"
+                        ],
+                        "\"V372\"": [
+                            "remove_column"
+                        ],
+                        "\"V376\"": [
+                            "remove_column"
+                        ],
+                        "\"V380\"": [
+                            "remove_column"
+                        ],
+                        "\"V392\"": [
+                            "remove_column"
+                        ],
+                        "\"V408\"": [
+                            "remove_column"
+                        ],
+                        "\"V410\"": [
+                            "remove_column"
+                        ],
+                        "\"V413\"": [
+                            "remove_column"
+                        ],
+                        "\"V418\"": [
+                            "remove_column"
+                        ],
+                        "\"V430\"": [
+                            "remove_column"
+                        ],
+                        "\"V436\"": [
+                            "remove_column"
+                        ],
+                        "\"V440\"": [
+                            "remove_column"
+                        ],
+                        "\"V443\"": [
+                            "remove_column"
+                        ],
+                        "\"V450\"": [
+                            "remove_column"
+                        ],
+                        "\"V454\"": [
+                            "remove_column"
+                        ],
+                        "\"V466\"": [
+                            "remove_column"
+                        ],
+                        "\"V467\"": [
+                            "remove_column"
+                        ],
+                        "\"V493\"": [
+                            "remove_column"
+                        ],
+                        "\"V501\"": [
+                            "remove_column"
+                        ],
+                        "\"V503\"": [
+                            "remove_column"
+                        ],
+                        "\"V509\"": [
+                            "remove_column"
+                        ],
+                        "\"V517\"": [
+                            "remove_column"
+                        ],
+                        "\"V522\"": [
+                            "remove_column"
+                        ],
+                        "\"V529\"": [
+                            "remove_column"
+                        ],
+                        "\"V531\"": [
+                            "remove_column"
+                        ],
+                        "\"V543\"": [
+                            "remove_column"
+                        ],
+                        "\"V545\"": [
+                            "remove_column"
+                        ],
+                        "\"V563\"": [
+                            "remove_column"
+                        ],
+                        "\"V575\"": [
+                            "remove_column"
+                        ],
+                        "\"V596\"": [
+                            "remove_column"
+                        ],
+                        "\"V599\"": [
+                            "remove_column"
+                        ],
+                        "\"V621\"": [
+                            "remove_column"
+                        ],
+                        "\"V623\"": [
+                            "remove_column"
+                        ],
+                        "\"V626\"": [
+                            "remove_column"
+                        ],
+                        "\"V629\"": [
+                            "remove_column"
+                        ],
+                        "\"V630\"": [
+                            "remove_column"
+                        ],
+                        "\"V643\"": [
+                            "remove_column"
+                        ],
+                        "\"V651\"": [
+                            "remove_column"
+                        ],
+                        "\"V652\"": [
+                            "remove_column"
+                        ],
+                        "\"V653\"": [
+                            "remove_column"
+                        ],
+                        "\"V655\"": [
+                            "remove_column"
+                        ],
+                        "\"V660\"": [
+                            "remove_column"
+                        ],
+                        "\"V676\"": [
+                            "remove_column"
+                        ],
+                        "\"V682\"": [
+                            "remove_column"
+                        ],
+                        "\"V689\"": [
+                            "remove_column"
+                        ],
+                        "\"V703\"": [
+                            "remove_column"
+                        ],
+                        "\"V707\"": [
+                            "remove_column"
+                        ],
+                        "\"V709\"": [
+                            "remove_column"
+                        ],
+                        "\"V718\"": [
+                            "remove_column"
+                        ],
+                        "\"V719\"": [
+                            "remove_column"
+                        ],
+                        "\"V733\"": [
+                            "remove_column"
+                        ],
+                        "\"V738\"": [
+                            "remove_column"
+                        ],
+                        "\"V744\"": [
+                            "remove_column"
+                        ],
+                        "\"V747\"": [
+                            "remove_column"
+                        ],
+                        "\"V753\"": [
+                            "remove_column"
+                        ],
+                        "\"V757\"": [
+                            "remove_column"
+                        ],
+                        "\"V765\"": [
+                            "remove_column"
+                        ],
+                        "\"V769\"": [
+                            "remove_column"
+                        ],
+                        "\"V773\"": [
+                            "remove_column"
+                        ],
+                        "\"V775\"": [
+                            "remove_column"
+                        ],
+                        "\"V777\"": [
+                            "remove_column"
+                        ],
+                        "\"V779\"": [
+                            "remove_column"
+                        ],
+                        "\"V793\"": [
+                            "remove_column"
+                        ],
+                        "\"V795\"": [
+                            "remove_column"
+                        ],
+                        "\"V816\"": [
+                            "remove_column"
+                        ],
+                        "\"V838\"": [
+                            "remove_column"
+                        ],
+                        "\"V841\"": [
+                            "remove_column"
+                        ],
+                        "\"V847\"": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.9,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 3,
+                    "num_class": 9,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "3_Default_NeuralNetwork",
+                "status": "trained",
+                "final_loss": -0.9629629629629629,
+                "train_time": 11.200091123580933,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "\"V2\"": [
+                            "remove_column"
+                        ],
+                        "\"V4\"": [
+                            "remove_column"
+                        ],
+                        "\"V5\"": [
+                            "remove_column"
+                        ],
+                        "\"V10\"": [
+                            "remove_column"
+                        ],
+                        "\"V17\"": [
+                            "remove_column"
+                        ],
+                        "\"V21\"": [
+                            "remove_column"
+                        ],
+                        "\"V29\"": [
+                            "remove_column"
+                        ],
+                        "\"V43\"": [
+                            "remove_column"
+                        ],
+                        "\"V44\"": [
+                            "remove_column"
+                        ],
+                        "\"V51\"": [
+                            "remove_column"
+                        ],
+                        "\"V64\"": [
+                            "remove_column"
+                        ],
+                        "\"V81\"": [
+                            "remove_column"
+                        ],
+                        "\"V89\"": [
+                            "remove_column"
+                        ],
+                        "\"V90\"": [
+                            "remove_column"
+                        ],
+                        "\"V97\"": [
+                            "remove_column"
+                        ],
+                        "\"V110\"": [
+                            "remove_column"
+                        ],
+                        "\"V115\"": [
+                            "remove_column"
+                        ],
+                        "\"V116\"": [
+                            "remove_column"
+                        ],
+                        "\"V130\"": [
+                            "remove_column"
+                        ],
+                        "\"V132\"": [
+                            "remove_column"
+                        ],
+                        "\"V136\"": [
+                            "remove_column"
+                        ],
+                        "\"V159\"": [
+                            "remove_column"
+                        ],
+                        "\"V166\"": [
+                            "remove_column"
+                        ],
+                        "\"V168\"": [
+                            "remove_column"
+                        ],
+                        "\"V192\"": [
+                            "remove_column"
+                        ],
+                        "\"V204\"": [
+                            "remove_column"
+                        ],
+                        "\"V217\"": [
+                            "remove_column"
+                        ],
+                        "\"V220\"": [
+                            "remove_column"
+                        ],
+                        "\"V228\"": [
+                            "remove_column"
+                        ],
+                        "\"V231\"": [
+                            "remove_column"
+                        ],
+                        "\"V239\"": [
+                            "remove_column"
+                        ],
+                        "\"V245\"": [
+                            "remove_column"
+                        ],
+                        "\"V249\"": [
+                            "remove_column"
+                        ],
+                        "\"V253\"": [
+                            "remove_column"
+                        ],
+                        "\"V256\"": [
+                            "remove_column"
+                        ],
+                        "\"V267\"": [
+                            "remove_column"
+                        ],
+                        "\"V293\"": [
+                            "remove_column"
+                        ],
+                        "\"V311\"": [
+                            "remove_column"
+                        ],
+                        "\"V313\"": [
+                            "remove_column"
+                        ],
+                        "\"V323\"": [
+                            "remove_column"
+                        ],
+                        "\"V327\"": [
+                            "remove_column"
+                        ],
+                        "\"V343\"": [
+                            "remove_column"
+                        ],
+                        "\"V344\"": [
+                            "remove_column"
+                        ],
+                        "\"V346\"": [
+                            "remove_column"
+                        ],
+                        "\"V368\"": [
+                            "remove_column"
+                        ],
+                        "\"V372\"": [
+                            "remove_column"
+                        ],
+                        "\"V376\"": [
+                            "remove_column"
+                        ],
+                        "\"V380\"": [
+                            "remove_column"
+                        ],
+                        "\"V392\"": [
+                            "remove_column"
+                        ],
+                        "\"V408\"": [
+                            "remove_column"
+                        ],
+                        "\"V410\"": [
+                            "remove_column"
+                        ],
+                        "\"V413\"": [
+                            "remove_column"
+                        ],
+                        "\"V418\"": [
+                            "remove_column"
+                        ],
+                        "\"V430\"": [
+                            "remove_column"
+                        ],
+                        "\"V436\"": [
+                            "remove_column"
+                        ],
+                        "\"V440\"": [
+                            "remove_column"
+                        ],
+                        "\"V443\"": [
+                            "remove_column"
+                        ],
+                        "\"V450\"": [
+                            "remove_column"
+                        ],
+                        "\"V454\"": [
+                            "remove_column"
+                        ],
+                        "\"V466\"": [
+                            "remove_column"
+                        ],
+                        "\"V467\"": [
+                            "remove_column"
+                        ],
+                        "\"V493\"": [
+                            "remove_column"
+                        ],
+                        "\"V501\"": [
+                            "remove_column"
+                        ],
+                        "\"V503\"": [
+                            "remove_column"
+                        ],
+                        "\"V509\"": [
+                            "remove_column"
+                        ],
+                        "\"V517\"": [
+                            "remove_column"
+                        ],
+                        "\"V522\"": [
+                            "remove_column"
+                        ],
+                        "\"V529\"": [
+                            "remove_column"
+                        ],
+                        "\"V531\"": [
+                            "remove_column"
+                        ],
+                        "\"V543\"": [
+                            "remove_column"
+                        ],
+                        "\"V545\"": [
+                            "remove_column"
+                        ],
+                        "\"V563\"": [
+                            "remove_column"
+                        ],
+                        "\"V575\"": [
+                            "remove_column"
+                        ],
+                        "\"V596\"": [
+                            "remove_column"
+                        ],
+                        "\"V599\"": [
+                            "remove_column"
+                        ],
+                        "\"V621\"": [
+                            "remove_column"
+                        ],
+                        "\"V623\"": [
+                            "remove_column"
+                        ],
+                        "\"V626\"": [
+                            "remove_column"
+                        ],
+                        "\"V629\"": [
+                            "remove_column"
+                        ],
+                        "\"V630\"": [
+                            "remove_column"
+                        ],
+                        "\"V643\"": [
+                            "remove_column"
+                        ],
+                        "\"V651\"": [
+                            "remove_column"
+                        ],
+                        "\"V652\"": [
+                            "remove_column"
+                        ],
+                        "\"V653\"": [
+                            "remove_column"
+                        ],
+                        "\"V655\"": [
+                            "remove_column"
+                        ],
+                        "\"V660\"": [
+                            "remove_column"
+                        ],
+                        "\"V676\"": [
+                            "remove_column"
+                        ],
+                        "\"V682\"": [
+                            "remove_column"
+                        ],
+                        "\"V689\"": [
+                            "remove_column"
+                        ],
+                        "\"V703\"": [
+                            "remove_column"
+                        ],
+                        "\"V707\"": [
+                            "remove_column"
+                        ],
+                        "\"V709\"": [
+                            "remove_column"
+                        ],
+                        "\"V718\"": [
+                            "remove_column"
+                        ],
+                        "\"V719\"": [
+                            "remove_column"
+                        ],
+                        "\"V733\"": [
+                            "remove_column"
+                        ],
+                        "\"V738\"": [
+                            "remove_column"
+                        ],
+                        "\"V744\"": [
+                            "remove_column"
+                        ],
+                        "\"V747\"": [
+                            "remove_column"
+                        ],
+                        "\"V753\"": [
+                            "remove_column"
+                        ],
+                        "\"V757\"": [
+                            "remove_column"
+                        ],
+                        "\"V765\"": [
+                            "remove_column"
+                        ],
+                        "\"V769\"": [
+                            "remove_column"
+                        ],
+                        "\"V773\"": [
+                            "remove_column"
+                        ],
+                        "\"V775\"": [
+                            "remove_column"
+                        ],
+                        "\"V777\"": [
+                            "remove_column"
+                        ],
+                        "\"V779\"": [
+                            "remove_column"
+                        ],
+                        "\"V793\"": [
+                            "remove_column"
+                        ],
+                        "\"V795\"": [
+                            "remove_column"
+                        ],
+                        "\"V816\"": [
+                            "remove_column"
+                        ],
+                        "\"V838\"": [
+                            "remove_column"
+                        ],
+                        "\"V841\"": [
+                            "remove_column"
+                        ],
+                        "\"V847\"": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "multiclass_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.9,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae/X.data",
+                    "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae/y.data",
+                    "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/cnae"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "multiclass_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 4,
+                    "eval_metric_name": "f1",
+                    "num_class": 9,
+                    "explain_level": 1
+                },
+                "automl_random_state": 2,
+                "ml_task": "multiclass_classification",
+                "explain_level": 1,
+                "name": "4_Default_RandomForest",
+                "status": "trained",
+                "final_loss": -0.691358024691358,
+                "train_time": 30.039283990859985,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": -1.0,
+                "train_time": 0.23245811462402344
+            }
+        ]
+    },
+    "adjust_validation": false
+}

@@ -1,0 +1,26 @@
+if ("V84" <= -0.763) and ("V53" <= 0.096) then class: 6 (proba: 100.0%) | based on 1,342 samples
+
+if ("V84" > -0.763) and ("V505" <= -0.114) and ("V70" > -0.362) and ("V74" > -0.541) then class: 1 (proba: 91.98%) | based on 1,047 samples
+
+if ("V84" > -0.763) and ("V505" <= -0.114) and ("V70" <= -0.362) and ("V53" <= 0.957) then class: 2 (proba: 90.6%) | based on 766 samples
+
+if ("V84" <= -0.763) and ("V53" > 0.096) and ("V560" > 0.14) and ("V452" <= -0.104) then class: 5 (proba: 97.03%) | based on 740 samples
+
+if ("V84" > -0.763) and ("V505" > -0.114) and ("V296" > -0.223) and ("V202" > 0.005) then class: 3 (proba: 96.98%) | based on 695 samples
+
+if ("V84" <= -0.763) and ("V53" > 0.096) and ("V560" <= 0.14) and ("V56" <= -0.296) then class: 4 (proba: 68.94%) | based on 660 samples
+
+if ("V84" <= -0.763) and ("V53" > 0.096) and ("V560" <= 0.14) and ("V56" > -0.296) then class: 4 (proba: 99.66%) | based on 590 samples
+
+if ("V84" <= -0.763) and ("V53" > 0.096) and ("V560" > 0.14) and ("V452" > -0.104) then class: 5 (proba: 74.95%) | based on 471 samples
+
+if ("V84" > -0.763) and ("V505" > -0.114) and ("V296" > -0.223) and ("V202" <= 0.005) then class: 3 (proba: 61.3%) | based on 230 samples
+
+if ("V84" > -0.763) and ("V505" <= -0.114) and ("V70" > -0.362) and ("V74" <= -0.541) then class: 2 (proba: 57.81%) | based on 192 samples
+
+if ("V84" > -0.763) and ("V505" > -0.114) and ("V296" <= -0.223) and ("V90" <= -0.229) then class: 2 (proba: 95.41%) | based on 109 samples
+
+if ("V84" > -0.763) and ("V505" <= -0.114) and ("V70" <= -0.362) and ("V53" > 0.957) then class: 1 (proba: 57.3%) | based on 89 samples
+
+if ("V84" > -0.763) and ("V505" > -0.114) and ("V296" <= -0.223) and ("V90" > -0.229) then class: 3 (proba: 85.0%) | based on 20 samples
+

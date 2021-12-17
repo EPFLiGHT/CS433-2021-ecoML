@@ -1,0 +1,32 @@
+if ("V2" <= 2.5) and ("V3" <= 25.5) and ("V5" > 3.0) and ("V1" <= 1.5) then class: 10 (proba: 15.89%) | based on 1,485 samples
+
+if ("V2" <= 2.5) and ("V3" <= 25.5) and ("V5" > 3.0) and ("V1" > 1.5) then class: 1 (proba: 23.06%) | based on 1,080 samples
+
+if ("V2" > 2.5) and ("V3" <= 12.5) and ("V5" > 6.5) and ("V4" > 5.5) then class: 8 (proba: 36.71%) | based on 523 samples
+
+if ("V2" <= 2.5) and ("V3" > 25.5) and ("V1" <= 2.5) and ("V5" > 30.5) then class: 2 (proba: 48.35%) | based on 364 samples
+
+if ("V2" > 2.5) and ("V3" > 12.5) and ("V1" > 3.5) and ("V5" > 22.5) then class: 1 (proba: 24.92%) | based on 333 samples
+
+if ("V2" > 2.5) and ("V3" > 12.5) and ("V1" > 3.5) and ("V5" <= 22.5) then class: 3 (proba: 48.64%) | based on 294 samples
+
+if ("V2" > 2.5) and ("V3" > 12.5) and ("V1" <= 3.5) and ("V3" <= 30.5) then class: 5 (proba: 78.49%) | based on 251 samples
+
+if ("V2" <= 2.5) and ("V3" <= 25.5) and ("V5" <= 3.0) and ("V1" > 3.0) then class: 6 (proba: 51.38%) | based on 218 samples
+
+if ("V2" > 2.5) and ("V3" > 12.5) and ("V1" <= 3.5) and ("V3" > 30.5) then class: 2 (proba: 52.0%) | based on 200 samples
+
+if ("V2" > 2.5) and ("V3" <= 12.5) and ("V5" > 6.5) and ("V4" <= 5.5) then class: 4 (proba: 49.48%) | based on 194 samples
+
+if ("V2" <= 2.5) and ("V3" > 25.5) and ("V1" > 2.5) and ("V1" <= 4.5) then class: 6 (proba: 46.84%) | based on 190 samples
+
+if ("V2" > 2.5) and ("V3" <= 12.5) and ("V5" <= 6.5) and ("V3" > 2.5) then class: 5 (proba: 82.16%) | based on 185 samples
+
+if ("V2" > 2.5) and ("V3" <= 12.5) and ("V5" <= 6.5) and ("V3" <= 2.5) then class: 8 (proba: 57.04%) | based on 135 samples
+
+if ("V2" <= 2.5) and ("V3" <= 25.5) and ("V5" <= 3.0) and ("V1" <= 3.0) then class: 10 (proba: 100.0%) | based on 116 samples
+
+if ("V2" <= 2.5) and ("V3" > 25.5) and ("V1" <= 2.5) and ("V5" <= 30.5) then class: 5 (proba: 66.32%) | based on 95 samples
+
+if ("V2" <= 2.5) and ("V3" > 25.5) and ("V1" > 2.5) and ("V1" > 4.5) then class: 1 (proba: 73.81%) | based on 84 samples
+

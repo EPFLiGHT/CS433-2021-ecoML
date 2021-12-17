@@ -1,0 +1,32 @@
+if ("X28" > 0.003) and ("X5" <= 0.007) and ("X11" > -0.004) and ("X27" > 0.001) then class: 'S' (proba: 33.49%) | based on 1,266 samples
+
+if ("X28" > 0.003) and ("X5" <= 0.007) and ("X11" <= -0.004) and ("X8" <= 0.004) then class: 'S' (proba: 37.89%) | based on 797 samples
+
+if ("X28" <= 0.003) and ("X28" > 0.001) and ("X27" > 0.002) and ("X2" > -0.009) then class: 'D' (proba: 26.99%) | based on 541 samples
+
+if ("X28" <= 0.003) and ("X28" > 0.001) and ("X27" <= 0.002) and ("X11" <= 0.002) then class: 'D' (proba: 53.22%) | based on 513 samples
+
+if ("X28" <= 0.003) and ("X28" <= 0.001) and ("X25" <= 0.002) and ("X9" <= 0.0) then class: 'D' (proba: 73.8%) | based on 439 samples
+
+if ("X28" > 0.003) and ("X5" > 0.007) and ("X2" > -0.007) and ("X9" <= 0.001) then class: 'P' (proba: 47.11%) | based on 433 samples
+
+if ("X28" <= 0.003) and ("X28" <= 0.001) and ("X25" <= 0.002) and ("X9" > 0.0) then class: 'D' (proba: 68.62%) | based on 325 samples
+
+if ("X28" <= 0.003) and ("X28" <= 0.001) and ("X25" > 0.002) and ("X26" > 0.001) then class: 'D' (proba: 44.32%) | based on 264 samples
+
+if ("X28" > 0.003) and ("X5" > 0.007) and ("X2" > -0.007) and ("X9" > 0.001) then class: 'P' (proba: 65.53%) | based on 235 samples
+
+if ("X28" > 0.003) and ("X5" <= 0.007) and ("X11" <= -0.004) and ("X8" > 0.004) then class: 'S' (proba: 81.41%) | based on 199 samples
+
+if ("X28" > 0.003) and ("X5" <= 0.007) and ("X11" > -0.004) and ("X27" <= 0.001) then class: 'D' (proba: 54.4%) | based on 182 samples
+
+if ("X28" > 0.003) and ("X5" > 0.007) and ("X2" <= -0.007) and ("X6" <= 0.019) then class: 'S' (proba: 80.92%) | based on 131 samples
+
+if ("X28" <= 0.003) and ("X28" <= 0.001) and ("X25" > 0.002) and ("X26" <= 0.001) then class: 'D' (proba: 72.65%) | based on 117 samples
+
+if ("X28" <= 0.003) and ("X28" > 0.001) and ("X27" <= 0.002) and ("X11" > 0.002) then class: 'S' (proba: 42.59%) | based on 54 samples
+
+if ("X28" <= 0.003) and ("X28" > 0.001) and ("X27" > 0.002) and ("X2" <= -0.009) then class: 'S' (proba: 50.94%) | based on 53 samples
+
+if ("X28" > 0.003) and ("X5" > 0.007) and ("X2" <= -0.007) and ("X6" > 0.019) then class: 'R' (proba: 100.0%) | based on 4 samples
+

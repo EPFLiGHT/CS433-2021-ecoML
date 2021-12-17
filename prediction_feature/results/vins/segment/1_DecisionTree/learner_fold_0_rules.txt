@@ -1,0 +1,20 @@
+if ("rawred.mean" <= 24.778) and ("hue.mean" <= 0.878) and ("hue.mean" <= -1.896) and ("hue.mean" > -2.215) then class: "window" (proba: 60.49%) | based on 243 samples
+
+if ("rawred.mean" <= 24.778) and ("hue.mean" <= 0.878) and ("hue.mean" > -1.896) and ("exgreen.mean" <= -5.0) then class: "brickface" (proba: 96.32%) | based on 190 samples
+
+if ("rawred.mean" > 24.778) and ("rawblue.mean" > 101.778) then class: "sky" (proba: 100.0%) | based on 186 samples
+
+if ("rawred.mean" <= 24.778) and ("hue.mean" > 0.878) then class: "grass" (proba: 100.0%) | based on 184 samples
+
+if ("rawred.mean" > 24.778) and ("rawblue.mean" <= 101.778) and ("region.centroid.row" > 158.5) and ("exblue.mean" > 14.056) then class: "path" (proba: 100.0%) | based on 178 samples
+
+if ("rawred.mean" > 24.778) and ("rawblue.mean" <= 101.778) and ("region.centroid.row" <= 158.5) and ("hue.mean" > -2.239) then class: "cement" (proba: 98.18%) | based on 165 samples
+
+if ("rawred.mean" <= 24.778) and ("hue.mean" <= 0.878) and ("hue.mean" <= -1.896) and ("hue.mean" <= -2.215) then class: "foliage" (proba: 93.07%) | based on 101 samples
+
+if ("rawred.mean" <= 24.778) and ("hue.mean" <= 0.878) and ("hue.mean" > -1.896) and ("exgreen.mean" > -5.0) then class: "window" (proba: 81.08%) | based on 37 samples
+
+if ("rawred.mean" > 24.778) and ("rawblue.mean" <= 101.778) and ("region.centroid.row" <= 158.5) and ("hue.mean" <= -2.239) then class: "foliage" (proba: 100.0%) | based on 14 samples
+
+if ("rawred.mean" > 24.778) and ("rawblue.mean" <= 101.778) and ("region.centroid.row" > 158.5) and ("exblue.mean" <= 14.056) then class: "cement" (proba: 100.0%) | based on 1 samples
+

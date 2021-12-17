@@ -1,0 +1,22 @@
+if ("V22" > 60.5) and ("V14" > 60.5) and ("V32" > 50.5) and ("V32" <= 96.5) then class: 'Normal' (proba: 99.96%) | based on 2,617 samples
+
+if ("V22" > 60.5) and ("V14" > 60.5) and ("V32" > 50.5) and ("V32" > 96.5) then class: 'Normal' (proba: 98.97%) | based on 195 samples
+
+if ("V22" <= 60.5) and ("V18" <= 58.5) then class: 'Anomaly' (proba: 100.0%) | based on 22 samples
+
+if ("V22" > 60.5) and ("V14" <= 60.5) and ("V21" > 61.5) and ("V9" <= 75.5) then class: 'Normal' (proba: 100.0%) | based on 8 samples
+
+if ("V22" <= 60.5) and ("V18" > 58.5) and ("V23" > 71.5) and ("V6" > 59.0) then class: 'Anomaly' (proba: 100.0%) | based on 6 samples
+
+if ("V22" <= 60.5) and ("V18" > 58.5) and ("V23" > 71.5) and ("V6" <= 59.0) then class: 'Normal' (proba: 80.0%) | based on 5 samples
+
+if ("V22" <= 60.5) and ("V18" > 58.5) and ("V23" <= 71.5) then class: 'Normal' (proba: 100.0%) | based on 5 samples
+
+if ("V22" > 60.5) and ("V14" <= 60.5) and ("V21" > 61.5) and ("V9" > 75.5) then class: 'Anomaly' (proba: 50.0%) | based on 4 samples
+
+if ("V22" > 60.5) and ("V14" <= 60.5) and ("V21" <= 61.5) then class: 'Anomaly' (proba: 100.0%) | based on 4 samples
+
+if ("V22" > 60.5) and ("V14" > 60.5) and ("V32" <= 50.5) and ("V15" > 84.0) then class: 'Normal' (proba: 100.0%) | based on 1 samples
+
+if ("V22" > 60.5) and ("V14" > 60.5) and ("V32" <= 50.5) and ("V15" <= 84.0) then class: 'Anomaly' (proba: 100.0%) | based on 1 samples
+

@@ -1,0 +1,26 @@
+if ("was" > 8.5) and ("be" > 9.5) and ("to" > 38.0) and ("not" > 9.5) then class: Austen (proba: 99.36%) | based on 157 samples
+
+if ("was" > 8.5) and ("be" <= 9.5) and ("BookID" <= 6.5) and ("so" <= 10.5) then class: London (proba: 99.32%) | based on 147 samples
+
+if ("was" <= 8.5) and ("is" > 9.5) and ("only" <= 3.5) and ("things" <= 6.0) then class: Shakespeare (proba: 100.0%) | based on 86 samples
+
+if ("was" <= 8.5) and ("is" <= 9.5) and ("have" <= 10.0) then class: Milton (proba: 100.0%) | based on 28 samples
+
+if ("was" > 8.5) and ("be" > 9.5) and ("to" <= 38.0) and ("the" <= 69.5) then class: Shakespeare (proba: 61.54%) | based on 13 samples
+
+if ("was" > 8.5) and ("be" > 9.5) and ("to" <= 38.0) and ("the" > 69.5) then class: London (proba: 100.0%) | based on 12 samples
+
+if ("was" > 8.5) and ("be" <= 9.5) and ("BookID" <= 6.5) and ("so" > 10.5) then class: London (proba: 57.14%) | based on 7 samples
+
+if ("was" > 8.5) and ("be" > 9.5) and ("to" > 38.0) and ("not" <= 9.5) then class: London (proba: 83.33%) | based on 6 samples
+
+if ("was" > 8.5) and ("be" <= 9.5) and ("BookID" > 6.5) then class: Austen (proba: 100.0%) | based on 4 samples
+
+if ("was" <= 8.5) and ("is" > 9.5) and ("only" > 3.5) and ("then" <= 3.5) then class: Austen (proba: 100.0%) | based on 4 samples
+
+if ("was" <= 8.5) and ("is" <= 9.5) and ("have" > 10.0) then class: Shakespeare (proba: 100.0%) | based on 4 samples
+
+if ("was" <= 8.5) and ("is" > 9.5) and ("only" > 3.5) and ("then" > 3.5) then class: Shakespeare (proba: 66.67%) | based on 3 samples
+
+if ("was" <= 8.5) and ("is" > 9.5) and ("only" <= 3.5) and ("things" > 6.0) then class: Milton (proba: 100.0%) | based on 1 samples
+

@@ -1,0 +1,366 @@
+{
+    "uid": "5685cc72-4027-48ec-81cf-1719755a9105",
+    "name": "2_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "\"V2\"": {
+                            "admin.": 0,
+                            "blue-collar": 1,
+                            "entrepreneur": 2,
+                            "housemaid": 3,
+                            "management": 4,
+                            "retired": 5,
+                            "self-employed": 6,
+                            "services": 7,
+                            "student": 8,
+                            "technician": 9,
+                            "unemployed": 10,
+                            "unknown": 11
+                        },
+                        "\"V3\"": {
+                            "divorced": 0,
+                            "married": 1,
+                            "single": 2
+                        },
+                        "\"V4\"": {
+                            "primary": 0,
+                            "secondary": 1,
+                            "tertiary": 2,
+                            "unknown": 3
+                        },
+                        "\"V5\"": {
+                            "no": 0,
+                            "yes": 1
+                        },
+                        "\"V7\"": {
+                            "no": 0,
+                            "yes": 1
+                        },
+                        "\"V8\"": {
+                            "no": 0,
+                            "yes": 1
+                        },
+                        "\"V9\"": {
+                            "cellular": 0,
+                            "telephone": 1,
+                            "unknown": 2
+                        },
+                        "\"V11\"": {
+                            "apr": 0,
+                            "aug": 1,
+                            "dec": 2,
+                            "feb": 3,
+                            "jan": 4,
+                            "jul": 5,
+                            "jun": 6,
+                            "mar": 7,
+                            "may": 8,
+                            "nov": 9,
+                            "oct": 10,
+                            "sep": 11
+                        },
+                        "\"V16\"": {
+                            "failure": 0,
+                            "other": 1,
+                            "success": 2,
+                            "unknown": 3
+                        }
+                    },
+                    "columns": [
+                        "\"V2\"",
+                        "\"V3\"",
+                        "\"V4\"",
+                        "\"V5\"",
+                        "\"V7\"",
+                        "\"V8\"",
+                        "\"V9\"",
+                        "\"V11\"",
+                        "\"V16\""
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        10.642210786030079,
+                        3.2828521529364116,
+                        0.6129428119532623,
+                        0.7457728413496499,
+                        0.1345434850442417,
+                        3050.524022955788,
+                        0.4969797250582466,
+                        0.3667533236401679,
+                        0.8981762502796178,
+                        8.338853239758064,
+                        2.99403399352749,
+                        258.01241203739033,
+                        3.0899263703157405,
+                        100.20592561286017,
+                        2.568612906590442,
+                        0.9830441240674955
+                    ],
+                    "mean": [
+                        40.950178915496835,
+                        4.349651999528135,
+                        1.1675120915418191,
+                        1.223546065825174,
+                        0.01844205890448665,
+                        1369.6511344422163,
+                        0.5548739727104715,
+                        0.1601588612323542,
+                        0.6416184971098265,
+                        15.797294640399512,
+                        5.550233966418937,
+                        257.6336361134049,
+                        2.769100703865361,
+                        40.32684518894263,
+                        0.5925445322637726,
+                        2.5626597459793166
+                    ],
+                    "var": [
+                        113.25665041429494,
+                        10.777118258039232,
+                        0.3756988907251722,
+                        0.5561771308947302,
+                        0.018101949367850093,
+                        9305696.814630365,
+                        0.2469888471189704,
+                        0.13450800040110972,
+                        0.8067205765663545,
+                        69.53647335422356,
+                        8.96423955439817,
+                        66570.40476535208,
+                        9.547644973972607,
+                        10041.227527930067,
+                        6.597772263902999,
+                        0.9663757498636295
+                    ],
+                    "n_samples_seen": 25431,
+                    "n_features_in": 16,
+                    "columns": [
+                        "\"V1\"",
+                        "\"V2\"",
+                        "\"V3\"",
+                        "\"V4\"",
+                        "\"V5\"",
+                        "\"V6\"",
+                        "\"V7\"",
+                        "\"V8\"",
+                        "\"V9\"",
+                        "\"V10\"",
+                        "\"V11\"",
+                        "\"V12\"",
+                        "\"V13\"",
+                        "\"V14\"",
+                        "\"V15\"",
+                        "\"V16\""
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "1": 0,
+                "2": 1
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "\"V1\"": [
+                        "scale_normal"
+                    ],
+                    "\"V2\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"V3\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"V4\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"V5\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"V6\"": [
+                        "scale_normal"
+                    ],
+                    "\"V7\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"V8\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"V9\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"V10\"": [
+                        "scale_normal"
+                    ],
+                    "\"V11\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "\"V12\"": [
+                        "scale_normal"
+                    ],
+                    "\"V13\"": [
+                        "scale_normal"
+                    ],
+                    "\"V14\"": [
+                        "scale_normal"
+                    ],
+                    "\"V15\"": [
+                        "scale_normal"
+                    ],
+                    "\"V16\"": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "6d629c91-bc4a-4823-9578-ac587a6cbcee",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 2,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "\"V1\"": [
+                    "scale_normal"
+                ],
+                "\"V2\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"V3\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"V4\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"V5\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"V6\"": [
+                    "scale_normal"
+                ],
+                "\"V7\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"V8\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"V9\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"V10\"": [
+                    "scale_normal"
+                ],
+                "\"V11\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "\"V12\"": [
+                    "scale_normal"
+                ],
+                "\"V13\"": [
+                    "scale_normal"
+                ],
+                "\"V14\"": [
+                    "scale_normal"
+                ],
+                "\"V15\"": [
+                    "scale_normal"
+                ],
+                "\"V16\"": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bankmarketing/X.data",
+            "y_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bankmarketing/y.data",
+            "results_path": "/Users/vincenzopecorella/Desktop/Universita/Machine Learning/Project2/prediction_feature/results/bankmarketing"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 2,
+            "explain_level": 1
+        },
+        "automl_random_state": 2,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "2_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_Default_NeuralNetwork/learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "2_Default_NeuralNetwork/predictions_validation.csv",
+    "metric_name": "f1",
+    "final_loss": -0.5475324675324675,
+    "train_time": 10.798596143722534,
+    "is_stacked": false,
+    "threshold": 0.4472091057781166
+}
