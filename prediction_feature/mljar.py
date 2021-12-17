@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 import numpy as np
 
 rootdir = os.path.dirname(__file__)
-results_dir = rootdir + '/results/'
+results_dir = rootdir + '/results/gio/'
 dataset_dir = rootdir + '/datasets_list_final/'
 
 algorithm_list = ['Linear', 'Random Forest', 'Decision Tree', 'Neural Network']
@@ -66,6 +66,15 @@ def create_dataset():
         max_corr = compute_max_corr(dataset)
         df.apply(lambda x: add_dataset_row(dataset, x['metric_value'], x['train_time'], x['model_type'], max_corr), axis=1)
 
+def extend_dataset():
+    for dir in os.listdir(dataset_dir):
+        dir = dir[:-4]
+        print(dir)
+        df = pd.read_csv(results_dir + dir + '/leaderboard.csv')
+        dataset = pd.read_csv(dataset_dir + dir + '.csv')
+        max_corr = compute_max_corr(dataset)
+        df.apply(lambda x: add_dataset_row(dataset, x['metric_value'], x['train_time'], x['model_type'], max_corr), axis=1)
 
-run_automl()
-create_dataset()
+
+#run_automl()
+extend_dataset()
