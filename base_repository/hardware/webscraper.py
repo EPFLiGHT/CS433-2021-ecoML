@@ -10,7 +10,7 @@ headers={
         'User-Agent': 'Mozilla/5.0',
     }
 
-#function for processing dump of all gpus obtained in scrape_gpu_all
+#function for processing dump of all cpus/gpus obtained in scrape_all
 def process_dump(path_dump, path_csv):
     with open(path_dump, 'r') as file:
         dump=json.load(file)
@@ -27,7 +27,7 @@ def process_dump(path_dump, path_csv):
         df=pd.DataFrame.from_dict(data_list)
         df.to_csv(path_csv, index=False)
         
-#It first obtains a dump of all GPUs whose TDP is known, and then calls process_dump_gpu for processing it and obtaing gpu.csv
+#It first obtains a dump of all CPUs/GPUs whose TDP is known, and then calls process_dump for processing it and obtaing cpu.csv/gpu.csv
 def scrape_all(cpu=True):
     if cpu:
         hardware="cpu"
