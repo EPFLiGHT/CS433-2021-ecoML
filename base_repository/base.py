@@ -12,11 +12,14 @@ import cpuinfo
 import os
 import re
 
+from prediction_feature.visualization_helper import scatterplot
+
 country_dataset_path = 'country_dataset_adjusted.csv'
 gpu_dataset_path = 'hardware/gpu.csv'
 metrics_dataset_path = 'metrics/CO2_metrics.json'
 cpu_dataset_path = 'hardware/cpu.csv'
 regexp_cpu='(Core|Ryzen).* (i\d-\d{3,5}.?|\d \d{3,5}.?)'
+models_directory = '../prediction_feature/models/'
 
 
 class Cumulator:
@@ -204,3 +207,30 @@ class Cumulator:
 
     def return_total_carbon_footprint(self):
         return self.total_carbon_footprint()
+
+    def predict_consumptions_f1(self, dataset):
+        """
+        Predict the consumption and f1 scores of classification task on a given dataset with 4 different models: Linear model, Decision tree, Random forest, Neural network
+        Parameters
+        ----------
+        dataset dataset as a Pandas dataframe
+
+        Returns
+        -------
+
+        """
+        # Load models
+
+        # Convert dataset to
+
+        # Predict times and consumptions, and put in a list in the following order: Linear - Decision tree - Random forest - Neural network
+
+
+        # Example of lists, TODO remove!
+        consumption_costs = [100, 1500, 900, 1200]
+        scores = [0.8, 0.9, 0.7, 0.6]
+        consumption_costs_rmse = [100, 75, 200, 175]
+        scores_rmse = [0.2, 0.3, 0.1, 0.5]
+
+        # Show results
+        scatterplot(consumption_costs, scores, consumption_costs_rmse, scores_rmse)
