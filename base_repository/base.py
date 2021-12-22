@@ -85,7 +85,8 @@ class Cumulator:
         try:
             cpu_name = cpuinfo.get_cpu_info()['brand_raw']
             result=re.search(regexp_cpu, cpu_name)
-            cpu_name=result.group(1)+' '+result.group(2)
+            if result is not None:
+                cpu_name=result.group(1)+' '+result.group(2)
             dirname = os.path.dirname(__file__)
             relative_cpu_dataset_path = os.path.join(dirname, cpu_dataset_path)
             df = pd.read_csv(relative_cpu_dataset_path)
