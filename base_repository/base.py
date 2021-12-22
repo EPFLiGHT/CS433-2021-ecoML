@@ -10,11 +10,13 @@ from geopy.geocoders import Nominatim
 import GPUtil
 import cpuinfo
 import os
+import re
 
 country_dataset_path = 'country_dataset_adjusted.csv'
 gpu_dataset_path = 'hardware/gpu.csv'
 metrics_dataset_path = 'metrics/CO2_metrics.json'
 cpu_dataset_path = 'hardware/cpu.csv'
+regexp_cpu='(Core|Ryzen).* (i\d-\d{3,5}.?|\d \d{3,5}.?)'
 
 
 class Cumulator:
@@ -82,7 +84,9 @@ class Cumulator:
     def detect_cpu(self):
         try:
             cpu_name = cpuinfo.get_cpu_info()['brand_raw']
-
+            result=re.search(regexp_cpu, cpu_name)
+            if result is not None:
+                cpu_name=result.group(1)+' '+result.group(2)
             dirname = os.path.dirname(__file__)
             relative_cpu_dataset_path = os.path.join(dirname, cpu_dataset_path)
             df = pd.read_csv(relative_cpu_dataset_path)
@@ -94,9 +98,11 @@ class Cumulator:
             else:
                 # otherwise, assign CPU's TDP
                 self.TDP = row.TDP.values[0]
+                print(f'CPU recognized: TDP set to {row.TDP.values[0]}')
+
         except:
             # in case no CPU can be found
-            print(f'[except] GPU not found. Standard TDP={self.TDP} assigned.')
+            print(f'[except] CPU not found. Standard TDP={self.TDP} assigned.')
 
     # stops accumulating time and records the value
     def off(self):
