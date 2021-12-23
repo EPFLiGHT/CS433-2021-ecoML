@@ -53,7 +53,7 @@ The project has been structured in the following way:
 │   └──country_dataset_helpers.py: 
 ├── prediction_feature
 |   ├── models: directory containing the saved trained models (4 models for F1, 4 models for consumption, thus 2 models per algorithm) and the respective RMSE (1 RMSE file for F1, 1 RMSE file for consumption)
-|   ├── notebooks: 
+|   ├── notebooks: directory with analysis and training on simple datasets done in different notebooks
 |   ├── plots: directory containing the plots with the RMSE scores of the trained models (4 plots for F1, 4 plots for consumption)
 |   ├── implementations.py: file containing the functions for training the model
 |   ├── ml_dataset.csv: meta-dataset 
@@ -64,7 +64,7 @@ The project has been structured in the following way:
 |   ├── regression.ipynb: notebook containing the procedure for training the models on the meta-dataset for predicting F1-score and consumption on a given dataset.
 |   └── visualization_helpers.py: helper file containing the function for visualizing the predictions
 └── tests
-    └── test_base.py
+    └── test_base.py: unit tests for Cirrus
 ```
 
 ## Running the code
