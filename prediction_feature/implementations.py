@@ -11,11 +11,11 @@ from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
 import os
 
+from prediction_feature.nn_utils import train
 from base_repository.base import Cumulator
 
 rootdir = os.path.dirname(__file__)
 
-from nn_utils import train
 
 ROUND_ACCURACY = 4
 

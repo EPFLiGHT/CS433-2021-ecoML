@@ -224,11 +224,11 @@ class Cumulator:
 
         """
         # Get x vector from dataset
-        x = compute_features(dataset, target) # TODO ADD HERE IMPLEMENTATION
+        x = compute_features(dataset, target)
 
         # Predict times and consumptions, and put them in lists in the following order: Linear - Decision tree -
         # Random forest - Neural network
         consumption_costs, scores, consumption_costs_rmse, scores_rmse = get_predictions(x)
 
         # Show results
-        scatterplot(consumption_costs, scores, consumption_costs_rmse, scores_rmse)
+        scatterplot(consumption_costs, scores)
