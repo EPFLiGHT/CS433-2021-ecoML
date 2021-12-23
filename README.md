@@ -52,17 +52,17 @@ The project has been structured in the following way:
 │   ├──test_cumulator.py:
 │   └──country_dataset_helpers.py: 
 ├── prediction_feature
-|   ├── models:
+|   ├── models: directory containing the saved trained models (4 models for F1, 4 models for consumption, thus 2 models per algorithm)
 |   ├── notebooks: 
 |   ├── plots: 
-|   ├── implementations.py: 
-|   ├── ml_dataset.csv: 
-|   ├── mljar.py: 
-|   ├── nn_utils.py:
-|   ├── openml_datasets_retrieval.ipynb:
-|   ├── prediction_helper.py: 
+|   ├── implementations.py: file containing the functions for training the model
+|   ├── ml_dataset.csv: meta-dataset 
+|   ├── mljar.py: file containing functions for AutoML 
+|   ├── nn_utils.py: helper file for neural networks
+|   ├── openml_datasets_retrieval.ipynb: notebook containing the procedure to populate the meta-dataset
+|   ├── prediction_helper.py: helper file containing the function for computing the predictions
 |   ├── regression.ipynb:
-|   └── visualization_helpers.py:
+|   └── visualization_helpers.py: helper file containing the function for visualizing the predictions
 └── tests
     └── test_base.py
 ```
