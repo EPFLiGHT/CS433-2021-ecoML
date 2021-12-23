@@ -3,8 +3,9 @@ This is the base class of cumulator.
 '''
 
 import os
+
 parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-os.sys.path.insert(0,parentdir) 
+os.sys.path.insert(0, parentdir)
 import json
 import time as t
 import geocoder
@@ -19,11 +20,11 @@ import re
 from prediction_feature.prediction_helper import get_predictions, compute_features
 from prediction_feature.visualization_helper import scatterplot
 
-country_dataset_path = 'country_dataset_adjusted.csv'
+country_dataset_path = 'countries/country_dataset_adjusted.csv'
 gpu_dataset_path = 'hardware/gpu.csv'
 metrics_dataset_path = 'metrics/CO2_metrics.json'
 cpu_dataset_path = 'hardware/cpu.csv'
-regexp_cpu='(Core|Ryzen).* (i\d-\d{3,5}.?|\d \d{3,5}.?)'
+regexp_cpu = '(Core|Ryzen).* (i\d-\d{3,5}.?|\d \d{3,5}.?)'
 
 
 class Cumulator:
@@ -91,9 +92,9 @@ class Cumulator:
     def detect_cpu(self):
         try:
             cpu_name = cpuinfo.get_cpu_info()['brand_raw']
-            result=re.search(regexp_cpu, cpu_name)
+            result = re.search(regexp_cpu, cpu_name)
             if result is not None:
-                cpu_name=result.group(1)+' '+result.group(2)
+                cpu_name = result.group(1) + ' ' + result.group(2)
             dirname = os.path.dirname(__file__)
             relative_cpu_dataset_path = os.path.join(dirname, cpu_dataset_path)
             df = pd.read_csv(relative_cpu_dataset_path)

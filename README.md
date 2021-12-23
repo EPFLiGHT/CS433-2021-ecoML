@@ -39,18 +39,19 @@ The project has been structured in the following way:
 ├── .gitignore
 ├── .cirrus.yml
 ├── base_repository
-│   ├──hardware: 
+│   ├──hardware
 │   |   ├──cpu.csv: dataset with information about CPUs (including the TDP metric important for computing consumption)
 │   |   ├──gpu.csv: dataset with information about GPUs (including the TDP metric important for computing consumption)
 │   |   └──webscraper.py.csv: webscraper program used for obtaining the cpu.csv and gpu.csv from https://www.techpowerup.com/cpu-specs/ and https://www.techpowerup.com/gpu-specs/
-│   ├──metrics: 
+│   ├──metrics
 │   |   └──CO2_metrics.json: different metrics to express the carbon-footprint obtained from https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator
+│   ├──countries
+|   │   ├──contr_2_dig.json: helper to map 2-digit country code to 3-digit country code, used by country_dataset_helpers.py
+|   │   ├──country_dataset_adjusted.csv: final country dataset exported by country_dataset_helpers.py and used by Cumulator
+|   │   ├──test_cumulator.py: file for testing the feature predicting F1-score and consumption of different algorithm given a dataset
+|   │   └──country_dataset_helpers.py: automatic script to transform the raw country dataset into the version used by Cumulator
 │   ├──base.py: file containing definition of the Cumulator class implementing the tool
-│   ├──bonus.py: 
-│   ├──contr_2_dig.json: 
-│   ├──country_dataset_adjusted.csv: 
-│   ├──test_cumulator.py: file for testing the feature predicting F1-score and consumption of different algorithm given a dataset
-│   └──country_dataset_helpers.py: 
+│   └──bonus.py: Cumulator original file, left unchanged
 ├── prediction_feature
 |   ├── models: directory containing the saved trained models (4 models for F1, 4 models for consumption, thus 2 models per algorithm) and the respective RMSE (1 RMSE file for F1, 1 RMSE file for consumption)
 |   ├── notebooks: directory with analysis and training on simple datasets done in different notebooks
@@ -68,6 +69,39 @@ The project has been structured in the following way:
 ```
 
 ## Running the code
+
+To automatically keep track of the consumption a generic function the method run() in base_repository/base.py can be used. An example of its use is reported below:
+```
+
+        Example
+        --------
+        >>> # imports
+        >>> from sklearn.linear_model import LinearRegression
+        >>> from sklearn import datasets
+        >>> # initialization
+        >>> cumulator = Cumulator()
+        >>> model = LinearRegression()
+        >>> diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
+        >>> # without output and with keywords arguments
+        >>> cumulator.run(model.fit, X=diabetes_X, y=diabetes_y)
+        >>> # with output and without keywords arguments
+        >>> y = cumulator.run(model.predict, diabetes_X)
+        >>> # show results
+        >>> cumulator.display_carbon_footprint()
+
+
+        :param function: function to measure.
+        :param args: positional arguments of `function`.
+        :param kwargs: keywords arguments of `function`.
+        :return: output of `function`.
+```
+Future updates of the dataset of country consumption can be found on the [official page](https://github.com/owid/energy-data?country=). It needs to be slightly modified to be used by Cumulator. An automatic script to transform the dataset is given in base_repository/country_dataset_helpers.py
+To update the hardware dataset instead, a script in base_repository/hardware/webscraper.py can be used.
+For the other functionalities of cumulator please refer to the original repo of [Cumulator](https://github.com/epfl-iglobalhealth/cumulator).
+
+To run the pipeline from the datasets fetching phase to the MLJar training phase a pre-made script can be found in prediction_feature/openml_datasets_retrieval.ipynb
+
+The models to predict the F1 score and the consumption of a dataset in input with a specific ML algorithm can be found in prediction\models folder.
 
 ### Badges
 
