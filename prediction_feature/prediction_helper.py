@@ -96,7 +96,7 @@ def get_predictions(x):
         consumptions_list.append(consumption_prediction)
         scores_list.append(score_prediction)
 
-    consumption_rmse_list = [216.08, 216.32, 215.45, 216.37]
-    score_rmse_list = [0.16, 0.16, 0.16, 0.16]
+    consumption_rmse_list = pickle.load(open(models_directory+'consumption_rmse.pkl', 'rb'))
+    score_rmse_list = pickle.load(open(models_directory+'F1_rmse.pkl', 'rb'))
 
     return consumptions_list, scores_list, consumption_rmse_list, score_rmse_list
