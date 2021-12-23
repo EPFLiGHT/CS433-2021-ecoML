@@ -12,6 +12,7 @@ import cpuinfo
 import os
 import re
 
+from prediction_feature.prediction_helper import get_predictions
 from prediction_feature.visualization_helper import scatterplot
 
 country_dataset_path = 'country_dataset_adjusted.csv'
@@ -19,7 +20,6 @@ gpu_dataset_path = 'hardware/gpu.csv'
 metrics_dataset_path = 'metrics/CO2_metrics.json'
 cpu_dataset_path = 'hardware/cpu.csv'
 regexp_cpu='(Core|Ryzen).* (i\d-\d{3,5}.?|\d \d{3,5}.?)'
-models_directory = '../prediction_feature/models/'
 
 
 class Cumulator:
@@ -219,18 +219,12 @@ class Cumulator:
         -------
 
         """
-        # Load models
+        # Get x vector from dataset
+        x = [] # TODO ADD HERE IMPLEMENTATION
 
-        # Convert dataset to
-
-        # Predict times and consumptions, and put in a list in the following order: Linear - Decision tree - Random forest - Neural network
-
-
-        # Example of lists, TODO remove!
-        consumption_costs = [100, 1500, 900, 1200]
-        scores = [0.8, 0.9, 0.7, 0.6]
-        consumption_costs_rmse = [100, 75, 200, 175]
-        scores_rmse = [0.2, 0.3, 0.1, 0.5]
+        # Predict times and consumptions, and put them in lists in the following order: Linear - Decision tree -
+        # Random forest - Neural network
+        consumption_costs, scores, consumption_costs_rmse, scores_rmse = get_predictions(dataset)
 
         # Show results
         scatterplot(consumption_costs, scores, consumption_costs_rmse, scores_rmse)
