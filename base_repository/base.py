@@ -1,6 +1,10 @@
 '''
 This is the base class of cumulator.
 '''
+
+import os
+parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.sys.path.insert(0,parentdir) 
 import json
 import time as t
 import geocoder
@@ -12,7 +16,7 @@ import cpuinfo
 import os
 import re
 
-from prediction_feature.prediction_helper import get_predictions
+from prediction_feature.prediction_helper import get_predictions, compute_features
 from prediction_feature.visualization_helper import scatterplot
 
 country_dataset_path = 'country_dataset_adjusted.csv'
@@ -208,7 +212,7 @@ class Cumulator:
     def return_total_carbon_footprint(self):
         return self.total_carbon_footprint()
 
-    def predict_consumptions_f1(self, dataset):
+    def predict_consumptions_f1(self, dataset, target):
         """
         Predict the consumption and f1 scores of classification task on a given dataset with 4 different models: Linear model, Decision tree, Random forest, Neural network
         Parameters
@@ -220,11 +224,11 @@ class Cumulator:
 
         """
         # Get x vector from dataset
-        x = [] # TODO ADD HERE IMPLEMENTATION
+        x = compute_features(dataset, target) # TODO ADD HERE IMPLEMENTATION
 
         # Predict times and consumptions, and put them in lists in the following order: Linear - Decision tree -
         # Random forest - Neural network
-        consumption_costs, scores, consumption_costs_rmse, scores_rmse = get_predictions(dataset)
+        consumption_costs, scores, consumption_costs_rmse, scores_rmse = get_predictions(x)
 
         # Show results
         scatterplot(consumption_costs, scores, consumption_costs_rmse, scores_rmse)
