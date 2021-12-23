@@ -13,11 +13,11 @@ In the folder prediction_feature/ we describe a new ambitious feature we integra
 \In order to realize this tool, we required what we call a meta-dataset, a dataset where rows represent datasets themselves, along with information about their training. As the authors are not aware of the existence of such a dataset, we designed a completely automated system to populate this meta-dataset: all the datasets are gathered from OpenML\cite{OpenML2013}, an online machine learning platform for sharing and organizing data, machine learning algorithms and experiments. Then, all the datasets will be trained with an AutoML tool. This will let us have an arbitrarily big meta-dataset, without the weight of training every single dataset by ourselves.
 Beyond the scope of this work, we also believe this pipeline can be easily adopted for further ML tasks that require the training of a similar meta-dataset.
 
-The team  ML GVA is composed by:
+The team is composed by:
 
+* Stefan Igescu (@nefagi-01)
 * Giovanni Monea (@giommok)
 * Vincenzo Pecorella (@vincenzopecorella)
-* Stefan Igescu (@nefagi-01)
 
 ## Libraries used
 To improve the accuracy of the carbon footprint returned by cumulator we used CPUInfo, GPUutils, geocoder. The use of these libraries can also be avoided and Cumulator will use the standard parameters to estimate the consumption.
@@ -40,28 +40,28 @@ The project has been structured in the following way:
 ├── .cirrus.yml
 ├── base_repository
 │   ├──hardware: 
-│   |   ├──cpu.csv: 
-│   |   ├──gpu.csv: 
-│   |   └──webscraper.py.csv: 
+│   |   ├──cpu.csv: dataset with information about CPUs (including the TDP metric important for computing consumption)
+│   |   ├──gpu.csv: dataset with information about GPUs (including the TDP metric important for computing consumption)
+│   |   └──webscraper.py.csv: webscraper program used for obtaining the cpu.csv and gpu.csv from https://www.techpowerup.com/cpu-specs/ and https://www.techpowerup.com/gpu-specs/
 │   ├──metrics: 
-│   |   └──CO2_metrics.json: 
-│   ├──base.py: 
+│   |   └──CO2_metrics.json: different metrics to express the carbon-footprint obtained from https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator
+│   ├──base.py: file containing definition of the Cumulator class implementing the tool
 │   ├──bonus.py: 
 │   ├──contr_2_dig.json: 
 │   ├──country_dataset_adjusted.csv: 
-│   ├──test_cumulator.py:
+│   ├──test_cumulator.py: file for testing the feature predicting F1-score and consumption of different algorithm given a dataset
 │   └──country_dataset_helpers.py: 
 ├── prediction_feature
-|   ├── models: directory containing the saved trained models (4 models for F1, 4 models for consumption, thus 2 models per algorithm)
+|   ├── models: directory containing the saved trained models (4 models for F1, 4 models for consumption, thus 2 models per algorithm) and the respective RMSE (1 RMSE file for F1, 1 RMSE file for consumption)
 |   ├── notebooks: 
-|   ├── plots: 
+|   ├── plots: directory containing the plots with the RMSE scores of the trained models (4 plots for F1, 4 plots for consumption)
 |   ├── implementations.py: file containing the functions for training the model
 |   ├── ml_dataset.csv: meta-dataset 
-|   ├── mljar.py: file containing functions for AutoML 
+|   ├── mljar.py: file containing functions for AutoML and for generating the meta-dataset
 |   ├── nn_utils.py: helper file for neural networks
 |   ├── openml_datasets_retrieval.ipynb: notebook containing the procedure to populate the meta-dataset
 |   ├── prediction_helper.py: helper file containing the function for computing the predictions
-|   ├── regression.ipynb:
+|   ├── regression.ipynb: notebook containing the procedure for training the models on the meta-dataset for predicting F1-score and consumption on a given dataset.
 |   └── visualization_helpers.py: helper file containing the function for visualizing the predictions
 └── tests
     └── test_base.py
