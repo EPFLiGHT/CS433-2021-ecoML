@@ -1,4 +1,63 @@
-# CS433-2021-ecoML
+# CUMULATOR
+A tool to quantify and report the carbon footprint of machine learning computations and communication in academia and healthcare
+
+## Aim
+Raise awareness about the carbon footprint of machine learning methods and to encourage further optimization and the rationale use of AI-powered tools. This work advocates for sustainable AI and the rational use of IT systems.
+## Prerequisites
+The tool works with Linux, Windows and MacOS
+### Required Libraries
+- [geocoder](https://geocoder.readthedocs.io)
+- [geopy](https://geopy.readthedocs.io/en/stable/)
+- [GPUtil](https://pypi.org/project/GPUtil/)
+- [cpuinfo](https://pypi.org/project/py-cpuinfo/)
+
+## Install and use
+Free software: MIT license
+
+To install CUMULATOR:
+```
+pip install cumulator
+```
+To import the script
+```
+from cumulator import base
+```
+To create a Cumulator instance
+```
+cumulator = base.Cumulator()
+```
+
+###Measure cost of computations
+- First option: Activate or deactivate chronometer by using `cumulator.on()`, `cumulator.off()` whenever you perform ML computations (typically within each interation). It will automatically record each time duration in `cumulator.time_list` and sum it in `cumulator.cumulated_time()`. Then return carbon footprint due to all computations using `cumulator.computation_costs()`.
+- Second option: Automatically track the cost of computation of a generic function with `cumulator.run(function, *args, **kwargs)` and then use `cumulator.computation_costs()` as before. An example is reported below:
+
+```
+cumulator = Cumulator()
+model = LinearRegression()
+diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
+
+# without output and with keywords arguments
+cumulator.run(model.fit, X=diabetes_X, y=diabetes_y)
+
+# with output and without keywords arguments
+y = cumulator.run(model.predict, diabetes_X)
+
+# show results
+cumulator.computation_costs()
+```
+###Measure cost of communications
+Each time your models sends a data file to another node of the network, record the size of the file which is communicated (in kilo bytes) using `cumulator.data_transferred(file_size)`. The amount of data transferred is automatically recorded in c`umulator.file_size_list` and accumulated in `cumulator.cumulated_data_traffic`. Then return carbon footprint due to all communications using `cumulator.communication_costs()`.
+
+###Display your total carbon footprint
+Display the carbon footprint of your recorded actions with `cumulator.display_carbon_footprint()`:
+```
+########
+Overall carbon footprint: 1.02e-08 gCO2eq
+########
+Carbon footprint due to computations: 1.02e-08 gCO2eq
+Carbon footprint due to communications: 0.00e+00 gCO2eq
+This carbon footprint is equivalent to 1.68e-13 incandescent lamps switched to leds.
+```
 
 ## General info
 

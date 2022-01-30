@@ -1,4 +1,4 @@
-base_repository/hardware/dump.json
+base_repository/hardware_data/dump.json
 prediction_feature/datasets/creditcard.csv
 prediction_feature/datasets/mnist/mnist_test.csv
 prediction_feature/datasets/mnist/mnist_train.csv
