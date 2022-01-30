@@ -22,17 +22,20 @@ def encode_y(y):
     y_enc = le.transform(y)
     return y_enc
 
+
 def compute_max_corr(df):
     y = encode_y(df[df.columns[-1]])
     y = pd.Series(y)
     corr = df[df.columns[:-1]].corrwith(y)
     return np.max(np.absolute(corr))
 
+
 def compute_max_corr_between_X_and_y(X, y):
     y = encode_y(y)
     y = pd.Series(y)
     X = X.apply(pd.to_numeric, errors='ignore')
     return np.max(np.absolute(X.apply(lambda x: x.corr(y) if is_numeric_dtype(x) else 0)))
+
 
 def add_dataset(dataset, dataset_dataframe):
     path = rootdir + "/ml_dataset.csv"
@@ -63,7 +66,6 @@ def add_dataset(dataset, dataset_dataframe):
         df_automl_results = pd.read_csv(results_dir + str(dataset_id) + '/leaderboard.csv')[results_col_list]
         df_automl_results.columns = results_col_new_names
 
-
         # Add information about dataset
         interesting_columns = dataset_dataframe.columns[6:]
         for column in interesting_columns:
@@ -79,7 +81,6 @@ def add_dataset(dataset, dataset_dataframe):
         pos = i.index('algo')
         new_i = i[0:pos] + i[pos + 1:] + [i[pos]]
         df_automl_results = df_automl_results[new_i]
-
 
         # Append new dataset
         df = pd.concat([df, df_automl_results])
