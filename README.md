@@ -148,11 +148,6 @@ To automatically keep track of the consumption a generic function the method run
         >>> # show results
         >>> cumulator.display_carbon_footprint()
 
-
-        :param function: function to measure.
-        :param args: positional arguments of `function`.
-        :param kwargs: keywords arguments of `function`.
-        :return: output of `function`.
 ```
 Future updates of the dataset of country consumption can be found on the [official page](https://github.com/owid/energy-data?country=). It needs to be slightly modified to be used by Cumulator. An automatic script to transform the dataset is given in base_repository/country_dataset_helpers.py
 To update the hardware dataset instead, a script in base_repository/hardware/webscraper.py can be used.
