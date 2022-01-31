@@ -163,6 +163,5 @@ To run the pipeline from the datasets fetching phase to the MLJar training phase
 The models to predict the F1 score and the consumption of a dataset in input with a specific ML algorithm can be found in prediction\models folder.
 
 ### Badges
-
-[![Build Status](https://api.cirrus-ci.com/github/epfl-iglobalhealth/CS433-2021-ecoML.svg)](https://cirrus-ci.com/github/epfl-iglobalhealth/CS433-2021-ecoML)
+[![Build Status](https://api.cirrus-ci.com/github/epfl-iglobalhealth/cumulator.svg)](https://cirrus-ci.com/github/epfl-iglobalhealth/cumulator)
 
