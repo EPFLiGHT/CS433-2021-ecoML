@@ -1,3 +1,6 @@
+### Badges
+[![Build Status](https://api.cirrus-ci.com/github/epfl-iglobalhealth/cumulator.svg)](https://cirrus-ci.com/github/epfl-iglobalhealth/cumulator)
+
 # CUMULATOR
 A tool to quantify and report the carbon footprint of machine learning computations and communication in academia and healthcare
 
@@ -70,6 +73,7 @@ Finally, we added new types of measures of consumption to give a better idea of 
 
 In the folder prediction_feature/ we describe a new ambitious feature we integrated in Cumulator: a tool to lead the user to a green choice of which Machine Learning algorithm to use. Precisely, given a dataset, our tool will predict the F1 score and the consumption of different classification methods on this dataset, so that the user can choose the model that can reach an optimal trade off between utility and consumption.
 \In order to realize this tool, we required what we call a meta-dataset, a dataset where rows represent datasets themselves, along with information about their training. As the authors are not aware of the existence of such a dataset, we designed a completely automated system to populate this meta-dataset: all the datasets are gathered from OpenML\cite{OpenML2013}, an online machine learning platform for sharing and organizing data, machine learning algorithms and experiments. Then, all the datasets will be trained with an AutoML tool. This will let us have an arbitrarily big meta-dataset, without the weight of training every single dataset by ourselves.
+For simplicity, we only used for training datasets with up to 1000 features, up to 10000 instances and up to 20 classes. Note that predictions involving datasets that violate these characteristics may not lead meaningful results.
 Beyond the scope of this work, we also believe this pipeline can be easily adopted for further ML tasks that require the training of a similar meta-dataset.
 
 The team is composed by:
@@ -156,7 +160,3 @@ For the other functionalities of cumulator please refer to the original repo of 
 To run the pipeline from the datasets fetching phase to the MLJar training phase a pre-made script can be found in prediction_feature/openml_datasets_retrieval.ipynb
 
 The models to predict the F1 score and the consumption of a dataset in input with a specific ML algorithm can be found in prediction\models folder.
-
-### Badges
-[![Build Status](https://api.cirrus-ci.com/github/epfl-iglobalhealth/cumulator.svg)](https://cirrus-ci.com/github/epfl-iglobalhealth/cumulator)
-
