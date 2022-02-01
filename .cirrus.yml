@@ -2,7 +2,7 @@ unittest_task:
   container:
     image: python:slim
   install_dependencies_script: |
-    pip3 install --upgrade pip
+    python3 -m pip install --upgrade pip
     pip3 install unittest_xml_reporting
     pip3 install geocoder
     pip3 install pandas
