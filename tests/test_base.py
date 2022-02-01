@@ -25,8 +25,6 @@ class TestBase(unittest.TestCase):
         output = cumulator.run(foo, 3, y=2)
         self.assertEqual(6, output)
 
-        cumulator.display_carbon_footprint()
-
 
 if __name__ == '__main__':
     unittest.main()
