@@ -78,7 +78,7 @@ Free software: MIT license
     
 - You can also return the total carbon footprint as a number using ``cumulator.total_carbon_footprint()``.
 
-**Default assumptions (can be manually modified for better estimation):**
+**Default assumptions: geo-localization, CPU-GPU detection (can be manually modified for better estimation):**
 
 Cumulator will try to detect the CPU and the GPU used and set the respective computation cost value. In case the detection fails the default value will be set.
 It is possible to manually modify the default value. 
