@@ -18,7 +18,7 @@ Prerequisites
 _______________
 The tool works with Linux, Windows and MacOS
 
-***Required Libraries***
+**Required Libraries**
 
 - [geocoder](https://geocoder.readthedocs.io)
 - [geopy](https://geopy.readthedocs.io/en/stable/)
