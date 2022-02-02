@@ -14,7 +14,7 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     output = 5
-    return render_template(FILE_PATH, prediction_image='CO2    Emission of the vehicle is :{}'.format(output))
+    return render_template(FILE_PATH, prediction_text='CO2    Emission of the vehicle is :{}'.format(output))
 
 
 if __name__ == "__main__":
