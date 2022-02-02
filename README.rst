@@ -42,6 +42,7 @@ Free software: MIT license
 - Second option: Automatically track the cost of computation of a generic function with `cumulator.run(function, *args, **kwargs)` and then use `cumulator.computation_costs()` as before. An example is reported below:
 
 :: 
+
     cumulator = Cumulator()
     model = LinearRegression()
     diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
