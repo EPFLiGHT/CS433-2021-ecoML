@@ -113,6 +113,7 @@ An example is reported below:
 
 **Important**:
 The model used for prediction consumption and F1-Score has been trained on datasets with up to:
+
 - 1000 features
 -  20 classes 
 - 100000 instances
