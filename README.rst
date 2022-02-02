@@ -38,7 +38,7 @@ Free software: MIT license
 
 **Measure cost of computations.** 
 
-- First option: Activate or deactivate chronometer by using ``cumulator.on()``, ``cumulator.off()`` whenever you perform ML computations (typically within each interation). It will automatically record each time duration in ``cumulator.time_list`` and sum it in ``cumulator.cumulated_time()``. Then return carbon footprint due to all computations using `cumulator.computation_costs()`.
+- First option: Activate or deactivate chronometer by using ``cumulator.on()``, ``cumulator.off()`` whenever you perform ML computations (typically within each interation). It will automatically record each time duration in ``cumulator.time_list`` and sum it in ``cumulator.cumulated_time()``. Then return carbon footprint due to all computations using ``cumulator.computation_costs()``.
 - Second option: Automatically track the cost of computation of a generic function with ``cumulator.run(function, *args, **kwargs)`` and then use ``cumulator.computation_costs()`` as before. An example is reported below:
 
 :: 
