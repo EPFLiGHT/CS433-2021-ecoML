@@ -40,20 +40,23 @@ Free software: MIT license
 
 - First option: Activate or deactivate chronometer by using `cumulator.on()`, `cumulator.off()` whenever you perform ML computations (typically within each interation). It will automatically record each time duration in `cumulator.time_list` and sum it in `cumulator.cumulated_time()`. Then return carbon footprint due to all computations using `cumulator.computation_costs()`.
 - Second option: Automatically track the cost of computation of a generic function with `cumulator.run(function, *args, **kwargs)` and then use `cumulator.computation_costs()` as before. An example is reported below:
-```
-cumulator = Cumulator()
-model = LinearRegression()
-diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
 
-# without output and with keywords arguments
-cumulator.run(model.fit, X=diabetes_X, y=diabetes_y)
+:: 
 
-# with output and without keywords arguments
-y = cumulator.run(model.predict, diabetes_X)
+	cumulator = Cumulator()
+	model = LinearRegression()
+	diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
 
-# show results
-cumulator.computation_costs()
-```
+	# without output and with keywords arguments
+	cumulator.run(model.fit, X=diabetes_X, y=diabetes_y)
+
+	# with output and without keywords arguments
+	y = cumulator.run(model.predict, diabetes_X)
+
+	# show results
+	cumulator.computation_costs()
+
+
 
 **Measure cost of communications.**
 
