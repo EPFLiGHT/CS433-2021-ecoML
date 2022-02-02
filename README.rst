@@ -110,9 +110,8 @@ An example is reported below:
     iris = load_diabetes()
     data1 = pd.DataFrame(data= np.c_[iris['data'], iris['target']], columns= iris['feature_names'] + ['target'])
     cumulator.predict_consumptions_f1(data1, 'target')
-    
-Results are communicated with the following plot:
 
+**Important**:
 The model used for prediction consumption and F1-Score has been trained on datasets with up to:
 - 1000 features
 -  20 classes 
