@@ -62,6 +62,7 @@ cumulator.computation_costs()
 **Display your total carbon footprint**
 
 - Display the carbon footprint of your recorded actions with ``cumulator.display_carbon_footprint()``:
+
 ```
 ########
 Overall carbon footprint: 1.02e-08 gCO2eq
@@ -93,6 +94,7 @@ It is possible to manually modify the default value.
 
 - ``cumulator.predict_consumptions_f1(dataset, target)``: Cumulator offers a feature for estimating both the consupmtion and the F1-Score of different classification machine learning algorithms (i.e: Linear, Decision Tree, Random Forest, Neural Network) given the dataset that the user is using. The goal is to allow users to choose the algorithm giving the best score but with the least consumption possible. 
 An example is reported below:
+
 ```
 from base import Cumulator
 from sklearn.datasets import load_iris,load_diabetes
@@ -124,7 +126,7 @@ _________________
     src/
     ├── cumulator  
         ├── base.py            <- implementation of the Cumulator class
-		├── prediction_feature <- implementation of the prediction feature
+	├── prediction_feature <- implementation of the prediction feature
         └── bonus.py           <- Impact Statement Protocol
 
 Cite
