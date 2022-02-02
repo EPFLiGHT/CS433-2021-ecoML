@@ -65,14 +65,15 @@ Free software: MIT license
 
 - Display the carbon footprint of your recorded actions with ``cumulator.display_carbon_footprint()``:
 
-```
-########
-Overall carbon footprint: 1.02e-08 gCO2eq
-########
-Carbon footprint due to computations: 1.02e-08 gCO2eq
-Carbon footprint due to communications: 0.00e+00 gCO2eq
-This carbon footprint is equivalent to 1.68e-13 incandescent lamps switched to leds.
-```
+::
+
+    ########
+    Overall carbon footprint: 1.02e-08 gCO2eq
+    ########
+    Carbon footprint due to computations: 1.02e-08 gCO2eq
+    Carbon footprint due to communications: 0.00e+00 gCO2eq
+    This carbon footprint is equivalent to 1.68e-13 incandescent lamps switched to leds.
+
     
 - You can also return the total carbon footprint as a number using ``cumulator.total_carbon_footprint()``.
 
@@ -94,22 +95,24 @@ It is possible to manually modify the default value.
 
 **Prediction consumption and F1-Score on classification tasks**
 
-- ``cumulator.predict_consumptions_f1(dataset, target)``: Cumulator offers a feature for estimating both the consupmtion and the F1-Score of different classification machine learning algorithms (i.e: Linear, Decision Tree, Random Forest, Neural Network) given the dataset that the user is using. The goal is to allow users to choose the algorithm giving the best score but with the least consumption possible. 
+- ``cumulator.predict_consumptions_f1(dataset, target)``: Cumulator offers a feature for estimating both the consupmtion and the F1-Score of different classification machine learning algorithms (i.e: Linear, Decision Tree, Random Forest, Neural Network) given the dataset that the user is using. The goal is to allow users to choose the algorithm giving the best score but with the least consumption possible.
+
 An example is reported below:
 
-```
-from base import Cumulator
-from sklearn.datasets import load_iris,load_diabetes
-import pandas as pd
-import numpy as np
+::
 
-cumulator = Cumulator()
-iris = load_diabetes()
-data1 = pd.DataFrame(data= np.c_[iris['data'], iris['target']], columns= iris['feature_names'] + ['target'])
-cumulator.predict_consumptions_f1(data1, 'target')
-```
+    from base import Cumulator 
+    from sklearn.datasets import load_iris,load_diabetes  
+    import pandas as pd  
+    import numpy as np  
+    
+    cumulator = Cumulator()
+    iris = load_diabetes()
+    data1 = pd.DataFrame(data= np.c_[iris['data'], iris['target']], columns= iris['feature_names'] + ['target'])
+    cumulator.predict_consumptions_f1(data1, 'target')
+    
 Results are communicated with the following plot:
-![[Figure_1.png]]
+
 The model used for prediction consumption and F1-Score has been trained on datasets with up to:
 - 1000 features
 -  20 classes 
@@ -118,7 +121,7 @@ The model used for prediction consumption and F1-Score has been trained on datas
 
 Therefore when using this feature please check if your datasets exceeds these values.
 
-More information about the prediction feature and the recognition of the user position and GPU/CPU at https://github.com/epfl-iglobalhealth/CS433-2021-ecoML/tree/master .
+More information about the prediction feature and the recognition of the user position and GPU/CPU at https://github.com/epfl-iglobalhealth/CS433-2021-ecoML.
 
 Project Structure
 _________________
@@ -127,9 +130,9 @@ _________________
 
     src/
     ├── cumulator  
-        ├── base.py            <- implementation of the Cumulator class
-	├── prediction_feature <- implementation of the prediction feature
-        └── bonus.py           <- Impact Statement Protocol
+        ├── base.py            <- implementation of the Cumulator class  
+        ├── prediction_feature <- implementation of the prediction feature  
+        └── bonus.py           <- Impact Statement Protocol  
 
 Cite
 ____
@@ -156,4 +159,4 @@ _____
 * Material: https://drive.google.com/drive/u/1/folders/1Cm7XmSjXo9cdexejbLpbV0TxJkthlAGR
 * GitHub: https://github.com/epfl-iglobalhealth/cumulator
 * PyPI: https://pypi.org/project/cumulator/
-* Prediction Feature, geo-localization, CPU/GPU detection: https://github.com/epfl-iglobalhealth/CS433-2021-ecoML/tree/master
+* Prediction Feature, geo-localization, CPU/GPU detection: https://github.com/epfl-iglobalhealth/CS433-2021-ecoML
