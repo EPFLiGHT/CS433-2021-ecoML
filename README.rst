@@ -20,10 +20,10 @@ The tool works with Linux, Windows and MacOS
 
 **Required Libraries**
 
-- [geocoder](https://geocoder.readthedocs.io)
-- [geopy](https://geopy.readthedocs.io/en/stable/)
-- [GPUtil](https://pypi.org/project/GPUtil/)
-- [cpuinfo](https://pypi.org/project/py-cpuinfo/)
+- ``geocoder`` (https://geocoder.readthedocs.io)
+- ``geopy`` (https://geopy.readthedocs.io/en/stable/)
+- ``GPUtil`` (https://pypi.org/project/GPUtil/)
+- ``cpuinfo`` (https://pypi.org/project/py-cpuinfo/)
 
 Install and use
 _______________
