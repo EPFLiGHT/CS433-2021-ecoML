@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, abort
 from base_repository.prediction_feature.prediction_helper import get_predictions
 from werkzeug.utils import secure_filename
 import pandas as pd
@@ -18,16 +18,20 @@ def upload_file():
 @app.route('/display', methods=['GET', 'POST'])
 def display_file():
     if request.method == 'POST':
-        f = request.files['file']
-        df = pd.read_csv(f)
-        columns = list(df.columns)
-        prediction_features = compute_features(df, columns[-1])
-        prediction = get_predictions(prediction_features)
-        print(prediction)
+        try:
+            target_column = request.form.get('name')
+            f = request.files['file']
+            df = pd.read_csv(f)
+            columns = list(df.columns)
+            prediction_features = compute_features(df, columns[-1])
+            prediction = get_predictions(prediction_features)
+            print(prediction)
+
+        except Exception:
+            abort(500)
+
     return render_template('content.html')
 
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
-
-
