@@ -92,8 +92,8 @@ def get_predictions(x):
         score_model = pickle.load(open(models_directory + '/F1_model_' + algorithm + '.sav', 'rb'))
         x_consumption = x[:, support_consumption]
         x_F1 = x[:, support_F1]
-        consumption_prediction = consumption_model.predict(x_consumption)
-        score_prediction = score_model.predict(x_F1)
+        consumption_prediction = (algorithm, consumption_model.predict(x_consumption))
+        score_prediction = (algorithm, score_model.predict(x_F1))
         consumptions_list.append(consumption_prediction)
         scores_list.append(score_prediction)
 
