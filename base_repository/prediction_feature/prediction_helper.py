@@ -2,9 +2,9 @@ import pickle
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
+from pathlib import Path
 
-models_directory = './prediction_feature/models/'
-
+models_directory = str(Path(__file__).absolute().parent / "models/")
 
 def encode_y(y):
     le = LabelEncoder()
@@ -86,10 +86,10 @@ def get_predictions(x):
     consumptions_list = []
     scores_list = []
     for algorithm in algorithms:
-        support_consumption = pickle.load(open(models_directory + 'support_consumption_' + algorithm + '.pkl', 'rb'))
-        support_F1 = pickle.load(open(models_directory + 'support_F1_' + algorithm + '.pkl', 'rb'))
-        consumption_model = pickle.load(open(models_directory + 'consumption_model_' + algorithm + '.sav', 'rb'))
-        score_model = pickle.load(open(models_directory + 'F1_model_' + algorithm + '.sav', 'rb'))
+        support_consumption = pickle.load(open(models_directory + '/support_consumption_' + algorithm + '.pkl', 'rb'))
+        support_F1 = pickle.load(open(models_directory + '/support_F1_' + algorithm + '.pkl', 'rb'))
+        consumption_model = pickle.load(open(models_directory + '/consumption_model_' + algorithm + '.sav', 'rb'))
+        score_model = pickle.load(open(models_directory + '/F1_model_' + algorithm + '.sav', 'rb'))
         x_consumption = x[:, support_consumption]
         x_F1 = x[:, support_F1]
         consumption_prediction = consumption_model.predict(x_consumption)
@@ -97,7 +97,7 @@ def get_predictions(x):
         consumptions_list.append(consumption_prediction)
         scores_list.append(score_prediction)
 
-    consumption_rmse_list = pickle.load(open(models_directory + 'consumption_rmse.pkl', 'rb'))
-    score_rmse_list = pickle.load(open(models_directory + 'F1_rmse.pkl', 'rb'))
+    consumption_rmse_list = pickle.load(open(models_directory + '/consumption_rmse.pkl', 'rb'))
+    score_rmse_list = pickle.load(open(models_directory + '/F1_rmse.pkl', 'rb'))
 
     return consumptions_list, scores_list, consumption_rmse_list, score_rmse_list

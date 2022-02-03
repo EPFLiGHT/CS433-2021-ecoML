@@ -1,21 +1,33 @@
 from flask import Flask, render_template, request
+from base_repository.prediction_feature.prediction_helper import get_predictions
+from werkzeug.utils import secure_filename
+import pandas as pd
+
+from base_repository.prediction_feature.prediction_helper import compute_features
 
 app = Flask(__name__)
-FILE_PATH = 'index.html'
+
+app.config["UPLOAD_FOLDER"] = "static/"
 
 
-# default page of our web-app
 @app.route('/')
-def home():
-    return render_template(FILE_PATH)
+def upload_file():
+    return render_template('index.html')
 
 
-# To use the predict button in our web-app
-@app.route('/predict', methods=['POST'])
-def predict():
-    output = 5
-    return render_template(FILE_PATH, prediction_text='CO2    Emission of the vehicle is :{}'.format(output))
+@app.route('/display', methods=['GET', 'POST'])
+def display_file():
+    if request.method == 'POST':
+        f = request.files['file']
+        df = pd.read_csv(f)
+        columns = list(df.columns)
+        prediction_features = compute_features(df, columns[-1])
+        prediction = get_predictions(prediction_features)
+        print(prediction)
+    return render_template('content.html')
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=5000, debug=True)
+
+
