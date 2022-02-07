@@ -19,11 +19,13 @@ def upload_file():
 @app.route('/display', methods=['GET', 'POST'])
 def display_file():
     if request.method == 'POST':
-        target_column = request.form.get('name')
         f = request.files['file']
         df = pd.read_csv(f)
         columns = list(df.columns)
-        prediction_features = compute_features(df, columns[-1])
+        target_column = request.form.get('target', default=columns[-1])
+        if target_column not in columns:
+            target_column = columns[-1]
+        prediction_features = compute_features(df, target_column)
         prediction = get_predictions(prediction_features)
         prediction_consumption = np.vstack(prediction[0]).T
         prediction_f1score = np.vstack(prediction[1]).T
