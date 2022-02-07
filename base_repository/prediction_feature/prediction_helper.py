@@ -33,7 +33,8 @@ def compute_features(df, target):
     if series_max_nominal.empty:
         MaxNominalAttDistinctValues = 0
     else:
-        MaxNominalAttDistinctValues = series_max_nominal.values().max()
+        MaxNominalAttDistinctValues = np.max(series_max_nominal.values)
+
     computed_features.append(MaxNominalAttDistinctValues)
 
     MinorityClassSize = df.groupby(by=label).size().min()
