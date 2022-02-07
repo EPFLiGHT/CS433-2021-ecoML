@@ -1,3 +1,7 @@
+### Badges
+[![Build Status](https://api.cirrus-ci.com/github/epfl-iglobalhealth/cumulator.svg)](https://cirrus-ci.com/github/epfl-iglobalhealth/cumulator)
+
+
 =========
 CUMULATOR
 =========
