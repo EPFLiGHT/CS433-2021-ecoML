@@ -1,6 +1,3 @@
-Badges
-_______________
-
 |Cirrus CI|
 
 .. |Cirrus CI| image:: https://api.cirrus-ci.com/github/epfl-iglobalhealth/cumulator.svg
