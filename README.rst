@@ -1,3 +1,11 @@
+Badges
+_______________
+
+|Cirrus CI|
+
+.. |Cirrus CI| image:: https://api.cirrus-ci.com/github/epfl-iglobalhealth/cumulator.svg
+   :target: https://cirrus-ci.com/github/epfl-iglobalhealth/cumulator
+
 =========
 CUMULATOR
 =========
@@ -162,10 +170,4 @@ _____
 * PyPI: https://pypi.org/project/cumulator/
 * Prediction Feature, geo-localization, CPU/GPU detection: https://github.com/epfl-iglobalhealth/CS433-2021-ecoML
 
-Badges
-_______________
 
-|Cirrus CI|
-
-.. |Cirrus CI| image:: https://api.cirrus-ci.com/github/epfl-iglobalhealth/cumulator.svg
-   :target: https://cirrus-ci.com/github/epfl-iglobalhealth/cumulator
